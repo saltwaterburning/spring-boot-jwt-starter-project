@@ -1,14 +1,16 @@
 /*
  * Build steps:
- *
+ *   gradlew clean build
+ *   or build within eclipse using Spring Tools plugin
  *
  * Run steps:
- *
+ *   java -jar build\libs\spring-boot-jwt-starter-project-0.0.1.war
+ *   or run within eclipse using Spring Tools plugin
  *
  * Available endpoints:
- *   https://localhost:8443/openapi?type=json
- *   https://localhost:8443/openapi?type=yaml
- *   https://localhost:8443/swagger-ui/index.html  (ToDo)
+ *   http://localhost:8080/openapi?type=json
+ *   http://localhost:8080/openapi?type=yaml
+ *   http://localhost:8080/swagger-ui/index.html  (ToDo)
  */
 
 plugins {

@@ -87,9 +87,11 @@ holon:
 
 
 server:
-   port: 8443
-   session-timeout: 1800
-   ssl:
-      key-store: "classpath:keystore.jks"
-      key-store-password: "changeit"
-      key-password: "changeit"
+   port: 8080
+
+#   port: 8443
+#   session-timeout: 1800
+#   ssl:
+#      key-store: "classpath:keystore.jks"
+#      key-store-password: "changeit"
+#      key-password: "changeit"
