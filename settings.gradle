@@ -1,0 +1,9 @@
+/*
+ * As Buildship of v3.1.0 the rootProject.name MUST be the same as the parent directory.
+ * This is not a limitation of Gradle.
+ * 
+ * Buildship: Eclipse Plug-ins for Gradle, provided as part of the Gradle Platform.
+ * Copyright (c) 2015 Gradle Inc.
+ * For more information, visit our website https://projects.eclipse.org/projects/tools.buildship
+ */
+rootProject.name = theName

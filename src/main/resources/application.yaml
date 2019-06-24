@@ -1,0 +1,95 @@
+management:
+   security:
+      enabled: false
+      port: 9000
+
+
+spring:
+   datasource:
+      url: "jdbc:h2:mem:test"
+      username: "sa"
+   main:
+      # console, log, off
+      banner-mode: "console"
+   profiles:
+      active: dev
+
+
+# JwtConfiguration [issuer=arj, signatureAlgorithm=RS256, sharedKey=null, publicKey=null,
+# privateKey=null, expireTime=3600000, includeDetails=true, includePermissions=true]
+holon:
+   # See JwtConfigProperties.java
+   jwt:
+      issuer: "jwt-issuer"
+      expire-hours: 1
+      # See JwtSignatureAlgorithm.java
+      signature-algorithm: RS256
+      privatekey:
+         store:
+            alias: "holon-server"
+            alias-password: changeit
+            password: changeit
+         encoding: PEM
+         # See KeyFormat.java
+         format: PKCS8
+         source: >
+            -----BEGIN PRIVATE KEY-----
+            MIIEuwIBADANBgkqhkiG9w0BAQEFAASCBKUwggShAgEAAoIBAQCZ5Tx2m++6HvqZ
+            tVpnMAz0zCh5EutBO5CQgPkJh7OWcEEIRrheWtkL6oH12vtYVu3VWivRiSbMEjFU
+            g50keIpeBVRf9KHxYwqb+/+cbe9XeOvap2Hh+SRtKNPju/PWKDCzROqCuWRq0hGU
+            RnEPlJ7AO3xGIyUWjmCy+nA5K8h9/JYQ9QwUjdzboSoY/MBieWvMhHN53H+ezTzB
+            v44XBWaRTvb03uHQX5zp78vNtUwgfD514Gc3o7bCtW7uVVcr+CJfR+DZTLT340wM
+            JGBnB/2p5dBwbIFB9w0MJSMT46L/fifX65LdMf9H+cFD3Vsg+WFRlcBPfT83bjRN
+            zuAZfBB1AgMBAAECggEAWjH6L+HQrJq/cRrS8ys8TLTi+6LU8pSAc9DDJIy9+mus
+            EbexEsvX7Z3xsTA4o1u/ZI3GpLXnYS9AbjH9BYUIQ3aILvzndNwBOc6Fzx63aeLb
+            CHmVaqVkbf3BwfVEQb2oXUkE0LzrV5fq6aYnWWRXbn7upQSwFfo4Pm19HGTGyt8x
+            5NZ96+BcJ1EbeMvbCyxj51m4V1FdvEaHQjVOQv1pTKreTgJtWJbTYwhMYd3y+Wx4
+            A8RpBzQMLPFvmc5tuSZGDDV9nWVIbPbHYZdSG2oODhgeuQtq6qqM3ZodXbkBHRY1
+            GMGMxMeZoawZMwQnFxi2Ni/e0+vrcTG9ja0mXMarwQKBgQD6rFBv9X9CFNSg1Rvp
+            kfxMXe1qNgyyRdYff/QxvXRbEQEPLx0KhwC9Ae1woB4ECwQjDIIP5KKsvafVhi/R
+            tRojPbUwCA1rDdDNH3Jn/hMv0Owm9mj+DlVKfpF9RqZeFCgBOmUZqG9+MXP/9q//
+            SoQ5eQM5+pElOR3Me12GvoG7DQKBgQCdKnE32gUS09PBdujTJE+KciNja9EMUfch
+            dt7Ap7VagbrAIw+0eb5X4EDZt6Vn1vuEP9fZ0BWVqCIcOyviAMcnkhtWFqLxp9rT
+            93YHKUdHjFc4CB9Yc8dach/AWxtJK8A98xJwr6Uz1TwP0fymlVDgWhkcDdsVYx60
+            89e8RtsxCQKBgEm7l6lm77izQdvQ83Xfj/OyiRv9q/xgGFyJmX1r+aazuLkLpaIs
+            FaaCw6GmJ04PI3dfvX4JRWREIPLolnY7q+WDyCDJrZC4rps3TcKS9HfTHzNStY1N
+            D/9qfUb5GgSAL0g1Mfm7Fphq2XEH0bro4z24f591OW5Wf5JfEyKINMadAn89ZFbV
+            elSBBj2xVMGduJFZgzxPmc4PAfWHHOfmWZx9vi803n1EAkpYCUFLynDSHygggM/Q
+            RXgo/YRVgsehgKxKyMfk2PLNcsQICKISKg2t5SQsvv9/jbpRmkLM4MnHy09M46ZQ
+            Xkwp8yGDDIOkjq8I9CjazI7Hy/Ayvw2GfichAoGBAJ4a/qgndUo30vbjeMfSFYnX
+            PdIEc2/rPEGdn6sSa/FcU6cIfzL+Q1HnxD8mmnj9tkLuuNgj/j5YHhYmT9hmFXZB
+            7xyWh0SD7S/+4Ww9yC9T21Un7EqFgks2wem7Bkq8kMKOtIO9elyeWnJkaO69zMMG
+            staSvDP68krqiArbPPzZ
+            -----END PRIVATE KEY-----
+      publickey:
+         store:
+            alias: "holon-server"
+            alias-password: changeit
+            password: changeit
+         encoding: PEM
+         # See KeyFormat.java
+         format: X509
+         source: >
+            -----BEGIN PUBLIC KEY-----
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmeU8dpvvuh76mbVaZzAM
+            9MwoeRLrQTuQkID5CYezlnBBCEa4XlrZC+qB9dr7WFbt1Vor0YkmzBIxVIOdJHiK
+            XgVUX/Sh8WMKm/v/nG3vV3jr2qdh4fkkbSjT47vz1igws0TqgrlkatIRlEZxD5Se
+            wDt8RiMlFo5gsvpwOSvIffyWEPUMFI3c26EqGPzAYnlrzIRzedx/ns08wb+OFwVm
+            kU729N7h0F+c6e/LzbVMIHw+deBnN6O2wrVu7lVXK/giX0fg2Uy09+NMDCRgZwf9
+            qeXQcGyBQfcNDCUjE+Oi/34n1+uS3TH/R/nBQ91bIPlhUZXAT30/N240Tc7gGXwQ
+            dQIDAQAB
+            -----END PUBLIC KEY-----
+   swagger:
+      enabled: true
+      path: "openapi"
+      title: "OpenAPI docs"
+      version: "v0.0.1"
+
+
+server:
+   port: 8443
+   session-timeout: 1800
+   ssl:
+      key-store: "classpath:keystore.jks"
+      key-store-password: "changeit"
+      key-password: "changeit"
