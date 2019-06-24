@@ -49,18 +49,12 @@ public class JwtIssuerEndpoint {
 	@Produces(MediaType.TEXT_PLAIN)
 	public Response issue(@Context SecurityContext securityContext) {
 
-		// get Authentication
 		Authentication authc = (Authentication) securityContext.getUserPrincipal();
 
-		// configuration
 		JwtConfiguration configuration = ResourceUtils.lookupResource(getClass(), JwtConfiguration.class, providers)
 				.orElseThrow(() -> new InternalServerErrorException("JWT configuration not available"));
 
-		// build JWT
 		String jwt = JwtTokenBuilder.get().buildJwt(configuration, authc, UUID.randomUUID().toString());
-		// ok
 		return Response.ok(jwt, MediaType.TEXT_PLAIN).build();
-
 	}
-
 }

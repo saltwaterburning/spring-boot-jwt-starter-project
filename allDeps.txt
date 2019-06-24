@@ -21,134 +21,184 @@ compile - Dependencies for source set 'main' (deprecated, use 'implementation' i
 No dependencies
 
 compileClasspath - Compile classpath for source set 'main'.
-+--- com.holon-platform:bom:5.2.0
-|    +--- com.holon-platform.core:holon-auth-jwt:5.2.0 (c)
-|    +--- com.holon-platform.jaxrs:holon-jaxrs-client:5.2.0 (c)
-|    +--- com.holon-platform.jaxrs:holon-jaxrs-swagger-v3:5.2.0 (c)
-|    +--- com.holon-platform.jaxrs:holon-starter-resteasy-undertow:5.2.0 (c)
-|    +--- com.holon-platform.jaxrs:holon-starter-resteasy-client:5.2.0 (c)
-|    +--- com.holon-platform.jdbc:holon-starter-jdbc-datastore-hikaricp:5.2.0 (c)
-|    +--- com.holon-platform.core:holon-auth:5.2.0 (c)
-|    +--- com.holon-platform.jaxrs:holon-jaxrs-commons:5.2.0 (c)
-|    +--- com.holon-platform.jaxrs:holon-starter-resteasy:5.2.0 (c)
-|    +--- com.holon-platform.core:holon-starter:5.2.0 (c)
-|    +--- com.holon-platform.json:holon-jackson-jaxrs:5.2.0 (c)
-|    +--- com.holon-platform.json:holon-jackson-spring:5.2.0 (c)
-|    +--- com.holon-platform.jdbc:holon-starter-jdbc-hikaricp:5.2.0 (c)
-|    +--- com.holon-platform.jdbc:holon-datastore-jdbc-spring-boot:5.2.0 (c)
-|    +--- com.holon-platform.core:holon-http:5.2.0 (c)
-|    +--- com.holon-platform.core:holon-core:5.2.0 (c)
-|    +--- com.holon-platform.jaxrs:holon-jaxrs-spring-boot-resteasy:5.2.0 (c)
-|    +--- com.holon-platform.core:holon-spring-boot:5.2.0 (c)
-|    +--- com.holon-platform.json:holon-jackson:5.2.0 (c)
-|    +--- com.holon-platform.jdbc:holon-jdbc-spring-boot:5.2.0 (c)
-|    +--- com.holon-platform.jdbc:holon-datastore-jdbc-spring:5.2.0 (c)
-|    +--- com.holon-platform.jaxrs:holon-jaxrs-server:5.2.0 (c)
-|    +--- com.holon-platform.core:holon-spring:5.2.0 (c)
-|    +--- com.holon-platform.jdbc:holon-jdbc-spring:5.2.0 (c)
-|    +--- com.holon-platform.jdbc:holon-datastore-jdbc:5.2.0 (c)
++--- org.springframework.boot:spring-boot-starter-actuator -> 2.1.6.RELEASE
+|    +--- org.springframework.boot:spring-boot-starter:2.1.6.RELEASE
+|    |    +--- org.springframework.boot:spring-boot:2.1.6.RELEASE
+|    |    |    +--- org.springframework:spring-core:5.1.8.RELEASE
+|    |    |    |    \--- org.springframework:spring-jcl:5.1.8.RELEASE
+|    |    |    \--- org.springframework:spring-context:5.1.8.RELEASE
+|    |    |         +--- org.springframework:spring-aop:5.1.8.RELEASE
+|    |    |         |    +--- org.springframework:spring-beans:5.1.8.RELEASE
+|    |    |         |    |    \--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    |         |    \--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    |         +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|    |    |         +--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    |         \--- org.springframework:spring-expression:5.1.8.RELEASE
+|    |    |              \--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    +--- org.springframework.boot:spring-boot-autoconfigure:2.1.6.RELEASE
+|    |    |    \--- org.springframework.boot:spring-boot:2.1.6.RELEASE (*)
+|    |    +--- org.springframework.boot:spring-boot-starter-logging:2.1.6.RELEASE
+|    |    |    +--- ch.qos.logback:logback-classic:1.2.3
+|    |    |    |    +--- ch.qos.logback:logback-core:1.2.3
+|    |    |    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.26
+|    |    |    +--- org.apache.logging.log4j:log4j-to-slf4j:2.11.2
+|    |    |    |    +--- org.slf4j:slf4j-api:1.7.25 -> 1.7.26
+|    |    |    |    \--- org.apache.logging.log4j:log4j-api:2.11.2
+|    |    |    \--- org.slf4j:jul-to-slf4j:1.7.26
+|    |    |         \--- org.slf4j:slf4j-api:1.7.26
+|    |    +--- javax.annotation:javax.annotation-api:1.3.2
+|    |    \--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    +--- org.springframework.boot:spring-boot-actuator-autoconfigure:2.1.6.RELEASE
+|    |    +--- org.springframework.boot:spring-boot-actuator:2.1.6.RELEASE
+|    |    |    \--- org.springframework.boot:spring-boot:2.1.6.RELEASE (*)
+|    |    +--- org.springframework.boot:spring-boot-autoconfigure:2.1.6.RELEASE (*)
+|    |    +--- com.fasterxml.jackson.core:jackson-databind:2.9.9
+|    |    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.9.0
+|    |    |    \--- com.fasterxml.jackson.core:jackson-core:2.9.9
+|    |    +--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    \--- org.springframework:spring-context:5.1.8.RELEASE (*)
+|    \--- io.micrometer:micrometer-core:1.1.5
+|         +--- org.hdrhistogram:HdrHistogram:2.1.9
+|         \--- org.latencyutils:LatencyUtils:2.0.3
++--- org.springframework.boot:spring-boot-starter-web -> 2.1.6.RELEASE
+|    +--- org.springframework.boot:spring-boot-starter:2.1.6.RELEASE (*)
+|    +--- org.springframework.boot:spring-boot-starter-json:2.1.6.RELEASE
+|    |    +--- org.springframework.boot:spring-boot-starter:2.1.6.RELEASE (*)
+|    |    +--- org.springframework:spring-web:5.1.8.RELEASE
+|    |    |    +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|    |    |    \--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    +--- com.fasterxml.jackson.core:jackson-databind:2.9.9 (*)
+|    |    +--- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.9.9
+|    |    |    +--- com.fasterxml.jackson.core:jackson-core:2.9.9
+|    |    |    \--- com.fasterxml.jackson.core:jackson-databind:2.9.9 (*)
+|    |    +--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.9
+|    |    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.9.0
+|    |    |    +--- com.fasterxml.jackson.core:jackson-core:2.9.9
+|    |    |    \--- com.fasterxml.jackson.core:jackson-databind:2.9.9 (*)
+|    |    \--- com.fasterxml.jackson.module:jackson-module-parameter-names:2.9.9
+|    |         +--- com.fasterxml.jackson.core:jackson-core:2.9.9
+|    |         \--- com.fasterxml.jackson.core:jackson-databind:2.9.9 (*)
+|    +--- org.hibernate.validator:hibernate-validator:6.0.17.Final
+|    |    +--- javax.validation:validation-api:2.0.1.Final
+|    |    +--- org.jboss.logging:jboss-logging:3.3.2.Final
+|    |    \--- com.fasterxml:classmate:1.3.4 -> 1.4.0
+|    +--- org.springframework:spring-web:5.1.8.RELEASE (*)
+|    \--- org.springframework:spring-webmvc:5.1.8.RELEASE
+|         +--- org.springframework:spring-aop:5.1.8.RELEASE (*)
+|         +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|         +--- org.springframework:spring-context:5.1.8.RELEASE (*)
+|         +--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|         +--- org.springframework:spring-expression:5.1.8.RELEASE (*)
+|         \--- org.springframework:spring-web:5.1.8.RELEASE (*)
++--- com.holon-platform:bom:5.2.3
+|    +--- com.holon-platform.core:holon-auth-jwt:5.2.1 (c)
+|    +--- com.holon-platform.jaxrs:holon-jaxrs-swagger-v3:5.2.1 (c)
+|    +--- com.holon-platform.jaxrs:holon-starter-resteasy-undertow:5.2.1 (c)
+|    +--- com.holon-platform.jaxrs:holon-starter-resteasy-client:5.2.1 (c)
+|    +--- com.holon-platform.jdbc:holon-starter-jdbc-datastore-hikaricp:5.2.1 (c)
+|    +--- com.holon-platform.core:holon-auth:5.2.1 (c)
+|    +--- com.holon-platform.jaxrs:holon-starter-resteasy:5.2.1 (c)
+|    +--- com.holon-platform.core:holon-starter:5.2.1 (c)
+|    +--- com.holon-platform.json:holon-jackson-jaxrs:5.2.1 (c)
+|    +--- com.holon-platform.json:holon-jackson-spring:5.2.1 (c)
+|    +--- com.holon-platform.jaxrs:holon-jaxrs-client:5.2.1 (c)
+|    +--- com.holon-platform.jdbc:holon-starter-jdbc-hikaricp:5.2.1 (c)
+|    +--- com.holon-platform.jdbc:holon-datastore-jdbc-spring-boot:5.2.1 (c)
 |    +--- ch.qos.logback:logback-classic:1.2.3 (c)
-|    \--- com.holon-platform.jdbc:holon-jdbc:5.2.0 (c)
-+--- com.holon-platform.core:holon-auth-jwt -> 5.2.0
-|    +--- com.holon-platform.core:holon-auth:5.2.0
-|    |    \--- com.holon-platform.core:holon-http:5.2.0
-|    |         \--- com.holon-platform.core:holon-core:5.2.0
+|    +--- com.holon-platform.core:holon-http:5.2.1 (c)
+|    +--- com.holon-platform.core:holon-core:5.2.1 (c)
+|    +--- com.holon-platform.jaxrs:holon-jaxrs-spring-boot-resteasy:5.2.1 (c)
+|    +--- com.holon-platform.core:holon-spring-boot:5.2.1 (c)
+|    +--- com.holon-platform.json:holon-jackson:5.2.1 (c)
+|    +--- com.holon-platform.jaxrs:holon-jaxrs-commons:5.2.1 (c)
+|    +--- com.holon-platform.jdbc:holon-jdbc-spring-boot:5.2.1 (c)
+|    +--- com.holon-platform.jdbc:holon-datastore-jdbc-spring:5.2.1 (c)
+|    +--- com.holon-platform.jaxrs:holon-jaxrs-server:5.2.1 (c)
+|    +--- com.holon-platform.core:holon-spring:5.2.1 (c)
+|    +--- com.holon-platform.jdbc:holon-jdbc-spring:5.2.1 (c)
+|    +--- com.holon-platform.jdbc:holon-datastore-jdbc:5.2.1 (c)
+|    \--- com.holon-platform.jdbc:holon-jdbc:5.2.1 (c)
++--- org.springframework.boot:spring-boot-starter-data-jpa -> 2.1.6.RELEASE
+|    +--- org.springframework.boot:spring-boot-starter-aop:2.1.6.RELEASE
+|    |    +--- org.springframework.boot:spring-boot-starter:2.1.6.RELEASE (*)
+|    |    +--- org.springframework:spring-aop:5.1.8.RELEASE (*)
+|    |    \--- org.aspectj:aspectjweaver:1.9.4
+|    +--- org.springframework.boot:spring-boot-starter-jdbc:2.1.6.RELEASE
+|    |    +--- org.springframework.boot:spring-boot-starter:2.1.6.RELEASE (*)
+|    |    +--- com.zaxxer:HikariCP:3.2.0
+|    |    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.26
+|    |    \--- org.springframework:spring-jdbc:5.1.8.RELEASE
+|    |         +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|    |         +--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |         \--- org.springframework:spring-tx:5.1.8.RELEASE
+|    |              +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|    |              \--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    +--- javax.transaction:javax.transaction-api:1.3
+|    +--- javax.xml.bind:jaxb-api:2.3.1
+|    |    \--- javax.activation:javax.activation-api:1.2.0
+|    +--- org.hibernate:hibernate-core:5.3.10.Final
+|    |    +--- org.jboss.logging:jboss-logging:3.3.2.Final
+|    |    +--- javax.persistence:javax.persistence-api:2.2
+|    |    +--- org.javassist:javassist:3.23.2-GA
+|    |    +--- net.bytebuddy:byte-buddy:1.9.5 -> 1.9.13
+|    |    +--- antlr:antlr:2.7.7
+|    |    +--- org.jboss:jandex:2.0.5.Final
+|    |    +--- com.fasterxml:classmate:1.3.4 -> 1.4.0
+|    |    +--- javax.activation:javax.activation-api:1.2.0
+|    |    +--- org.dom4j:dom4j:2.1.1
+|    |    \--- org.hibernate.common:hibernate-commons-annotations:5.0.4.Final
+|    |         \--- org.jboss.logging:jboss-logging:3.3.1.Final -> 3.3.2.Final
+|    +--- org.springframework.data:spring-data-jpa:2.1.9.RELEASE
+|    |    +--- org.springframework.data:spring-data-commons:2.1.9.RELEASE
+|    |    |    +--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    |    +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|    |    |    \--- org.slf4j:slf4j-api:1.7.26
+|    |    +--- org.springframework:spring-orm:5.1.8.RELEASE
+|    |    |    +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|    |    |    +--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    |    +--- org.springframework:spring-jdbc:5.1.8.RELEASE (*)
+|    |    |    \--- org.springframework:spring-tx:5.1.8.RELEASE (*)
+|    |    +--- org.springframework:spring-context:5.1.8.RELEASE (*)
+|    |    +--- org.springframework:spring-aop:5.1.8.RELEASE (*)
+|    |    +--- org.springframework:spring-tx:5.1.8.RELEASE (*)
+|    |    +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|    |    +--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    \--- org.slf4j:slf4j-api:1.7.26
+|    \--- org.springframework:spring-aspects:5.1.8.RELEASE
+|         \--- org.aspectj:aspectjweaver:1.9.3 -> 1.9.4
++--- com.holon-platform.core:holon-auth-jwt -> 5.2.1
+|    +--- com.holon-platform.core:holon-auth:5.2.1
+|    |    \--- com.holon-platform.core:holon-http:5.2.1
+|    |         \--- com.holon-platform.core:holon-core:5.2.1
 |    |              +--- org.apache.commons:commons-lang3:3.8.1
 |    |              \--- javax.annotation:javax.annotation-api:1.3.2
-|    \--- io.jsonwebtoken:jjwt:0.9.1
-+--- com.holon-platform.jdbc:holon-starter-jdbc-datastore-hikaricp -> 5.2.0
-|    +--- com.holon-platform.jdbc:holon-starter-jdbc-hikaricp:5.2.0
-|    |    +--- com.holon-platform.core:holon-starter:5.2.0
-|    |    |    +--- com.holon-platform.core:holon-spring-boot:5.2.0
-|    |    |    |    +--- com.holon-platform.core:holon-spring:5.2.0
-|    |    |    |    |    +--- com.holon-platform.core:holon-http:5.2.0 (*)
-|    |    |    |    |    +--- org.springframework:spring-context:5.1.4.RELEASE -> 5.1.8.RELEASE
-|    |    |    |    |    |    +--- org.springframework:spring-aop:5.1.8.RELEASE
-|    |    |    |    |    |    |    +--- org.springframework:spring-beans:5.1.8.RELEASE
-|    |    |    |    |    |    |    |    \--- org.springframework:spring-core:5.1.8.RELEASE
-|    |    |    |    |    |    |    |         \--- org.springframework:spring-jcl:5.1.8.RELEASE
-|    |    |    |    |    |    |    \--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    |    |    |    |    +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
-|    |    |    |    |    |    +--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    |    |    |    |    \--- org.springframework:spring-expression:5.1.8.RELEASE
-|    |    |    |    |    |         \--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    |    |    |    \--- org.springframework:spring-context-support:5.1.4.RELEASE -> 5.1.8.RELEASE
-|    |    |    |    |         +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
-|    |    |    |    |         +--- org.springframework:spring-context:5.1.8.RELEASE (*)
-|    |    |    |    |         \--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    |    |    +--- com.holon-platform.core:holon-auth:5.2.0 (*)
-|    |    |    |    +--- org.springframework.boot:spring-boot:2.1.2.RELEASE -> 2.1.6.RELEASE
-|    |    |    |    |    +--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    |    |    |    \--- org.springframework:spring-context:5.1.8.RELEASE (*)
-|    |    |    |    \--- org.springframework.boot:spring-boot-autoconfigure:2.1.2.RELEASE -> 2.1.6.RELEASE
-|    |    |    |         \--- org.springframework.boot:spring-boot:2.1.6.RELEASE (*)
-|    |    |    \--- org.springframework.boot:spring-boot-starter:2.1.2.RELEASE -> 2.1.6.RELEASE
-|    |    |         +--- org.springframework.boot:spring-boot:2.1.6.RELEASE (*)
-|    |    |         +--- org.springframework.boot:spring-boot-autoconfigure:2.1.6.RELEASE (*)
-|    |    |         +--- org.springframework.boot:spring-boot-starter-logging:2.1.6.RELEASE
-|    |    |         |    +--- ch.qos.logback:logback-classic:1.2.3
-|    |    |         |    |    +--- ch.qos.logback:logback-core:1.2.3
-|    |    |         |    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.26
-|    |    |         |    +--- org.apache.logging.log4j:log4j-to-slf4j:2.11.2
-|    |    |         |    |    +--- org.slf4j:slf4j-api:1.7.25 -> 1.7.26
-|    |    |         |    |    \--- org.apache.logging.log4j:log4j-api:2.11.2
-|    |    |         |    \--- org.slf4j:jul-to-slf4j:1.7.26
-|    |    |         |         \--- org.slf4j:slf4j-api:1.7.26
-|    |    |         +--- javax.annotation:javax.annotation-api:1.3.2
-|    |    |         \--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    +--- com.holon-platform.jdbc:holon-jdbc-spring-boot:5.2.0
-|    |    |    \--- com.holon-platform.jdbc:holon-jdbc-spring:5.2.0
-|    |    |         +--- com.holon-platform.jdbc:holon-jdbc:5.2.0
-|    |    |         \--- org.springframework:spring-jdbc:5.1.4.RELEASE -> 5.1.8.RELEASE
-|    |    |              +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
-|    |    |              +--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    |              \--- org.springframework:spring-tx:5.1.8.RELEASE
-|    |    |                   +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
-|    |    |                   \--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    \--- com.zaxxer:HikariCP:3.3.0 -> 3.2.0
-|    \--- com.holon-platform.jdbc:holon-datastore-jdbc-spring-boot:5.2.0
-|         +--- com.holon-platform.jdbc:holon-jdbc-spring-boot:5.2.0 (*)
-|         +--- com.holon-platform.core:holon-spring-boot:5.2.0 (*)
-|         \--- com.holon-platform.jdbc:holon-datastore-jdbc-spring:5.2.0
-|              +--- com.holon-platform.jdbc:holon-jdbc-spring:5.2.0 (*)
-|              +--- com.holon-platform.core:holon-spring:5.2.0 (*)
-|              +--- com.holon-platform.jdbc:holon-datastore-jdbc:5.2.0
-|              |    \--- com.holon-platform.jdbc:holon-datastore-jdbc-composer:5.2.0
-|              |         +--- com.holon-platform.core:holon-core:5.2.0 (*)
-|              |         \--- com.holon-platform.jdbc:holon-jdbc:5.2.0
-|              +--- org.springframework:spring-context:5.1.4.RELEASE -> 5.1.8.RELEASE (*)
-|              \--- net.bytebuddy:byte-buddy:1.9.7 -> 1.9.13
-+--- com.holon-platform.jaxrs:holon-jaxrs-swagger-v3 -> 5.2.0
-|    +--- com.holon-platform.jaxrs:holon-jaxrs-swagger-core:5.2.0
-|    |    +--- com.holon-platform.core:holon-core:5.2.0 (*)
-|    |    +--- com.holon-platform.json:holon-json:5.2.0
-|    |    |    \--- com.holon-platform.core:holon-core:5.2.0 (*)
-|    |    \--- net.bytebuddy:byte-buddy:1.9.7 -> 1.9.13
-|    +--- com.holon-platform.core:holon-auth:5.2.0 (*)
-|    +--- com.holon-platform.json:holon-json:5.2.0 (*)
-|    +--- io.swagger.core.v3:swagger-jaxrs2:2.0.6
-|    |    +--- org.reflections:reflections:0.9.11
-|    |    |    +--- com.google.guava:guava:20.0
-|    |    |    \--- org.javassist:javassist:3.21.0-GA -> 3.22.0-GA
-|    |    +--- org.javassist:javassist:3.22.0-GA
-|    |    +--- io.swagger.core.v3:swagger-models:2.0.6
-|    |    +--- io.swagger.core.v3:swagger-annotations:2.0.6
-|    |    +--- io.swagger.core.v3:swagger-integration:2.0.6
-|    |    |    +--- org.reflections:reflections:0.9.11 (*)
-|    |    |    +--- io.swagger.core.v3:swagger-core:2.0.6
-|    |    |    |    +--- javax.xml.bind:jaxb-api:2.3.0 -> 2.3.1
-|    |    |    |    |    \--- javax.activation:javax.activation-api:1.2.0
+|    \--- io.jsonwebtoken:jjwt-api:0.10.6
++--- com.holon-platform.jaxrs:holon-jaxrs-swagger-v3 -> 5.2.1
+|    +--- com.holon-platform.jaxrs:holon-jaxrs-swagger-core:5.2.1
+|    |    +--- com.holon-platform.core:holon-core:5.2.1 (*)
+|    |    +--- com.holon-platform.json:holon-json:5.2.1
+|    |    |    \--- com.holon-platform.core:holon-core:5.2.1 (*)
+|    |    \--- net.bytebuddy:byte-buddy:1.9.10 -> 1.9.13
+|    +--- com.holon-platform.core:holon-auth:5.2.1 (*)
+|    +--- com.holon-platform.json:holon-json:5.2.1 (*)
+|    +--- io.swagger.core.v3:swagger-jaxrs2:2.0.7
+|    |    +--- io.github.classgraph:classgraph:4.6.32
+|    |    +--- org.javassist:javassist:3.22.0-GA -> 3.23.2-GA
+|    |    +--- io.swagger.core.v3:swagger-models:2.0.7
+|    |    +--- io.swagger.core.v3:swagger-annotations:2.0.7
+|    |    +--- io.swagger.core.v3:swagger-integration:2.0.7
+|    |    |    +--- io.github.classgraph:classgraph:4.6.32
+|    |    |    +--- io.swagger.core.v3:swagger-core:2.0.7
+|    |    |    |    +--- javax.xml.bind:jaxb-api:2.3.0 -> 2.3.1 (*)
 |    |    |    |    +--- org.slf4j:slf4j-api:1.7.25 -> 1.7.26
-|    |    |    |    +--- io.swagger.core.v3:swagger-annotations:2.0.6
-|    |    |    |    +--- io.swagger.core.v3:swagger-models:2.0.6
+|    |    |    |    +--- io.swagger.core.v3:swagger-annotations:2.0.7
+|    |    |    |    +--- io.swagger.core.v3:swagger-models:2.0.7
 |    |    |    |    \--- javax.validation:validation-api:1.1.0.Final -> 2.0.1.Final
-|    |    |    \--- io.swagger.core.v3:swagger-models:2.0.6
-|    |    \--- com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.9.5 -> 2.9.9
+|    |    |    \--- io.swagger.core.v3:swagger-models:2.0.7
+|    |    \--- com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.9.8 -> 2.9.9
 |    |         +--- com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:2.9.9
 |    |         |    +--- com.fasterxml.jackson.core:jackson-core:2.9.9
-|    |         |    \--- com.fasterxml.jackson.core:jackson-databind:2.9.9
-|    |         |         +--- com.fasterxml.jackson.core:jackson-annotations:2.9.0
-|    |         |         \--- com.fasterxml.jackson.core:jackson-core:2.9.9
+|    |         |    \--- com.fasterxml.jackson.core:jackson-databind:2.9.9 (*)
 |    |         \--- com.fasterxml.jackson.module:jackson-module-jaxb-annotations:2.9.9
 |    |              +--- com.fasterxml.jackson.core:jackson-annotations:2.9.0
 |    |              +--- com.fasterxml.jackson.core:jackson-core:2.9.9
@@ -159,74 +209,81 @@ compileClasspath - Compile classpath for source set 'main'.
 |    \--- com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.9.8 -> 2.9.9
 |         +--- org.yaml:snakeyaml:1.23
 |         \--- com.fasterxml.jackson.core:jackson-core:2.9.9
-+--- com.holon-platform.jaxrs:holon-starter-resteasy-undertow -> 5.2.0
-|    +--- com.holon-platform.jaxrs:holon-starter-resteasy:5.2.0
-|    |    +--- com.holon-platform.core:holon-starter:5.2.0 (*)
-|    |    +--- com.holon-platform.jaxrs:holon-jaxrs-spring-boot-resteasy:5.2.0
-|    |    |    +--- com.holon-platform.core:holon-spring-boot:5.2.0 (*)
-|    |    |    +--- com.holon-platform.jaxrs:holon-jaxrs-server:5.2.0
-|    |    |    |    +--- com.holon-platform.core:holon-http:5.2.0 (*)
-|    |    |    |    +--- com.holon-platform.core:holon-auth:5.2.0 (*)
-|    |    |    |    \--- com.holon-platform.jaxrs:holon-jaxrs-commons:5.2.0
-|    |    |    |         \--- com.holon-platform.core:holon-core:5.2.0 (*)
-|    |    |    +--- org.springframework:spring-web:5.1.4.RELEASE -> 5.1.8.RELEASE
-|    |    |    |    +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
-|    |    |    |    \--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    |    +--- org.jboss.resteasy:resteasy-jaxrs:3.6.2.Final
++--- com.holon-platform.jaxrs:holon-starter-resteasy-undertow -> 5.2.1
+|    +--- com.holon-platform.jaxrs:holon-starter-resteasy:5.2.1
+|    |    +--- com.holon-platform.core:holon-starter:5.2.1
+|    |    |    +--- com.holon-platform.core:holon-spring-boot:5.2.1
+|    |    |    |    +--- com.holon-platform.core:holon-spring:5.2.1
+|    |    |    |    |    +--- com.holon-platform.core:holon-http:5.2.1 (*)
+|    |    |    |    |    +--- org.springframework:spring-context:5.1.5.RELEASE -> 5.1.8.RELEASE (*)
+|    |    |    |    |    \--- org.springframework:spring-context-support:5.1.5.RELEASE -> 5.1.8.RELEASE
+|    |    |    |    |         +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|    |    |    |    |         +--- org.springframework:spring-context:5.1.8.RELEASE (*)
+|    |    |    |    |         \--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    |    |    +--- com.holon-platform.core:holon-auth:5.2.1 (*)
+|    |    |    |    +--- org.springframework.boot:spring-boot:2.1.3.RELEASE -> 2.1.6.RELEASE (*)
+|    |    |    |    \--- org.springframework.boot:spring-boot-autoconfigure:2.1.3.RELEASE -> 2.1.6.RELEASE (*)
+|    |    |    \--- org.springframework.boot:spring-boot-starter:2.1.3.RELEASE -> 2.1.6.RELEASE (*)
+|    |    +--- com.holon-platform.jaxrs:holon-jaxrs-spring-boot-resteasy:5.2.1
+|    |    |    +--- com.holon-platform.core:holon-spring-boot:5.2.1 (*)
+|    |    |    +--- com.holon-platform.jaxrs:holon-jaxrs-server:5.2.1
+|    |    |    |    +--- com.holon-platform.core:holon-http:5.2.1 (*)
+|    |    |    |    +--- com.holon-platform.core:holon-auth:5.2.1 (*)
+|    |    |    |    \--- com.holon-platform.jaxrs:holon-jaxrs-commons:5.2.1
+|    |    |    |         \--- com.holon-platform.core:holon-core:5.2.1 (*)
+|    |    |    +--- org.springframework:spring-web:5.1.5.RELEASE -> 5.1.8.RELEASE (*)
+|    |    |    +--- org.jboss.resteasy:resteasy-jaxrs:3.6.3.Final
 |    |    |    |    +--- org.jboss.spec.javax.ws.rs:jboss-jaxrs-api_2.1_spec:1.0.2.Final
-|    |    |    |    +--- org.jboss.spec.javax.xml.bind:jboss-jaxb-api_2.3_spec:1.0.0.Final
+|    |    |    |    +--- org.jboss.spec.javax.xml.bind:jboss-jaxb-api_2.3_spec:1.0.1.Final
 |    |    |    |    +--- org.reactivestreams:reactive-streams:1.0.2
-|    |    |    |    +--- javax.validation:validation-api:1.1.0.Final -> 2.0.1.Final
-|    |    |    |    +--- org.jboss.spec.javax.annotation:jboss-annotations-api_1.2_spec:1.0.0.Final -> 1.0.2.Final
+|    |    |    |    +--- javax.validation:validation-api:2.0.1.Final
+|    |    |    |    +--- org.jboss.spec.javax.annotation:jboss-annotations-api_1.3_spec:1.0.1.Final
 |    |    |    |    +--- javax.activation:activation:1.1.1
 |    |    |    |    +--- org.apache.httpcomponents:httpclient:4.5.4 -> 4.5.9
 |    |    |    |    |    +--- org.apache.httpcomponents:httpcore:4.4.11
 |    |    |    |    |    \--- commons-codec:commons-codec:1.11
 |    |    |    |    +--- commons-io:commons-io:2.5
 |    |    |    |    +--- net.jcip:jcip-annotations:1.0
-|    |    |    |    \--- org.jboss.logging:jboss-logging:3.3.1.Final -> 3.3.2.Final
-|    |    |    +--- org.jboss.resteasy:resteasy-jaxb-provider:3.6.2.Final
-|    |    |    |    +--- org.jboss.spec.javax.xml.bind:jboss-jaxb-api_2.3_spec:1.0.0.Final
+|    |    |    |    \--- org.jboss.logging:jboss-logging:3.3.2.Final
+|    |    |    +--- org.jboss.resteasy:resteasy-jaxb-provider:3.6.3.Final
+|    |    |    |    +--- org.jboss.spec.javax.xml.bind:jboss-jaxb-api_2.3_spec:1.0.1.Final
 |    |    |    |    +--- org.glassfish.jaxb:jaxb-runtime:2.3.1
-|    |    |    |    |    +--- javax.xml.bind:jaxb-api:2.3.1 (*)
 |    |    |    |    |    +--- org.glassfish.jaxb:txw2:2.3.1
 |    |    |    |    |    +--- com.sun.istack:istack-commons-runtime:3.0.7
 |    |    |    |    |    +--- org.jvnet.staxex:stax-ex:1.8
 |    |    |    |    |    +--- com.sun.xml.fastinfoset:FastInfoset:1.2.15
 |    |    |    |    |    \--- javax.activation:javax.activation-api:1.2.0
-|    |    |    |    \--- org.jboss.logging:jboss-logging:3.3.1.Final -> 3.3.2.Final
-|    |    |    \--- org.jboss.resteasy:resteasy-spring:3.6.2.Final
-|    |    |         +--- org.jboss.resteasy:resteasy-jaxrs:3.6.2.Final (*)
+|    |    |    |    \--- org.jboss.logging:jboss-logging:3.3.2.Final
+|    |    |    \--- org.jboss.resteasy:resteasy-spring:3.6.3.Final
+|    |    |         +--- org.jboss.resteasy:resteasy-jaxrs:3.6.3.Final (*)
 |    |    |         +--- org.jboss.spec.javax.ws.rs:jboss-jaxrs-api_2.1_spec:1.0.2.Final
-|    |    |         +--- org.jboss.spec.javax.annotation:jboss-annotations-api_1.2_spec:1.0.0.Final -> 1.0.2.Final
+|    |    |         +--- org.jboss.spec.javax.annotation:jboss-annotations-api_1.3_spec:1.0.1.Final
 |    |    |         +--- javax.activation:activation:1.1.1
-|    |    |         \--- org.jboss.logging:jboss-logging:3.3.1.Final -> 3.3.2.Final
-|    |    +--- org.jboss.resteasy:resteasy-jackson2-provider:3.6.2.Final
-|    |    |    \--- com.github.fge:json-patch:1.3
-|    |    |         \--- com.github.fge:jackson-coreutils:1.0
-|    |    |              +--- com.google.guava:guava:14.0 -> 20.0
-|    |    |              \--- net.jcip:jcip-annotations:1.0
-|    |    +--- com.holon-platform.json:holon-jackson-jaxrs:5.2.0
-|    |    |    +--- com.holon-platform.json:holon-jackson:5.2.0
-|    |    |    |    +--- com.holon-platform.json:holon-json:5.2.0 (*)
+|    |    |         \--- org.jboss.logging:jboss-logging:3.3.2.Final
+|    |    +--- org.jboss.resteasy:resteasy-jackson2-provider:3.6.3.Final
+|    |    |    \--- com.github.fge:json-patch:1.9
+|    |    |         \--- com.github.fge:jackson-coreutils:1.6
+|    |    |              +--- com.github.fge:msg-simple:1.1
+|    |    |              |    \--- com.github.fge:btf:1.2
+|    |    |              \--- com.google.guava:guava:16.0.1
+|    |    +--- com.holon-platform.json:holon-jackson-jaxrs:5.2.1
+|    |    |    +--- com.holon-platform.json:holon-jackson:5.2.1
+|    |    |    |    +--- com.holon-platform.json:holon-json:5.2.1 (*)
 |    |    |    |    +--- com.fasterxml.jackson.core:jackson-core:2.9.8 -> 2.9.9
 |    |    |    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.9.8 -> 2.9.0
 |    |    |    |    +--- com.fasterxml.jackson.core:jackson-databind:2.9.8 -> 2.9.9 (*)
-|    |    |    |    \--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.8 -> 2.9.9
+|    |    |    |    \--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.8 -> 2.9.9 (*)
 |    |    |    +--- com.fasterxml.jackson.core:jackson-core:2.9.8 -> 2.9.9
 |    |    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.9.8 -> 2.9.0
 |    |    |    +--- com.fasterxml.jackson.core:jackson-databind:2.9.8 -> 2.9.9 (*)
 |    |    |    \--- com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.9.8 -> 2.9.9 (*)
-|    |    +--- com.holon-platform.json:holon-jackson-spring:5.2.0
-|    |    |    \--- com.holon-platform.json:holon-jackson:5.2.0 (*)
-|    |    +--- org.springframework:spring-web:5.1.4.RELEASE -> 5.1.8.RELEASE (*)
-|    |    +--- org.springframework:spring-core:5.1.4.RELEASE -> 5.1.8.RELEASE (*)
-|    |    +--- org.springframework.boot:spring-boot-starter-validation:2.1.2.RELEASE -> 2.1.6.RELEASE
+|    |    +--- com.holon-platform.json:holon-jackson-spring:5.2.1
+|    |    |    \--- com.holon-platform.json:holon-jackson:5.2.1 (*)
+|    |    +--- org.springframework:spring-web:5.1.5.RELEASE -> 5.1.8.RELEASE (*)
+|    |    +--- org.springframework:spring-core:5.1.5.RELEASE -> 5.1.8.RELEASE (*)
+|    |    +--- org.springframework.boot:spring-boot-starter-validation:2.1.3.RELEASE -> 2.1.6.RELEASE
 |    |    |    +--- org.springframework.boot:spring-boot-starter:2.1.6.RELEASE (*)
-|    |    |    \--- org.hibernate.validator:hibernate-validator:6.0.17.Final
-|    |    |         +--- javax.validation:validation-api:2.0.1.Final
-|    |    |         +--- org.jboss.logging:jboss-logging:3.3.2.Final
-|    |    |         \--- com.fasterxml:classmate:1.3.4 -> 1.4.0
+|    |    |    \--- org.hibernate.validator:hibernate-validator:6.0.17.Final (*)
 |    |    +--- com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.9.8 -> 2.9.9 (*)
 |    |    +--- org.eclipse:yasson:1.0.1
 |    |    |    +--- javax.json.bind:javax.json.bind-api:1.0
@@ -237,7 +294,7 @@ compileClasspath - Compile classpath for source set 'main'.
 |    |    |         \--- javax.inject:javax.inject:1
 |    |    \--- org.glassfish:javax.json:1.1.2
 |    |         \--- javax.json:javax.json-api:1.1.2 -> 1.1.4
-|    \--- org.springframework.boot:spring-boot-starter-undertow:2.1.2.RELEASE -> 2.1.6.RELEASE
+|    \--- org.springframework.boot:spring-boot-starter-undertow:2.1.3.RELEASE -> 2.1.6.RELEASE
 |         +--- io.undertow:undertow-core:2.0.21.Final
 |         |    +--- org.jboss.logging:jboss-logging:3.4.0.Final -> 3.3.2.Final
 |         |    \--- org.jboss.xnio:xnio-api:3.3.8.Final
@@ -250,159 +307,233 @@ compileClasspath - Compile classpath for source set 'main'.
 |         |    \--- org.jboss.spec.javax.websocket:jboss-websocket-api_1.1_spec:1.1.4.Final
 |         +--- javax.servlet:javax.servlet-api:4.0.1
 |         \--- org.glassfish:javax.el:3.0.0
-+--- com.h2database:h2:1.4.196
 +--- org.webjars:swagger-ui:3.22.2
 +--- org.projectlombok:lombok:1.18.8
-+--- com.holon-platform.jaxrs:holon-jaxrs-client -> 5.2.0
-|    +--- com.holon-platform.core:holon-async-http:5.2.0
-|    |    \--- com.holon-platform.core:holon-http:5.2.0 (*)
-|    \--- com.holon-platform.jaxrs:holon-jaxrs-commons:5.2.0 (*)
-\--- com.holon-platform.jaxrs:holon-starter-resteasy-client -> 5.2.0
-     +--- com.holon-platform.core:holon-starter:5.2.0 (*)
-     +--- com.holon-platform.json:holon-jackson-jaxrs:5.2.0 (*)
-     +--- com.holon-platform.json:holon-jackson-spring:5.2.0 (*)
-     +--- com.holon-platform.jaxrs:holon-jaxrs-client:5.2.0 (*)
-     +--- org.jboss.resteasy:resteasy-client:3.6.2.Final
++--- com.holon-platform.jdbc:holon-starter-jdbc-datastore-hikaricp -> 5.2.1
+|    +--- com.holon-platform.jdbc:holon-starter-jdbc-hikaricp:5.2.1
+|    |    +--- com.holon-platform.core:holon-starter:5.2.1 (*)
+|    |    +--- com.holon-platform.jdbc:holon-jdbc-spring-boot:5.2.1
+|    |    |    \--- com.holon-platform.jdbc:holon-jdbc-spring:5.2.1
+|    |    |         +--- com.holon-platform.jdbc:holon-jdbc:5.2.1
+|    |    |         \--- org.springframework:spring-jdbc:5.1.5.RELEASE -> 5.1.8.RELEASE (*)
+|    |    \--- com.zaxxer:HikariCP:3.3.1 -> 3.2.0 (*)
+|    \--- com.holon-platform.jdbc:holon-datastore-jdbc-spring-boot:5.2.1
+|         +--- com.holon-platform.jdbc:holon-jdbc-spring-boot:5.2.1 (*)
+|         +--- com.holon-platform.core:holon-spring-boot:5.2.1 (*)
+|         \--- com.holon-platform.jdbc:holon-datastore-jdbc-spring:5.2.1
+|              +--- com.holon-platform.jdbc:holon-jdbc-spring:5.2.1 (*)
+|              +--- com.holon-platform.core:holon-spring:5.2.1 (*)
+|              +--- com.holon-platform.jdbc:holon-datastore-jdbc:5.2.1
+|              |    \--- com.holon-platform.jdbc:holon-datastore-jdbc-composer:5.2.1
+|              |         +--- com.holon-platform.core:holon-core:5.2.1 (*)
+|              |         \--- com.holon-platform.jdbc:holon-jdbc:5.2.1
+|              +--- org.springframework:spring-context:5.1.5.RELEASE -> 5.1.8.RELEASE (*)
+|              \--- net.bytebuddy:byte-buddy:1.9.10 -> 1.9.13
++--- com.h2database:h2:1.4.196
+\--- com.holon-platform.jaxrs:holon-starter-resteasy-client -> 5.2.1
+     +--- com.holon-platform.core:holon-starter:5.2.1 (*)
+     +--- com.holon-platform.json:holon-jackson-jaxrs:5.2.1 (*)
+     +--- com.holon-platform.json:holon-jackson-spring:5.2.1 (*)
+     +--- com.holon-platform.jaxrs:holon-jaxrs-client:5.2.1
+     |    +--- com.holon-platform.core:holon-async-http:5.2.1
+     |    |    \--- com.holon-platform.core:holon-http:5.2.1 (*)
+     |    \--- com.holon-platform.jaxrs:holon-jaxrs-commons:5.2.1 (*)
+     +--- org.jboss.resteasy:resteasy-client:3.6.3.Final
      |    +--- org.jboss.spec.javax.ws.rs:jboss-jaxrs-api_2.1_spec:1.0.2.Final
-     |    +--- org.jboss.resteasy:resteasy-jaxrs:3.6.2.Final (*)
-     |    +--- org.jboss.logging:jboss-logging:3.3.1.Final -> 3.3.2.Final
+     |    +--- org.jboss.resteasy:resteasy-jaxrs:3.6.3.Final (*)
+     |    +--- org.jboss.logging:jboss-logging:3.3.2.Final
      |    \--- org.apache.httpcomponents:httpclient:4.5.4 -> 4.5.9 (*)
-     +--- org.jboss.resteasy:resteasy-jackson2-provider:3.6.2.Final (*)
+     +--- org.jboss.resteasy:resteasy-jackson2-provider:3.6.3.Final (*)
      \--- com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.9.8 -> 2.9.9 (*)
 
 compileOnly - Compile only dependencies for source set 'main'.
 No dependencies
 
 default - Configuration for default artifacts.
-+--- com.holon-platform:bom:5.2.0
-|    +--- com.holon-platform.core:holon-auth-jwt:5.2.0 (c)
-|    +--- com.holon-platform.jaxrs:holon-jaxrs-client:5.2.0 (c)
-|    +--- com.holon-platform.jaxrs:holon-jaxrs-swagger-v3:5.2.0 (c)
-|    +--- com.holon-platform.jaxrs:holon-starter-resteasy-undertow:5.2.0 (c)
-|    +--- com.holon-platform.jaxrs:holon-starter-resteasy-client:5.2.0 (c)
-|    +--- com.holon-platform.jdbc:holon-starter-jdbc-datastore-hikaricp:5.2.0 (c)
-|    +--- com.holon-platform.core:holon-auth:5.2.0 (c)
-|    +--- com.holon-platform.jaxrs:holon-jaxrs-commons:5.2.0 (c)
-|    +--- com.holon-platform.jaxrs:holon-starter-resteasy:5.2.0 (c)
-|    +--- com.holon-platform.core:holon-starter:5.2.0 (c)
-|    +--- com.holon-platform.json:holon-jackson-jaxrs:5.2.0 (c)
-|    +--- com.holon-platform.json:holon-jackson-spring:5.2.0 (c)
-|    +--- com.holon-platform.jdbc:holon-starter-jdbc-hikaricp:5.2.0 (c)
-|    +--- com.holon-platform.jdbc:holon-datastore-jdbc-spring-boot:5.2.0 (c)
-|    +--- com.holon-platform.core:holon-http:5.2.0 (c)
-|    +--- com.holon-platform.core:holon-core:5.2.0 (c)
-|    +--- com.holon-platform.jaxrs:holon-jaxrs-spring-boot-resteasy:5.2.0 (c)
-|    +--- com.holon-platform.core:holon-spring-boot:5.2.0 (c)
-|    +--- com.holon-platform.json:holon-jackson:5.2.0 (c)
-|    +--- com.holon-platform.jdbc:holon-jdbc-spring-boot:5.2.0 (c)
-|    +--- com.holon-platform.jdbc:holon-datastore-jdbc-spring:5.2.0 (c)
-|    +--- com.holon-platform.jaxrs:holon-jaxrs-server:5.2.0 (c)
-|    +--- com.holon-platform.core:holon-spring:5.2.0 (c)
-|    +--- com.holon-platform.jdbc:holon-jdbc-spring:5.2.0 (c)
-|    +--- com.holon-platform.jdbc:holon-datastore-jdbc:5.2.0 (c)
++--- org.springframework.boot:spring-boot-starter-actuator -> 2.1.6.RELEASE
+|    +--- org.springframework.boot:spring-boot-starter:2.1.6.RELEASE
+|    |    +--- org.springframework.boot:spring-boot:2.1.6.RELEASE
+|    |    |    +--- org.springframework:spring-core:5.1.8.RELEASE
+|    |    |    |    \--- org.springframework:spring-jcl:5.1.8.RELEASE
+|    |    |    \--- org.springframework:spring-context:5.1.8.RELEASE
+|    |    |         +--- org.springframework:spring-aop:5.1.8.RELEASE
+|    |    |         |    +--- org.springframework:spring-beans:5.1.8.RELEASE
+|    |    |         |    |    \--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    |         |    \--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    |         +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|    |    |         +--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    |         \--- org.springframework:spring-expression:5.1.8.RELEASE
+|    |    |              \--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    +--- org.springframework.boot:spring-boot-autoconfigure:2.1.6.RELEASE
+|    |    |    \--- org.springframework.boot:spring-boot:2.1.6.RELEASE (*)
+|    |    +--- org.springframework.boot:spring-boot-starter-logging:2.1.6.RELEASE
+|    |    |    +--- ch.qos.logback:logback-classic:1.2.3
+|    |    |    |    +--- ch.qos.logback:logback-core:1.2.3
+|    |    |    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.26
+|    |    |    +--- org.apache.logging.log4j:log4j-to-slf4j:2.11.2
+|    |    |    |    +--- org.slf4j:slf4j-api:1.7.25 -> 1.7.26
+|    |    |    |    \--- org.apache.logging.log4j:log4j-api:2.11.2
+|    |    |    \--- org.slf4j:jul-to-slf4j:1.7.26
+|    |    |         \--- org.slf4j:slf4j-api:1.7.26
+|    |    +--- javax.annotation:javax.annotation-api:1.3.2
+|    |    +--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    \--- org.yaml:snakeyaml:1.23
+|    +--- org.springframework.boot:spring-boot-actuator-autoconfigure:2.1.6.RELEASE
+|    |    +--- org.springframework.boot:spring-boot-actuator:2.1.6.RELEASE
+|    |    |    \--- org.springframework.boot:spring-boot:2.1.6.RELEASE (*)
+|    |    +--- org.springframework.boot:spring-boot-autoconfigure:2.1.6.RELEASE (*)
+|    |    +--- com.fasterxml.jackson.core:jackson-databind:2.9.9
+|    |    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.9.0
+|    |    |    \--- com.fasterxml.jackson.core:jackson-core:2.9.9
+|    |    +--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    +--- org.springframework:spring-context:5.1.8.RELEASE (*)
+|    |    \--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.9
+|    |         +--- com.fasterxml.jackson.core:jackson-annotations:2.9.0
+|    |         +--- com.fasterxml.jackson.core:jackson-core:2.9.9
+|    |         \--- com.fasterxml.jackson.core:jackson-databind:2.9.9 (*)
+|    \--- io.micrometer:micrometer-core:1.1.5
+|         +--- org.hdrhistogram:HdrHistogram:2.1.9
+|         \--- org.latencyutils:LatencyUtils:2.0.3
++--- org.springframework.boot:spring-boot-starter-web -> 2.1.6.RELEASE
+|    +--- org.springframework.boot:spring-boot-starter:2.1.6.RELEASE (*)
+|    +--- org.springframework.boot:spring-boot-starter-json:2.1.6.RELEASE
+|    |    +--- org.springframework.boot:spring-boot-starter:2.1.6.RELEASE (*)
+|    |    +--- org.springframework:spring-web:5.1.8.RELEASE
+|    |    |    +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|    |    |    \--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    +--- com.fasterxml.jackson.core:jackson-databind:2.9.9 (*)
+|    |    +--- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.9.9
+|    |    |    +--- com.fasterxml.jackson.core:jackson-core:2.9.9
+|    |    |    \--- com.fasterxml.jackson.core:jackson-databind:2.9.9 (*)
+|    |    +--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.9 (*)
+|    |    \--- com.fasterxml.jackson.module:jackson-module-parameter-names:2.9.9
+|    |         +--- com.fasterxml.jackson.core:jackson-core:2.9.9
+|    |         \--- com.fasterxml.jackson.core:jackson-databind:2.9.9 (*)
+|    +--- org.hibernate.validator:hibernate-validator:6.0.17.Final
+|    |    +--- javax.validation:validation-api:2.0.1.Final
+|    |    +--- org.jboss.logging:jboss-logging:3.3.2.Final
+|    |    \--- com.fasterxml:classmate:1.3.4 -> 1.4.0
+|    +--- org.springframework:spring-web:5.1.8.RELEASE (*)
+|    \--- org.springframework:spring-webmvc:5.1.8.RELEASE
+|         +--- org.springframework:spring-aop:5.1.8.RELEASE (*)
+|         +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|         +--- org.springframework:spring-context:5.1.8.RELEASE (*)
+|         +--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|         +--- org.springframework:spring-expression:5.1.8.RELEASE (*)
+|         \--- org.springframework:spring-web:5.1.8.RELEASE (*)
++--- com.holon-platform:bom:5.2.3
+|    +--- com.holon-platform.core:holon-auth-jwt:5.2.1 (c)
+|    +--- com.holon-platform.jaxrs:holon-jaxrs-swagger-v3:5.2.1 (c)
+|    +--- com.holon-platform.jaxrs:holon-starter-resteasy-undertow:5.2.1 (c)
+|    +--- com.holon-platform.jaxrs:holon-starter-resteasy-client:5.2.1 (c)
+|    +--- com.holon-platform.jdbc:holon-starter-jdbc-datastore-hikaricp:5.2.1 (c)
+|    +--- com.holon-platform.core:holon-auth:5.2.1 (c)
+|    +--- com.holon-platform.jaxrs:holon-starter-resteasy:5.2.1 (c)
+|    +--- com.holon-platform.core:holon-starter:5.2.1 (c)
+|    +--- com.holon-platform.json:holon-jackson-jaxrs:5.2.1 (c)
+|    +--- com.holon-platform.json:holon-jackson-spring:5.2.1 (c)
+|    +--- com.holon-platform.jaxrs:holon-jaxrs-client:5.2.1 (c)
+|    +--- com.holon-platform.jdbc:holon-starter-jdbc-hikaricp:5.2.1 (c)
+|    +--- com.holon-platform.jdbc:holon-datastore-jdbc-spring-boot:5.2.1 (c)
 |    +--- ch.qos.logback:logback-classic:1.2.3 (c)
-|    \--- com.holon-platform.jdbc:holon-jdbc:5.2.0 (c)
-+--- com.holon-platform.core:holon-auth-jwt -> 5.2.0
-|    +--- com.holon-platform.core:holon-auth:5.2.0
-|    |    \--- com.holon-platform.core:holon-http:5.2.0
-|    |         \--- com.holon-platform.core:holon-core:5.2.0
+|    +--- com.holon-platform.core:holon-http:5.2.1 (c)
+|    +--- com.holon-platform.core:holon-core:5.2.1 (c)
+|    +--- com.holon-platform.jaxrs:holon-jaxrs-spring-boot-resteasy:5.2.1 (c)
+|    +--- com.holon-platform.core:holon-spring-boot:5.2.1 (c)
+|    +--- com.holon-platform.json:holon-jackson:5.2.1 (c)
+|    +--- com.holon-platform.jaxrs:holon-jaxrs-commons:5.2.1 (c)
+|    +--- com.holon-platform.jdbc:holon-jdbc-spring-boot:5.2.1 (c)
+|    +--- com.holon-platform.jdbc:holon-datastore-jdbc-spring:5.2.1 (c)
+|    +--- com.holon-platform.jaxrs:holon-jaxrs-server:5.2.1 (c)
+|    +--- com.holon-platform.core:holon-spring:5.2.1 (c)
+|    +--- com.holon-platform.jdbc:holon-jdbc-spring:5.2.1 (c)
+|    +--- com.holon-platform.jdbc:holon-datastore-jdbc:5.2.1 (c)
+|    \--- com.holon-platform.jdbc:holon-jdbc:5.2.1 (c)
++--- org.springframework.boot:spring-boot-starter-data-jpa -> 2.1.6.RELEASE
+|    +--- org.springframework.boot:spring-boot-starter-aop:2.1.6.RELEASE
+|    |    +--- org.springframework.boot:spring-boot-starter:2.1.6.RELEASE (*)
+|    |    +--- org.springframework:spring-aop:5.1.8.RELEASE (*)
+|    |    \--- org.aspectj:aspectjweaver:1.9.4
+|    +--- org.springframework.boot:spring-boot-starter-jdbc:2.1.6.RELEASE
+|    |    +--- org.springframework.boot:spring-boot-starter:2.1.6.RELEASE (*)
+|    |    +--- com.zaxxer:HikariCP:3.2.0
+|    |    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.26
+|    |    \--- org.springframework:spring-jdbc:5.1.8.RELEASE
+|    |         +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|    |         +--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |         \--- org.springframework:spring-tx:5.1.8.RELEASE
+|    |              +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|    |              \--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    +--- javax.transaction:javax.transaction-api:1.3
+|    +--- javax.xml.bind:jaxb-api:2.3.1
+|    |    \--- javax.activation:javax.activation-api:1.2.0
+|    +--- org.hibernate:hibernate-core:5.3.10.Final
+|    |    +--- org.jboss.logging:jboss-logging:3.3.2.Final
+|    |    +--- javax.persistence:javax.persistence-api:2.2
+|    |    +--- org.javassist:javassist:3.23.2-GA
+|    |    +--- net.bytebuddy:byte-buddy:1.9.5 -> 1.9.13
+|    |    +--- antlr:antlr:2.7.7
+|    |    +--- org.jboss:jandex:2.0.5.Final
+|    |    +--- com.fasterxml:classmate:1.3.4 -> 1.4.0
+|    |    +--- javax.activation:javax.activation-api:1.2.0
+|    |    +--- org.dom4j:dom4j:2.1.1
+|    |    \--- org.hibernate.common:hibernate-commons-annotations:5.0.4.Final
+|    |         \--- org.jboss.logging:jboss-logging:3.3.1.Final -> 3.3.2.Final
+|    +--- org.springframework.data:spring-data-jpa:2.1.9.RELEASE
+|    |    +--- org.springframework.data:spring-data-commons:2.1.9.RELEASE
+|    |    |    +--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    |    +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|    |    |    \--- org.slf4j:slf4j-api:1.7.26
+|    |    +--- org.springframework:spring-orm:5.1.8.RELEASE
+|    |    |    +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|    |    |    +--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    |    +--- org.springframework:spring-jdbc:5.1.8.RELEASE (*)
+|    |    |    \--- org.springframework:spring-tx:5.1.8.RELEASE (*)
+|    |    +--- org.springframework:spring-context:5.1.8.RELEASE (*)
+|    |    +--- org.springframework:spring-aop:5.1.8.RELEASE (*)
+|    |    +--- org.springframework:spring-tx:5.1.8.RELEASE (*)
+|    |    +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|    |    +--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    \--- org.slf4j:slf4j-api:1.7.26
+|    \--- org.springframework:spring-aspects:5.1.8.RELEASE
+|         \--- org.aspectj:aspectjweaver:1.9.3 -> 1.9.4
++--- com.holon-platform.core:holon-auth-jwt -> 5.2.1
+|    +--- com.holon-platform.core:holon-auth:5.2.1
+|    |    \--- com.holon-platform.core:holon-http:5.2.1
+|    |         \--- com.holon-platform.core:holon-core:5.2.1
 |    |              +--- org.apache.commons:commons-lang3:3.8.1
 |    |              \--- javax.annotation:javax.annotation-api:1.3.2
-|    \--- io.jsonwebtoken:jjwt:0.9.1
-+--- com.holon-platform.jdbc:holon-starter-jdbc-datastore-hikaricp -> 5.2.0
-|    +--- com.holon-platform.jdbc:holon-starter-jdbc-hikaricp:5.2.0
-|    |    +--- com.holon-platform.core:holon-starter:5.2.0
-|    |    |    +--- com.holon-platform.core:holon-spring-boot:5.2.0
-|    |    |    |    +--- com.holon-platform.core:holon-spring:5.2.0
-|    |    |    |    |    +--- com.holon-platform.core:holon-http:5.2.0 (*)
-|    |    |    |    |    +--- org.springframework:spring-context:5.1.4.RELEASE -> 5.1.8.RELEASE
-|    |    |    |    |    |    +--- org.springframework:spring-aop:5.1.8.RELEASE
-|    |    |    |    |    |    |    +--- org.springframework:spring-beans:5.1.8.RELEASE
-|    |    |    |    |    |    |    |    \--- org.springframework:spring-core:5.1.8.RELEASE
-|    |    |    |    |    |    |    |         \--- org.springframework:spring-jcl:5.1.8.RELEASE
-|    |    |    |    |    |    |    \--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    |    |    |    |    +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
-|    |    |    |    |    |    +--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    |    |    |    |    \--- org.springframework:spring-expression:5.1.8.RELEASE
-|    |    |    |    |    |         \--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    |    |    |    \--- org.springframework:spring-context-support:5.1.4.RELEASE -> 5.1.8.RELEASE
-|    |    |    |    |         +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
-|    |    |    |    |         +--- org.springframework:spring-context:5.1.8.RELEASE (*)
-|    |    |    |    |         \--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    |    |    +--- com.holon-platform.core:holon-auth:5.2.0 (*)
-|    |    |    |    +--- org.springframework.boot:spring-boot:2.1.2.RELEASE -> 2.1.6.RELEASE
-|    |    |    |    |    +--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    |    |    |    \--- org.springframework:spring-context:5.1.8.RELEASE (*)
-|    |    |    |    \--- org.springframework.boot:spring-boot-autoconfigure:2.1.2.RELEASE -> 2.1.6.RELEASE
-|    |    |    |         \--- org.springframework.boot:spring-boot:2.1.6.RELEASE (*)
-|    |    |    \--- org.springframework.boot:spring-boot-starter:2.1.2.RELEASE -> 2.1.6.RELEASE
-|    |    |         +--- org.springframework.boot:spring-boot:2.1.6.RELEASE (*)
-|    |    |         +--- org.springframework.boot:spring-boot-autoconfigure:2.1.6.RELEASE (*)
-|    |    |         +--- org.springframework.boot:spring-boot-starter-logging:2.1.6.RELEASE
-|    |    |         |    +--- ch.qos.logback:logback-classic:1.2.3
-|    |    |         |    |    +--- ch.qos.logback:logback-core:1.2.3
-|    |    |         |    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.26
-|    |    |         |    +--- org.apache.logging.log4j:log4j-to-slf4j:2.11.2
-|    |    |         |    |    +--- org.slf4j:slf4j-api:1.7.25 -> 1.7.26
-|    |    |         |    |    \--- org.apache.logging.log4j:log4j-api:2.11.2
-|    |    |         |    \--- org.slf4j:jul-to-slf4j:1.7.26
-|    |    |         |         \--- org.slf4j:slf4j-api:1.7.26
-|    |    |         +--- javax.annotation:javax.annotation-api:1.3.2
-|    |    |         +--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    |         \--- org.yaml:snakeyaml:1.23
-|    |    +--- com.holon-platform.jdbc:holon-jdbc-spring-boot:5.2.0
-|    |    |    \--- com.holon-platform.jdbc:holon-jdbc-spring:5.2.0
-|    |    |         +--- com.holon-platform.jdbc:holon-jdbc:5.2.0
-|    |    |         \--- org.springframework:spring-jdbc:5.1.4.RELEASE -> 5.1.8.RELEASE
-|    |    |              +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
-|    |    |              +--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    |              \--- org.springframework:spring-tx:5.1.8.RELEASE
-|    |    |                   +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
-|    |    |                   \--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    \--- com.zaxxer:HikariCP:3.3.0 -> 3.2.0
-|    \--- com.holon-platform.jdbc:holon-datastore-jdbc-spring-boot:5.2.0
-|         +--- com.holon-platform.jdbc:holon-jdbc-spring-boot:5.2.0 (*)
-|         +--- com.holon-platform.core:holon-spring-boot:5.2.0 (*)
-|         \--- com.holon-platform.jdbc:holon-datastore-jdbc-spring:5.2.0
-|              +--- com.holon-platform.jdbc:holon-jdbc-spring:5.2.0 (*)
-|              +--- com.holon-platform.core:holon-spring:5.2.0 (*)
-|              +--- com.holon-platform.jdbc:holon-datastore-jdbc:5.2.0
-|              |    \--- com.holon-platform.jdbc:holon-datastore-jdbc-composer:5.2.0
-|              |         +--- com.holon-platform.core:holon-core:5.2.0 (*)
-|              |         \--- com.holon-platform.jdbc:holon-jdbc:5.2.0
-|              +--- org.springframework:spring-context:5.1.4.RELEASE -> 5.1.8.RELEASE (*)
-|              \--- net.bytebuddy:byte-buddy:1.9.7 -> 1.9.13
-+--- com.holon-platform.jaxrs:holon-jaxrs-swagger-v3 -> 5.2.0
-|    +--- com.holon-platform.jaxrs:holon-jaxrs-swagger-core:5.2.0
-|    |    +--- com.holon-platform.core:holon-core:5.2.0 (*)
-|    |    +--- com.holon-platform.json:holon-json:5.2.0
-|    |    |    \--- com.holon-platform.core:holon-core:5.2.0 (*)
-|    |    \--- net.bytebuddy:byte-buddy:1.9.7 -> 1.9.13
-|    +--- com.holon-platform.core:holon-auth:5.2.0 (*)
-|    +--- com.holon-platform.json:holon-json:5.2.0 (*)
-|    +--- io.swagger.core.v3:swagger-jaxrs2:2.0.6
-|    |    +--- org.reflections:reflections:0.9.11
-|    |    |    +--- com.google.guava:guava:20.0
-|    |    |    \--- org.javassist:javassist:3.21.0-GA -> 3.22.0-GA
-|    |    +--- org.javassist:javassist:3.22.0-GA
-|    |    +--- io.swagger.core.v3:swagger-models:2.0.6
-|    |    +--- io.swagger.core.v3:swagger-annotations:2.0.6
-|    |    +--- io.swagger.core.v3:swagger-integration:2.0.6
-|    |    |    +--- org.reflections:reflections:0.9.11 (*)
-|    |    |    +--- io.swagger.core.v3:swagger-core:2.0.6
-|    |    |    |    +--- javax.xml.bind:jaxb-api:2.3.0 -> 2.3.1
-|    |    |    |    |    \--- javax.activation:javax.activation-api:1.2.0
+|    +--- io.jsonwebtoken:jjwt-api:0.10.6
+|    +--- io.jsonwebtoken:jjwt-impl:0.10.6
+|    |    \--- io.jsonwebtoken:jjwt-api:0.10.6
+|    \--- io.jsonwebtoken:jjwt-jackson:0.10.6
+|         \--- io.jsonwebtoken:jjwt-api:0.10.6
++--- com.holon-platform.jaxrs:holon-jaxrs-swagger-v3 -> 5.2.1
+|    +--- com.holon-platform.jaxrs:holon-jaxrs-swagger-core:5.2.1
+|    |    +--- com.holon-platform.core:holon-core:5.2.1 (*)
+|    |    +--- com.holon-platform.json:holon-json:5.2.1
+|    |    |    \--- com.holon-platform.core:holon-core:5.2.1 (*)
+|    |    \--- net.bytebuddy:byte-buddy:1.9.10 -> 1.9.13
+|    +--- com.holon-platform.core:holon-auth:5.2.1 (*)
+|    +--- com.holon-platform.json:holon-json:5.2.1 (*)
+|    +--- io.swagger.core.v3:swagger-jaxrs2:2.0.7
+|    |    +--- io.github.classgraph:classgraph:4.6.32
+|    |    +--- org.javassist:javassist:3.22.0-GA -> 3.23.2-GA
+|    |    +--- io.swagger.core.v3:swagger-models:2.0.7
+|    |    +--- io.swagger.core.v3:swagger-annotations:2.0.7
+|    |    +--- io.swagger.core.v3:swagger-integration:2.0.7
+|    |    |    +--- io.github.classgraph:classgraph:4.6.32
+|    |    |    +--- io.swagger.core.v3:swagger-core:2.0.7
+|    |    |    |    +--- javax.xml.bind:jaxb-api:2.3.0 -> 2.3.1 (*)
 |    |    |    |    +--- org.slf4j:slf4j-api:1.7.25 -> 1.7.26
-|    |    |    |    +--- io.swagger.core.v3:swagger-annotations:2.0.6
-|    |    |    |    +--- io.swagger.core.v3:swagger-models:2.0.6
+|    |    |    |    +--- io.swagger.core.v3:swagger-annotations:2.0.7
+|    |    |    |    +--- io.swagger.core.v3:swagger-models:2.0.7
 |    |    |    |    \--- javax.validation:validation-api:1.1.0.Final -> 2.0.1.Final
-|    |    |    \--- io.swagger.core.v3:swagger-models:2.0.6
-|    |    \--- com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.9.5 -> 2.9.9
+|    |    |    \--- io.swagger.core.v3:swagger-models:2.0.7
+|    |    \--- com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.9.8 -> 2.9.9
 |    |         +--- com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:2.9.9
 |    |         |    +--- com.fasterxml.jackson.core:jackson-core:2.9.9
-|    |         |    \--- com.fasterxml.jackson.core:jackson-databind:2.9.9
-|    |         |         +--- com.fasterxml.jackson.core:jackson-annotations:2.9.0
-|    |         |         \--- com.fasterxml.jackson.core:jackson-core:2.9.9
+|    |         |    \--- com.fasterxml.jackson.core:jackson-databind:2.9.9 (*)
 |    |         \--- com.fasterxml.jackson.module:jackson-module-jaxb-annotations:2.9.9
 |    |              +--- com.fasterxml.jackson.core:jackson-annotations:2.9.0
 |    |              +--- com.fasterxml.jackson.core:jackson-core:2.9.9
@@ -413,74 +544,81 @@ default - Configuration for default artifacts.
 |    \--- com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.9.8 -> 2.9.9
 |         +--- org.yaml:snakeyaml:1.23
 |         \--- com.fasterxml.jackson.core:jackson-core:2.9.9
-+--- com.holon-platform.jaxrs:holon-starter-resteasy-undertow -> 5.2.0
-|    +--- com.holon-platform.jaxrs:holon-starter-resteasy:5.2.0
-|    |    +--- com.holon-platform.core:holon-starter:5.2.0 (*)
-|    |    +--- com.holon-platform.jaxrs:holon-jaxrs-spring-boot-resteasy:5.2.0
-|    |    |    +--- com.holon-platform.core:holon-spring-boot:5.2.0 (*)
-|    |    |    +--- com.holon-platform.jaxrs:holon-jaxrs-server:5.2.0
-|    |    |    |    +--- com.holon-platform.core:holon-http:5.2.0 (*)
-|    |    |    |    +--- com.holon-platform.core:holon-auth:5.2.0 (*)
-|    |    |    |    \--- com.holon-platform.jaxrs:holon-jaxrs-commons:5.2.0
-|    |    |    |         \--- com.holon-platform.core:holon-core:5.2.0 (*)
-|    |    |    +--- org.springframework:spring-web:5.1.4.RELEASE -> 5.1.8.RELEASE
-|    |    |    |    +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
-|    |    |    |    \--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    |    +--- org.jboss.resteasy:resteasy-jaxrs:3.6.2.Final
++--- com.holon-platform.jaxrs:holon-starter-resteasy-undertow -> 5.2.1
+|    +--- com.holon-platform.jaxrs:holon-starter-resteasy:5.2.1
+|    |    +--- com.holon-platform.core:holon-starter:5.2.1
+|    |    |    +--- com.holon-platform.core:holon-spring-boot:5.2.1
+|    |    |    |    +--- com.holon-platform.core:holon-spring:5.2.1
+|    |    |    |    |    +--- com.holon-platform.core:holon-http:5.2.1 (*)
+|    |    |    |    |    +--- org.springframework:spring-context:5.1.5.RELEASE -> 5.1.8.RELEASE (*)
+|    |    |    |    |    \--- org.springframework:spring-context-support:5.1.5.RELEASE -> 5.1.8.RELEASE
+|    |    |    |    |         +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|    |    |    |    |         +--- org.springframework:spring-context:5.1.8.RELEASE (*)
+|    |    |    |    |         \--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    |    |    +--- com.holon-platform.core:holon-auth:5.2.1 (*)
+|    |    |    |    +--- org.springframework.boot:spring-boot:2.1.3.RELEASE -> 2.1.6.RELEASE (*)
+|    |    |    |    \--- org.springframework.boot:spring-boot-autoconfigure:2.1.3.RELEASE -> 2.1.6.RELEASE (*)
+|    |    |    \--- org.springframework.boot:spring-boot-starter:2.1.3.RELEASE -> 2.1.6.RELEASE (*)
+|    |    +--- com.holon-platform.jaxrs:holon-jaxrs-spring-boot-resteasy:5.2.1
+|    |    |    +--- com.holon-platform.core:holon-spring-boot:5.2.1 (*)
+|    |    |    +--- com.holon-platform.jaxrs:holon-jaxrs-server:5.2.1
+|    |    |    |    +--- com.holon-platform.core:holon-http:5.2.1 (*)
+|    |    |    |    +--- com.holon-platform.core:holon-auth:5.2.1 (*)
+|    |    |    |    \--- com.holon-platform.jaxrs:holon-jaxrs-commons:5.2.1
+|    |    |    |         \--- com.holon-platform.core:holon-core:5.2.1 (*)
+|    |    |    +--- org.springframework:spring-web:5.1.5.RELEASE -> 5.1.8.RELEASE (*)
+|    |    |    +--- org.jboss.resteasy:resteasy-jaxrs:3.6.3.Final
 |    |    |    |    +--- org.jboss.spec.javax.ws.rs:jboss-jaxrs-api_2.1_spec:1.0.2.Final
-|    |    |    |    +--- org.jboss.spec.javax.xml.bind:jboss-jaxb-api_2.3_spec:1.0.0.Final
+|    |    |    |    +--- org.jboss.spec.javax.xml.bind:jboss-jaxb-api_2.3_spec:1.0.1.Final
 |    |    |    |    +--- org.reactivestreams:reactive-streams:1.0.2
-|    |    |    |    +--- javax.validation:validation-api:1.1.0.Final -> 2.0.1.Final
-|    |    |    |    +--- org.jboss.spec.javax.annotation:jboss-annotations-api_1.2_spec:1.0.0.Final -> 1.0.2.Final
+|    |    |    |    +--- javax.validation:validation-api:2.0.1.Final
+|    |    |    |    +--- org.jboss.spec.javax.annotation:jboss-annotations-api_1.3_spec:1.0.1.Final
 |    |    |    |    +--- javax.activation:activation:1.1.1
 |    |    |    |    +--- org.apache.httpcomponents:httpclient:4.5.4 -> 4.5.9
 |    |    |    |    |    +--- org.apache.httpcomponents:httpcore:4.4.11
 |    |    |    |    |    \--- commons-codec:commons-codec:1.11
 |    |    |    |    +--- commons-io:commons-io:2.5
 |    |    |    |    +--- net.jcip:jcip-annotations:1.0
-|    |    |    |    \--- org.jboss.logging:jboss-logging:3.3.1.Final -> 3.3.2.Final
-|    |    |    +--- org.jboss.resteasy:resteasy-jaxb-provider:3.6.2.Final
-|    |    |    |    +--- org.jboss.spec.javax.xml.bind:jboss-jaxb-api_2.3_spec:1.0.0.Final
+|    |    |    |    \--- org.jboss.logging:jboss-logging:3.3.2.Final
+|    |    |    +--- org.jboss.resteasy:resteasy-jaxb-provider:3.6.3.Final
+|    |    |    |    +--- org.jboss.spec.javax.xml.bind:jboss-jaxb-api_2.3_spec:1.0.1.Final
 |    |    |    |    +--- org.glassfish.jaxb:jaxb-runtime:2.3.1
-|    |    |    |    |    +--- javax.xml.bind:jaxb-api:2.3.1 (*)
 |    |    |    |    |    +--- org.glassfish.jaxb:txw2:2.3.1
 |    |    |    |    |    +--- com.sun.istack:istack-commons-runtime:3.0.7
 |    |    |    |    |    +--- org.jvnet.staxex:stax-ex:1.8
 |    |    |    |    |    +--- com.sun.xml.fastinfoset:FastInfoset:1.2.15
 |    |    |    |    |    \--- javax.activation:javax.activation-api:1.2.0
-|    |    |    |    \--- org.jboss.logging:jboss-logging:3.3.1.Final -> 3.3.2.Final
-|    |    |    \--- org.jboss.resteasy:resteasy-spring:3.6.2.Final
-|    |    |         +--- org.jboss.resteasy:resteasy-jaxrs:3.6.2.Final (*)
+|    |    |    |    \--- org.jboss.logging:jboss-logging:3.3.2.Final
+|    |    |    \--- org.jboss.resteasy:resteasy-spring:3.6.3.Final
+|    |    |         +--- org.jboss.resteasy:resteasy-jaxrs:3.6.3.Final (*)
 |    |    |         +--- org.jboss.spec.javax.ws.rs:jboss-jaxrs-api_2.1_spec:1.0.2.Final
-|    |    |         +--- org.jboss.spec.javax.annotation:jboss-annotations-api_1.2_spec:1.0.0.Final -> 1.0.2.Final
+|    |    |         +--- org.jboss.spec.javax.annotation:jboss-annotations-api_1.3_spec:1.0.1.Final
 |    |    |         +--- javax.activation:activation:1.1.1
-|    |    |         \--- org.jboss.logging:jboss-logging:3.3.1.Final -> 3.3.2.Final
-|    |    +--- org.jboss.resteasy:resteasy-jackson2-provider:3.6.2.Final
-|    |    |    \--- com.github.fge:json-patch:1.3
-|    |    |         \--- com.github.fge:jackson-coreutils:1.0
-|    |    |              +--- com.google.guava:guava:14.0 -> 20.0
-|    |    |              \--- net.jcip:jcip-annotations:1.0
-|    |    +--- com.holon-platform.json:holon-jackson-jaxrs:5.2.0
-|    |    |    +--- com.holon-platform.json:holon-jackson:5.2.0
-|    |    |    |    +--- com.holon-platform.json:holon-json:5.2.0 (*)
+|    |    |         \--- org.jboss.logging:jboss-logging:3.3.2.Final
+|    |    +--- org.jboss.resteasy:resteasy-jackson2-provider:3.6.3.Final
+|    |    |    \--- com.github.fge:json-patch:1.9
+|    |    |         \--- com.github.fge:jackson-coreutils:1.6
+|    |    |              +--- com.github.fge:msg-simple:1.1
+|    |    |              |    \--- com.github.fge:btf:1.2
+|    |    |              \--- com.google.guava:guava:16.0.1
+|    |    +--- com.holon-platform.json:holon-jackson-jaxrs:5.2.1
+|    |    |    +--- com.holon-platform.json:holon-jackson:5.2.1
+|    |    |    |    +--- com.holon-platform.json:holon-json:5.2.1 (*)
 |    |    |    |    +--- com.fasterxml.jackson.core:jackson-core:2.9.8 -> 2.9.9
 |    |    |    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.9.8 -> 2.9.0
 |    |    |    |    +--- com.fasterxml.jackson.core:jackson-databind:2.9.8 -> 2.9.9 (*)
-|    |    |    |    \--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.8 -> 2.9.9
+|    |    |    |    \--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.8 -> 2.9.9 (*)
 |    |    |    +--- com.fasterxml.jackson.core:jackson-core:2.9.8 -> 2.9.9
 |    |    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.9.8 -> 2.9.0
 |    |    |    +--- com.fasterxml.jackson.core:jackson-databind:2.9.8 -> 2.9.9 (*)
 |    |    |    \--- com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.9.8 -> 2.9.9 (*)
-|    |    +--- com.holon-platform.json:holon-jackson-spring:5.2.0
-|    |    |    \--- com.holon-platform.json:holon-jackson:5.2.0 (*)
-|    |    +--- org.springframework:spring-web:5.1.4.RELEASE -> 5.1.8.RELEASE (*)
-|    |    +--- org.springframework:spring-core:5.1.4.RELEASE -> 5.1.8.RELEASE (*)
-|    |    +--- org.springframework.boot:spring-boot-starter-validation:2.1.2.RELEASE -> 2.1.6.RELEASE
+|    |    +--- com.holon-platform.json:holon-jackson-spring:5.2.1
+|    |    |    \--- com.holon-platform.json:holon-jackson:5.2.1 (*)
+|    |    +--- org.springframework:spring-web:5.1.5.RELEASE -> 5.1.8.RELEASE (*)
+|    |    +--- org.springframework:spring-core:5.1.5.RELEASE -> 5.1.8.RELEASE (*)
+|    |    +--- org.springframework.boot:spring-boot-starter-validation:2.1.3.RELEASE -> 2.1.6.RELEASE
 |    |    |    +--- org.springframework.boot:spring-boot-starter:2.1.6.RELEASE (*)
-|    |    |    \--- org.hibernate.validator:hibernate-validator:6.0.17.Final
-|    |    |         +--- javax.validation:validation-api:2.0.1.Final
-|    |    |         +--- org.jboss.logging:jboss-logging:3.3.2.Final
-|    |    |         \--- com.fasterxml:classmate:1.3.4 -> 1.4.0
+|    |    |    \--- org.hibernate.validator:hibernate-validator:6.0.17.Final (*)
 |    |    +--- com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.9.8 -> 2.9.9 (*)
 |    |    +--- org.eclipse:yasson:1.0.1
 |    |    |    +--- javax.json.bind:javax.json.bind-api:1.0
@@ -491,7 +629,7 @@ default - Configuration for default artifacts.
 |    |    |         \--- javax.inject:javax.inject:1
 |    |    \--- org.glassfish:javax.json:1.1.2
 |    |         \--- javax.json:javax.json-api:1.1.2 -> 1.1.4
-|    \--- org.springframework.boot:spring-boot-starter-undertow:2.1.2.RELEASE -> 2.1.6.RELEASE
+|    \--- org.springframework.boot:spring-boot-starter-undertow:2.1.3.RELEASE -> 2.1.6.RELEASE
 |         +--- io.undertow:undertow-core:2.0.21.Final
 |         |    +--- org.jboss.logging:jboss-logging:3.4.0.Final -> 3.3.2.Final
 |         |    +--- org.jboss.xnio:xnio-api:3.3.8.Final
@@ -506,36 +644,57 @@ default - Configuration for default artifacts.
 |         |    \--- org.jboss.spec.javax.websocket:jboss-websocket-api_1.1_spec:1.1.4.Final
 |         +--- javax.servlet:javax.servlet-api:4.0.1
 |         \--- org.glassfish:javax.el:3.0.0
-+--- com.h2database:h2:1.4.196
 +--- org.webjars:swagger-ui:3.22.2
 +--- org.projectlombok:lombok:1.18.8
-+--- com.holon-platform.jaxrs:holon-jaxrs-client -> 5.2.0
-|    +--- com.holon-platform.core:holon-async-http:5.2.0
-|    |    \--- com.holon-platform.core:holon-http:5.2.0 (*)
-|    \--- com.holon-platform.jaxrs:holon-jaxrs-commons:5.2.0 (*)
-\--- com.holon-platform.jaxrs:holon-starter-resteasy-client -> 5.2.0
-     +--- com.holon-platform.core:holon-starter:5.2.0 (*)
-     +--- com.holon-platform.json:holon-jackson-jaxrs:5.2.0 (*)
-     +--- com.holon-platform.json:holon-jackson-spring:5.2.0 (*)
-     +--- com.holon-platform.jaxrs:holon-jaxrs-client:5.2.0 (*)
-     +--- org.jboss.resteasy:resteasy-client:3.6.2.Final
++--- com.holon-platform.jdbc:holon-starter-jdbc-datastore-hikaricp -> 5.2.1
+|    +--- com.holon-platform.jdbc:holon-starter-jdbc-hikaricp:5.2.1
+|    |    +--- com.holon-platform.core:holon-starter:5.2.1 (*)
+|    |    +--- com.holon-platform.jdbc:holon-jdbc-spring-boot:5.2.1
+|    |    |    \--- com.holon-platform.jdbc:holon-jdbc-spring:5.2.1
+|    |    |         +--- com.holon-platform.jdbc:holon-jdbc:5.2.1
+|    |    |         \--- org.springframework:spring-jdbc:5.1.5.RELEASE -> 5.1.8.RELEASE (*)
+|    |    \--- com.zaxxer:HikariCP:3.3.1 -> 3.2.0 (*)
+|    \--- com.holon-platform.jdbc:holon-datastore-jdbc-spring-boot:5.2.1
+|         +--- com.holon-platform.jdbc:holon-jdbc-spring-boot:5.2.1 (*)
+|         +--- com.holon-platform.core:holon-spring-boot:5.2.1 (*)
+|         \--- com.holon-platform.jdbc:holon-datastore-jdbc-spring:5.2.1
+|              +--- com.holon-platform.jdbc:holon-jdbc-spring:5.2.1 (*)
+|              +--- com.holon-platform.core:holon-spring:5.2.1 (*)
+|              +--- com.holon-platform.jdbc:holon-datastore-jdbc:5.2.1
+|              |    \--- com.holon-platform.jdbc:holon-datastore-jdbc-composer:5.2.1
+|              |         +--- com.holon-platform.core:holon-core:5.2.1 (*)
+|              |         \--- com.holon-platform.jdbc:holon-jdbc:5.2.1
+|              +--- org.springframework:spring-context:5.1.5.RELEASE -> 5.1.8.RELEASE (*)
+|              \--- net.bytebuddy:byte-buddy:1.9.10 -> 1.9.13
++--- com.h2database:h2:1.4.196
+\--- com.holon-platform.jaxrs:holon-starter-resteasy-client -> 5.2.1
+     +--- com.holon-platform.core:holon-starter:5.2.1 (*)
+     +--- com.holon-platform.json:holon-jackson-jaxrs:5.2.1 (*)
+     +--- com.holon-platform.json:holon-jackson-spring:5.2.1 (*)
+     +--- com.holon-platform.jaxrs:holon-jaxrs-client:5.2.1
+     |    +--- com.holon-platform.core:holon-async-http:5.2.1
+     |    |    \--- com.holon-platform.core:holon-http:5.2.1 (*)
+     |    \--- com.holon-platform.jaxrs:holon-jaxrs-commons:5.2.1 (*)
+     +--- org.jboss.resteasy:resteasy-client:3.6.3.Final
      |    +--- org.jboss.spec.javax.ws.rs:jboss-jaxrs-api_2.1_spec:1.0.2.Final
-     |    +--- org.jboss.resteasy:resteasy-jaxrs:3.6.2.Final (*)
-     |    +--- org.jboss.logging:jboss-logging:3.3.1.Final -> 3.3.2.Final
+     |    +--- org.jboss.resteasy:resteasy-jaxrs:3.6.3.Final (*)
+     |    +--- org.jboss.logging:jboss-logging:3.3.2.Final
      |    \--- org.apache.httpcomponents:httpclient:4.5.4 -> 4.5.9 (*)
-     +--- org.jboss.resteasy:resteasy-jackson2-provider:3.6.2.Final (*)
+     +--- org.jboss.resteasy:resteasy-jackson2-provider:3.6.3.Final (*)
      \--- com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.9.8 -> 2.9.9 (*)
 
 implementation - Implementation only dependencies for source set 'main'. (n)
-+--- com.holon-platform:bom:5.2.0 (n)
++--- org.springframework.boot:spring-boot-starter-actuator (n)
++--- org.springframework.boot:spring-boot-starter-web (n)
++--- com.holon-platform:bom:5.2.3 (n)
++--- org.springframework.boot:spring-boot-starter-data-jpa (n)
 +--- com.holon-platform.core:holon-auth-jwt (n)
-+--- com.holon-platform.jdbc:holon-starter-jdbc-datastore-hikaricp (n)
 +--- com.holon-platform.jaxrs:holon-jaxrs-swagger-v3 (n)
 +--- com.holon-platform.jaxrs:holon-starter-resteasy-undertow (n)
-+--- com.h2database:h2:1.4.196 (n)
 +--- org.webjars:swagger-ui:3.22.2 (n)
 +--- org.projectlombok:lombok:1.18.8 (n)
-+--- com.holon-platform.jaxrs:holon-jaxrs-client (n)
++--- com.holon-platform.jdbc:holon-starter-jdbc-datastore-hikaricp (n)
++--- com.h2database:h2:1.4.196 (n)
 \--- com.holon-platform.jaxrs:holon-starter-resteasy-client (n)
 
 providedCompile - Additional compile classpath for libraries that should not be part of the WAR archive.
@@ -548,135 +707,190 @@ runtime - Runtime dependencies for source set 'main' (deprecated, use 'runtimeOn
 No dependencies
 
 runtimeClasspath - Runtime classpath of source set 'main'.
-+--- com.holon-platform:bom:5.2.0
-|    +--- com.holon-platform.core:holon-auth-jwt:5.2.0 (c)
-|    +--- com.holon-platform.jaxrs:holon-jaxrs-client:5.2.0 (c)
-|    +--- com.holon-platform.jaxrs:holon-jaxrs-swagger-v3:5.2.0 (c)
-|    +--- com.holon-platform.jaxrs:holon-starter-resteasy-undertow:5.2.0 (c)
-|    +--- com.holon-platform.jaxrs:holon-starter-resteasy-client:5.2.0 (c)
-|    +--- com.holon-platform.jdbc:holon-starter-jdbc-datastore-hikaricp:5.2.0 (c)
-|    +--- com.holon-platform.core:holon-auth:5.2.0 (c)
-|    +--- com.holon-platform.jaxrs:holon-jaxrs-commons:5.2.0 (c)
-|    +--- com.holon-platform.jaxrs:holon-starter-resteasy:5.2.0 (c)
-|    +--- com.holon-platform.core:holon-starter:5.2.0 (c)
-|    +--- com.holon-platform.json:holon-jackson-jaxrs:5.2.0 (c)
-|    +--- com.holon-platform.json:holon-jackson-spring:5.2.0 (c)
-|    +--- com.holon-platform.jdbc:holon-starter-jdbc-hikaricp:5.2.0 (c)
-|    +--- com.holon-platform.jdbc:holon-datastore-jdbc-spring-boot:5.2.0 (c)
-|    +--- com.holon-platform.core:holon-http:5.2.0 (c)
-|    +--- com.holon-platform.core:holon-core:5.2.0 (c)
-|    +--- com.holon-platform.jaxrs:holon-jaxrs-spring-boot-resteasy:5.2.0 (c)
-|    +--- com.holon-platform.core:holon-spring-boot:5.2.0 (c)
-|    +--- com.holon-platform.json:holon-jackson:5.2.0 (c)
-|    +--- com.holon-platform.jdbc:holon-jdbc-spring-boot:5.2.0 (c)
-|    +--- com.holon-platform.jdbc:holon-datastore-jdbc-spring:5.2.0 (c)
-|    +--- com.holon-platform.jaxrs:holon-jaxrs-server:5.2.0 (c)
-|    +--- com.holon-platform.core:holon-spring:5.2.0 (c)
-|    +--- com.holon-platform.jdbc:holon-jdbc-spring:5.2.0 (c)
-|    +--- com.holon-platform.jdbc:holon-datastore-jdbc:5.2.0 (c)
++--- org.springframework.boot:spring-boot-starter-actuator -> 2.1.6.RELEASE
+|    +--- org.springframework.boot:spring-boot-starter:2.1.6.RELEASE
+|    |    +--- org.springframework.boot:spring-boot:2.1.6.RELEASE
+|    |    |    +--- org.springframework:spring-core:5.1.8.RELEASE
+|    |    |    |    \--- org.springframework:spring-jcl:5.1.8.RELEASE
+|    |    |    \--- org.springframework:spring-context:5.1.8.RELEASE
+|    |    |         +--- org.springframework:spring-aop:5.1.8.RELEASE
+|    |    |         |    +--- org.springframework:spring-beans:5.1.8.RELEASE
+|    |    |         |    |    \--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    |         |    \--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    |         +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|    |    |         +--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    |         \--- org.springframework:spring-expression:5.1.8.RELEASE
+|    |    |              \--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    +--- org.springframework.boot:spring-boot-autoconfigure:2.1.6.RELEASE
+|    |    |    \--- org.springframework.boot:spring-boot:2.1.6.RELEASE (*)
+|    |    +--- org.springframework.boot:spring-boot-starter-logging:2.1.6.RELEASE
+|    |    |    +--- ch.qos.logback:logback-classic:1.2.3
+|    |    |    |    +--- ch.qos.logback:logback-core:1.2.3
+|    |    |    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.26
+|    |    |    +--- org.apache.logging.log4j:log4j-to-slf4j:2.11.2
+|    |    |    |    +--- org.slf4j:slf4j-api:1.7.25 -> 1.7.26
+|    |    |    |    \--- org.apache.logging.log4j:log4j-api:2.11.2
+|    |    |    \--- org.slf4j:jul-to-slf4j:1.7.26
+|    |    |         \--- org.slf4j:slf4j-api:1.7.26
+|    |    +--- javax.annotation:javax.annotation-api:1.3.2
+|    |    +--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    \--- org.yaml:snakeyaml:1.23
+|    +--- org.springframework.boot:spring-boot-actuator-autoconfigure:2.1.6.RELEASE
+|    |    +--- org.springframework.boot:spring-boot-actuator:2.1.6.RELEASE
+|    |    |    \--- org.springframework.boot:spring-boot:2.1.6.RELEASE (*)
+|    |    +--- org.springframework.boot:spring-boot-autoconfigure:2.1.6.RELEASE (*)
+|    |    +--- com.fasterxml.jackson.core:jackson-databind:2.9.9
+|    |    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.9.0
+|    |    |    \--- com.fasterxml.jackson.core:jackson-core:2.9.9
+|    |    +--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    +--- org.springframework:spring-context:5.1.8.RELEASE (*)
+|    |    \--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.9
+|    |         +--- com.fasterxml.jackson.core:jackson-annotations:2.9.0
+|    |         +--- com.fasterxml.jackson.core:jackson-core:2.9.9
+|    |         \--- com.fasterxml.jackson.core:jackson-databind:2.9.9 (*)
+|    \--- io.micrometer:micrometer-core:1.1.5
+|         +--- org.hdrhistogram:HdrHistogram:2.1.9
+|         \--- org.latencyutils:LatencyUtils:2.0.3
++--- org.springframework.boot:spring-boot-starter-web -> 2.1.6.RELEASE
+|    +--- org.springframework.boot:spring-boot-starter:2.1.6.RELEASE (*)
+|    +--- org.springframework.boot:spring-boot-starter-json:2.1.6.RELEASE
+|    |    +--- org.springframework.boot:spring-boot-starter:2.1.6.RELEASE (*)
+|    |    +--- org.springframework:spring-web:5.1.8.RELEASE
+|    |    |    +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|    |    |    \--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    +--- com.fasterxml.jackson.core:jackson-databind:2.9.9 (*)
+|    |    +--- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.9.9
+|    |    |    +--- com.fasterxml.jackson.core:jackson-core:2.9.9
+|    |    |    \--- com.fasterxml.jackson.core:jackson-databind:2.9.9 (*)
+|    |    +--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.9 (*)
+|    |    \--- com.fasterxml.jackson.module:jackson-module-parameter-names:2.9.9
+|    |         +--- com.fasterxml.jackson.core:jackson-core:2.9.9
+|    |         \--- com.fasterxml.jackson.core:jackson-databind:2.9.9 (*)
+|    +--- org.hibernate.validator:hibernate-validator:6.0.17.Final
+|    |    +--- javax.validation:validation-api:2.0.1.Final
+|    |    +--- org.jboss.logging:jboss-logging:3.3.2.Final
+|    |    \--- com.fasterxml:classmate:1.3.4 -> 1.4.0
+|    +--- org.springframework:spring-web:5.1.8.RELEASE (*)
+|    \--- org.springframework:spring-webmvc:5.1.8.RELEASE
+|         +--- org.springframework:spring-aop:5.1.8.RELEASE (*)
+|         +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|         +--- org.springframework:spring-context:5.1.8.RELEASE (*)
+|         +--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|         +--- org.springframework:spring-expression:5.1.8.RELEASE (*)
+|         \--- org.springframework:spring-web:5.1.8.RELEASE (*)
++--- com.holon-platform:bom:5.2.3
+|    +--- com.holon-platform.core:holon-auth-jwt:5.2.1 (c)
+|    +--- com.holon-platform.jaxrs:holon-jaxrs-swagger-v3:5.2.1 (c)
+|    +--- com.holon-platform.jaxrs:holon-starter-resteasy-undertow:5.2.1 (c)
+|    +--- com.holon-platform.jaxrs:holon-starter-resteasy-client:5.2.1 (c)
+|    +--- com.holon-platform.jdbc:holon-starter-jdbc-datastore-hikaricp:5.2.1 (c)
+|    +--- com.holon-platform.core:holon-auth:5.2.1 (c)
+|    +--- com.holon-platform.jaxrs:holon-starter-resteasy:5.2.1 (c)
+|    +--- com.holon-platform.core:holon-starter:5.2.1 (c)
+|    +--- com.holon-platform.json:holon-jackson-jaxrs:5.2.1 (c)
+|    +--- com.holon-platform.json:holon-jackson-spring:5.2.1 (c)
+|    +--- com.holon-platform.jaxrs:holon-jaxrs-client:5.2.1 (c)
+|    +--- com.holon-platform.jdbc:holon-starter-jdbc-hikaricp:5.2.1 (c)
+|    +--- com.holon-platform.jdbc:holon-datastore-jdbc-spring-boot:5.2.1 (c)
 |    +--- ch.qos.logback:logback-classic:1.2.3 (c)
-|    \--- com.holon-platform.jdbc:holon-jdbc:5.2.0 (c)
-+--- com.holon-platform.core:holon-auth-jwt -> 5.2.0
-|    +--- com.holon-platform.core:holon-auth:5.2.0
-|    |    \--- com.holon-platform.core:holon-http:5.2.0
-|    |         \--- com.holon-platform.core:holon-core:5.2.0
+|    +--- com.holon-platform.core:holon-http:5.2.1 (c)
+|    +--- com.holon-platform.core:holon-core:5.2.1 (c)
+|    +--- com.holon-platform.jaxrs:holon-jaxrs-spring-boot-resteasy:5.2.1 (c)
+|    +--- com.holon-platform.core:holon-spring-boot:5.2.1 (c)
+|    +--- com.holon-platform.json:holon-jackson:5.2.1 (c)
+|    +--- com.holon-platform.jaxrs:holon-jaxrs-commons:5.2.1 (c)
+|    +--- com.holon-platform.jdbc:holon-jdbc-spring-boot:5.2.1 (c)
+|    +--- com.holon-platform.jdbc:holon-datastore-jdbc-spring:5.2.1 (c)
+|    +--- com.holon-platform.jaxrs:holon-jaxrs-server:5.2.1 (c)
+|    +--- com.holon-platform.core:holon-spring:5.2.1 (c)
+|    +--- com.holon-platform.jdbc:holon-jdbc-spring:5.2.1 (c)
+|    +--- com.holon-platform.jdbc:holon-datastore-jdbc:5.2.1 (c)
+|    \--- com.holon-platform.jdbc:holon-jdbc:5.2.1 (c)
++--- org.springframework.boot:spring-boot-starter-data-jpa -> 2.1.6.RELEASE
+|    +--- org.springframework.boot:spring-boot-starter-aop:2.1.6.RELEASE
+|    |    +--- org.springframework.boot:spring-boot-starter:2.1.6.RELEASE (*)
+|    |    +--- org.springframework:spring-aop:5.1.8.RELEASE (*)
+|    |    \--- org.aspectj:aspectjweaver:1.9.4
+|    +--- org.springframework.boot:spring-boot-starter-jdbc:2.1.6.RELEASE
+|    |    +--- org.springframework.boot:spring-boot-starter:2.1.6.RELEASE (*)
+|    |    +--- com.zaxxer:HikariCP:3.2.0
+|    |    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.26
+|    |    \--- org.springframework:spring-jdbc:5.1.8.RELEASE
+|    |         +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|    |         +--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |         \--- org.springframework:spring-tx:5.1.8.RELEASE
+|    |              +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|    |              \--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    +--- javax.transaction:javax.transaction-api:1.3
+|    +--- javax.xml.bind:jaxb-api:2.3.1
+|    |    \--- javax.activation:javax.activation-api:1.2.0
+|    +--- org.hibernate:hibernate-core:5.3.10.Final
+|    |    +--- org.jboss.logging:jboss-logging:3.3.2.Final
+|    |    +--- javax.persistence:javax.persistence-api:2.2
+|    |    +--- org.javassist:javassist:3.23.2-GA
+|    |    +--- net.bytebuddy:byte-buddy:1.9.5 -> 1.9.13
+|    |    +--- antlr:antlr:2.7.7
+|    |    +--- org.jboss:jandex:2.0.5.Final
+|    |    +--- com.fasterxml:classmate:1.3.4 -> 1.4.0
+|    |    +--- javax.activation:javax.activation-api:1.2.0
+|    |    +--- org.dom4j:dom4j:2.1.1
+|    |    \--- org.hibernate.common:hibernate-commons-annotations:5.0.4.Final
+|    |         \--- org.jboss.logging:jboss-logging:3.3.1.Final -> 3.3.2.Final
+|    +--- org.springframework.data:spring-data-jpa:2.1.9.RELEASE
+|    |    +--- org.springframework.data:spring-data-commons:2.1.9.RELEASE
+|    |    |    +--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    |    +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|    |    |    \--- org.slf4j:slf4j-api:1.7.26
+|    |    +--- org.springframework:spring-orm:5.1.8.RELEASE
+|    |    |    +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|    |    |    +--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    |    +--- org.springframework:spring-jdbc:5.1.8.RELEASE (*)
+|    |    |    \--- org.springframework:spring-tx:5.1.8.RELEASE (*)
+|    |    +--- org.springframework:spring-context:5.1.8.RELEASE (*)
+|    |    +--- org.springframework:spring-aop:5.1.8.RELEASE (*)
+|    |    +--- org.springframework:spring-tx:5.1.8.RELEASE (*)
+|    |    +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|    |    +--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    \--- org.slf4j:slf4j-api:1.7.26
+|    \--- org.springframework:spring-aspects:5.1.8.RELEASE
+|         \--- org.aspectj:aspectjweaver:1.9.3 -> 1.9.4
++--- com.holon-platform.core:holon-auth-jwt -> 5.2.1
+|    +--- com.holon-platform.core:holon-auth:5.2.1
+|    |    \--- com.holon-platform.core:holon-http:5.2.1
+|    |         \--- com.holon-platform.core:holon-core:5.2.1
 |    |              +--- org.apache.commons:commons-lang3:3.8.1
 |    |              \--- javax.annotation:javax.annotation-api:1.3.2
-|    \--- io.jsonwebtoken:jjwt:0.9.1
-+--- com.holon-platform.jdbc:holon-starter-jdbc-datastore-hikaricp -> 5.2.0
-|    +--- com.holon-platform.jdbc:holon-starter-jdbc-hikaricp:5.2.0
-|    |    +--- com.holon-platform.core:holon-starter:5.2.0
-|    |    |    +--- com.holon-platform.core:holon-spring-boot:5.2.0
-|    |    |    |    +--- com.holon-platform.core:holon-spring:5.2.0
-|    |    |    |    |    +--- com.holon-platform.core:holon-http:5.2.0 (*)
-|    |    |    |    |    +--- org.springframework:spring-context:5.1.4.RELEASE -> 5.1.8.RELEASE
-|    |    |    |    |    |    +--- org.springframework:spring-aop:5.1.8.RELEASE
-|    |    |    |    |    |    |    +--- org.springframework:spring-beans:5.1.8.RELEASE
-|    |    |    |    |    |    |    |    \--- org.springframework:spring-core:5.1.8.RELEASE
-|    |    |    |    |    |    |    |         \--- org.springframework:spring-jcl:5.1.8.RELEASE
-|    |    |    |    |    |    |    \--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    |    |    |    |    +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
-|    |    |    |    |    |    +--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    |    |    |    |    \--- org.springframework:spring-expression:5.1.8.RELEASE
-|    |    |    |    |    |         \--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    |    |    |    \--- org.springframework:spring-context-support:5.1.4.RELEASE -> 5.1.8.RELEASE
-|    |    |    |    |         +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
-|    |    |    |    |         +--- org.springframework:spring-context:5.1.8.RELEASE (*)
-|    |    |    |    |         \--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    |    |    +--- com.holon-platform.core:holon-auth:5.2.0 (*)
-|    |    |    |    +--- org.springframework.boot:spring-boot:2.1.2.RELEASE -> 2.1.6.RELEASE
-|    |    |    |    |    +--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    |    |    |    \--- org.springframework:spring-context:5.1.8.RELEASE (*)
-|    |    |    |    \--- org.springframework.boot:spring-boot-autoconfigure:2.1.2.RELEASE -> 2.1.6.RELEASE
-|    |    |    |         \--- org.springframework.boot:spring-boot:2.1.6.RELEASE (*)
-|    |    |    \--- org.springframework.boot:spring-boot-starter:2.1.2.RELEASE -> 2.1.6.RELEASE
-|    |    |         +--- org.springframework.boot:spring-boot:2.1.6.RELEASE (*)
-|    |    |         +--- org.springframework.boot:spring-boot-autoconfigure:2.1.6.RELEASE (*)
-|    |    |         +--- org.springframework.boot:spring-boot-starter-logging:2.1.6.RELEASE
-|    |    |         |    +--- ch.qos.logback:logback-classic:1.2.3
-|    |    |         |    |    +--- ch.qos.logback:logback-core:1.2.3
-|    |    |         |    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.26
-|    |    |         |    +--- org.apache.logging.log4j:log4j-to-slf4j:2.11.2
-|    |    |         |    |    +--- org.slf4j:slf4j-api:1.7.25 -> 1.7.26
-|    |    |         |    |    \--- org.apache.logging.log4j:log4j-api:2.11.2
-|    |    |         |    \--- org.slf4j:jul-to-slf4j:1.7.26
-|    |    |         |         \--- org.slf4j:slf4j-api:1.7.26
-|    |    |         +--- javax.annotation:javax.annotation-api:1.3.2
-|    |    |         +--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    |         \--- org.yaml:snakeyaml:1.23
-|    |    +--- com.holon-platform.jdbc:holon-jdbc-spring-boot:5.2.0
-|    |    |    \--- com.holon-platform.jdbc:holon-jdbc-spring:5.2.0
-|    |    |         +--- com.holon-platform.jdbc:holon-jdbc:5.2.0
-|    |    |         \--- org.springframework:spring-jdbc:5.1.4.RELEASE -> 5.1.8.RELEASE
-|    |    |              +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
-|    |    |              +--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    |              \--- org.springframework:spring-tx:5.1.8.RELEASE
-|    |    |                   +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
-|    |    |                   \--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    \--- com.zaxxer:HikariCP:3.3.0 -> 3.2.0
-|    \--- com.holon-platform.jdbc:holon-datastore-jdbc-spring-boot:5.2.0
-|         +--- com.holon-platform.jdbc:holon-jdbc-spring-boot:5.2.0 (*)
-|         +--- com.holon-platform.core:holon-spring-boot:5.2.0 (*)
-|         \--- com.holon-platform.jdbc:holon-datastore-jdbc-spring:5.2.0
-|              +--- com.holon-platform.jdbc:holon-jdbc-spring:5.2.0 (*)
-|              +--- com.holon-platform.core:holon-spring:5.2.0 (*)
-|              +--- com.holon-platform.jdbc:holon-datastore-jdbc:5.2.0
-|              |    \--- com.holon-platform.jdbc:holon-datastore-jdbc-composer:5.2.0
-|              |         +--- com.holon-platform.core:holon-core:5.2.0 (*)
-|              |         \--- com.holon-platform.jdbc:holon-jdbc:5.2.0
-|              +--- org.springframework:spring-context:5.1.4.RELEASE -> 5.1.8.RELEASE (*)
-|              \--- net.bytebuddy:byte-buddy:1.9.7 -> 1.9.13
-+--- com.holon-platform.jaxrs:holon-jaxrs-swagger-v3 -> 5.2.0
-|    +--- com.holon-platform.jaxrs:holon-jaxrs-swagger-core:5.2.0
-|    |    +--- com.holon-platform.core:holon-core:5.2.0 (*)
-|    |    +--- com.holon-platform.json:holon-json:5.2.0
-|    |    |    \--- com.holon-platform.core:holon-core:5.2.0 (*)
-|    |    \--- net.bytebuddy:byte-buddy:1.9.7 -> 1.9.13
-|    +--- com.holon-platform.core:holon-auth:5.2.0 (*)
-|    +--- com.holon-platform.json:holon-json:5.2.0 (*)
-|    +--- io.swagger.core.v3:swagger-jaxrs2:2.0.6
-|    |    +--- org.reflections:reflections:0.9.11
-|    |    |    +--- com.google.guava:guava:20.0
-|    |    |    \--- org.javassist:javassist:3.21.0-GA -> 3.22.0-GA
-|    |    +--- org.javassist:javassist:3.22.0-GA
-|    |    +--- io.swagger.core.v3:swagger-models:2.0.6
-|    |    +--- io.swagger.core.v3:swagger-annotations:2.0.6
-|    |    +--- io.swagger.core.v3:swagger-integration:2.0.6
-|    |    |    +--- org.reflections:reflections:0.9.11 (*)
-|    |    |    +--- io.swagger.core.v3:swagger-core:2.0.6
-|    |    |    |    +--- javax.xml.bind:jaxb-api:2.3.0 -> 2.3.1
-|    |    |    |    |    \--- javax.activation:javax.activation-api:1.2.0
+|    +--- io.jsonwebtoken:jjwt-api:0.10.6
+|    +--- io.jsonwebtoken:jjwt-impl:0.10.6
+|    |    \--- io.jsonwebtoken:jjwt-api:0.10.6
+|    \--- io.jsonwebtoken:jjwt-jackson:0.10.6
+|         \--- io.jsonwebtoken:jjwt-api:0.10.6
++--- com.holon-platform.jaxrs:holon-jaxrs-swagger-v3 -> 5.2.1
+|    +--- com.holon-platform.jaxrs:holon-jaxrs-swagger-core:5.2.1
+|    |    +--- com.holon-platform.core:holon-core:5.2.1 (*)
+|    |    +--- com.holon-platform.json:holon-json:5.2.1
+|    |    |    \--- com.holon-platform.core:holon-core:5.2.1 (*)
+|    |    \--- net.bytebuddy:byte-buddy:1.9.10 -> 1.9.13
+|    +--- com.holon-platform.core:holon-auth:5.2.1 (*)
+|    +--- com.holon-platform.json:holon-json:5.2.1 (*)
+|    +--- io.swagger.core.v3:swagger-jaxrs2:2.0.7
+|    |    +--- io.github.classgraph:classgraph:4.6.32
+|    |    +--- org.javassist:javassist:3.22.0-GA -> 3.23.2-GA
+|    |    +--- io.swagger.core.v3:swagger-models:2.0.7
+|    |    +--- io.swagger.core.v3:swagger-annotations:2.0.7
+|    |    +--- io.swagger.core.v3:swagger-integration:2.0.7
+|    |    |    +--- io.github.classgraph:classgraph:4.6.32
+|    |    |    +--- io.swagger.core.v3:swagger-core:2.0.7
+|    |    |    |    +--- javax.xml.bind:jaxb-api:2.3.0 -> 2.3.1 (*)
 |    |    |    |    +--- org.slf4j:slf4j-api:1.7.25 -> 1.7.26
-|    |    |    |    +--- io.swagger.core.v3:swagger-annotations:2.0.6
-|    |    |    |    +--- io.swagger.core.v3:swagger-models:2.0.6
+|    |    |    |    +--- io.swagger.core.v3:swagger-annotations:2.0.7
+|    |    |    |    +--- io.swagger.core.v3:swagger-models:2.0.7
 |    |    |    |    \--- javax.validation:validation-api:1.1.0.Final -> 2.0.1.Final
-|    |    |    \--- io.swagger.core.v3:swagger-models:2.0.6
-|    |    \--- com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.9.5 -> 2.9.9
+|    |    |    \--- io.swagger.core.v3:swagger-models:2.0.7
+|    |    \--- com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.9.8 -> 2.9.9
 |    |         +--- com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:2.9.9
 |    |         |    +--- com.fasterxml.jackson.core:jackson-core:2.9.9
-|    |         |    \--- com.fasterxml.jackson.core:jackson-databind:2.9.9
-|    |         |         +--- com.fasterxml.jackson.core:jackson-annotations:2.9.0
-|    |         |         \--- com.fasterxml.jackson.core:jackson-core:2.9.9
+|    |         |    \--- com.fasterxml.jackson.core:jackson-databind:2.9.9 (*)
 |    |         \--- com.fasterxml.jackson.module:jackson-module-jaxb-annotations:2.9.9
 |    |              +--- com.fasterxml.jackson.core:jackson-annotations:2.9.0
 |    |              +--- com.fasterxml.jackson.core:jackson-core:2.9.9
@@ -687,74 +901,81 @@ runtimeClasspath - Runtime classpath of source set 'main'.
 |    \--- com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.9.8 -> 2.9.9
 |         +--- org.yaml:snakeyaml:1.23
 |         \--- com.fasterxml.jackson.core:jackson-core:2.9.9
-+--- com.holon-platform.jaxrs:holon-starter-resteasy-undertow -> 5.2.0
-|    +--- com.holon-platform.jaxrs:holon-starter-resteasy:5.2.0
-|    |    +--- com.holon-platform.core:holon-starter:5.2.0 (*)
-|    |    +--- com.holon-platform.jaxrs:holon-jaxrs-spring-boot-resteasy:5.2.0
-|    |    |    +--- com.holon-platform.core:holon-spring-boot:5.2.0 (*)
-|    |    |    +--- com.holon-platform.jaxrs:holon-jaxrs-server:5.2.0
-|    |    |    |    +--- com.holon-platform.core:holon-http:5.2.0 (*)
-|    |    |    |    +--- com.holon-platform.core:holon-auth:5.2.0 (*)
-|    |    |    |    \--- com.holon-platform.jaxrs:holon-jaxrs-commons:5.2.0
-|    |    |    |         \--- com.holon-platform.core:holon-core:5.2.0 (*)
-|    |    |    +--- org.springframework:spring-web:5.1.4.RELEASE -> 5.1.8.RELEASE
-|    |    |    |    +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
-|    |    |    |    \--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    |    +--- org.jboss.resteasy:resteasy-jaxrs:3.6.2.Final
++--- com.holon-platform.jaxrs:holon-starter-resteasy-undertow -> 5.2.1
+|    +--- com.holon-platform.jaxrs:holon-starter-resteasy:5.2.1
+|    |    +--- com.holon-platform.core:holon-starter:5.2.1
+|    |    |    +--- com.holon-platform.core:holon-spring-boot:5.2.1
+|    |    |    |    +--- com.holon-platform.core:holon-spring:5.2.1
+|    |    |    |    |    +--- com.holon-platform.core:holon-http:5.2.1 (*)
+|    |    |    |    |    +--- org.springframework:spring-context:5.1.5.RELEASE -> 5.1.8.RELEASE (*)
+|    |    |    |    |    \--- org.springframework:spring-context-support:5.1.5.RELEASE -> 5.1.8.RELEASE
+|    |    |    |    |         +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|    |    |    |    |         +--- org.springframework:spring-context:5.1.8.RELEASE (*)
+|    |    |    |    |         \--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    |    |    +--- com.holon-platform.core:holon-auth:5.2.1 (*)
+|    |    |    |    +--- org.springframework.boot:spring-boot:2.1.3.RELEASE -> 2.1.6.RELEASE (*)
+|    |    |    |    \--- org.springframework.boot:spring-boot-autoconfigure:2.1.3.RELEASE -> 2.1.6.RELEASE (*)
+|    |    |    \--- org.springframework.boot:spring-boot-starter:2.1.3.RELEASE -> 2.1.6.RELEASE (*)
+|    |    +--- com.holon-platform.jaxrs:holon-jaxrs-spring-boot-resteasy:5.2.1
+|    |    |    +--- com.holon-platform.core:holon-spring-boot:5.2.1 (*)
+|    |    |    +--- com.holon-platform.jaxrs:holon-jaxrs-server:5.2.1
+|    |    |    |    +--- com.holon-platform.core:holon-http:5.2.1 (*)
+|    |    |    |    +--- com.holon-platform.core:holon-auth:5.2.1 (*)
+|    |    |    |    \--- com.holon-platform.jaxrs:holon-jaxrs-commons:5.2.1
+|    |    |    |         \--- com.holon-platform.core:holon-core:5.2.1 (*)
+|    |    |    +--- org.springframework:spring-web:5.1.5.RELEASE -> 5.1.8.RELEASE (*)
+|    |    |    +--- org.jboss.resteasy:resteasy-jaxrs:3.6.3.Final
 |    |    |    |    +--- org.jboss.spec.javax.ws.rs:jboss-jaxrs-api_2.1_spec:1.0.2.Final
-|    |    |    |    +--- org.jboss.spec.javax.xml.bind:jboss-jaxb-api_2.3_spec:1.0.0.Final
+|    |    |    |    +--- org.jboss.spec.javax.xml.bind:jboss-jaxb-api_2.3_spec:1.0.1.Final
 |    |    |    |    +--- org.reactivestreams:reactive-streams:1.0.2
-|    |    |    |    +--- javax.validation:validation-api:1.1.0.Final -> 2.0.1.Final
-|    |    |    |    +--- org.jboss.spec.javax.annotation:jboss-annotations-api_1.2_spec:1.0.0.Final -> 1.0.2.Final
+|    |    |    |    +--- javax.validation:validation-api:2.0.1.Final
+|    |    |    |    +--- org.jboss.spec.javax.annotation:jboss-annotations-api_1.3_spec:1.0.1.Final
 |    |    |    |    +--- javax.activation:activation:1.1.1
 |    |    |    |    +--- org.apache.httpcomponents:httpclient:4.5.4 -> 4.5.9
 |    |    |    |    |    +--- org.apache.httpcomponents:httpcore:4.4.11
 |    |    |    |    |    \--- commons-codec:commons-codec:1.11
 |    |    |    |    +--- commons-io:commons-io:2.5
 |    |    |    |    +--- net.jcip:jcip-annotations:1.0
-|    |    |    |    \--- org.jboss.logging:jboss-logging:3.3.1.Final -> 3.3.2.Final
-|    |    |    +--- org.jboss.resteasy:resteasy-jaxb-provider:3.6.2.Final
-|    |    |    |    +--- org.jboss.spec.javax.xml.bind:jboss-jaxb-api_2.3_spec:1.0.0.Final
+|    |    |    |    \--- org.jboss.logging:jboss-logging:3.3.2.Final
+|    |    |    +--- org.jboss.resteasy:resteasy-jaxb-provider:3.6.3.Final
+|    |    |    |    +--- org.jboss.spec.javax.xml.bind:jboss-jaxb-api_2.3_spec:1.0.1.Final
 |    |    |    |    +--- org.glassfish.jaxb:jaxb-runtime:2.3.1
-|    |    |    |    |    +--- javax.xml.bind:jaxb-api:2.3.1 (*)
 |    |    |    |    |    +--- org.glassfish.jaxb:txw2:2.3.1
 |    |    |    |    |    +--- com.sun.istack:istack-commons-runtime:3.0.7
 |    |    |    |    |    +--- org.jvnet.staxex:stax-ex:1.8
 |    |    |    |    |    +--- com.sun.xml.fastinfoset:FastInfoset:1.2.15
 |    |    |    |    |    \--- javax.activation:javax.activation-api:1.2.0
-|    |    |    |    \--- org.jboss.logging:jboss-logging:3.3.1.Final -> 3.3.2.Final
-|    |    |    \--- org.jboss.resteasy:resteasy-spring:3.6.2.Final
-|    |    |         +--- org.jboss.resteasy:resteasy-jaxrs:3.6.2.Final (*)
+|    |    |    |    \--- org.jboss.logging:jboss-logging:3.3.2.Final
+|    |    |    \--- org.jboss.resteasy:resteasy-spring:3.6.3.Final
+|    |    |         +--- org.jboss.resteasy:resteasy-jaxrs:3.6.3.Final (*)
 |    |    |         +--- org.jboss.spec.javax.ws.rs:jboss-jaxrs-api_2.1_spec:1.0.2.Final
-|    |    |         +--- org.jboss.spec.javax.annotation:jboss-annotations-api_1.2_spec:1.0.0.Final -> 1.0.2.Final
+|    |    |         +--- org.jboss.spec.javax.annotation:jboss-annotations-api_1.3_spec:1.0.1.Final
 |    |    |         +--- javax.activation:activation:1.1.1
-|    |    |         \--- org.jboss.logging:jboss-logging:3.3.1.Final -> 3.3.2.Final
-|    |    +--- org.jboss.resteasy:resteasy-jackson2-provider:3.6.2.Final
-|    |    |    \--- com.github.fge:json-patch:1.3
-|    |    |         \--- com.github.fge:jackson-coreutils:1.0
-|    |    |              +--- com.google.guava:guava:14.0 -> 20.0
-|    |    |              \--- net.jcip:jcip-annotations:1.0
-|    |    +--- com.holon-platform.json:holon-jackson-jaxrs:5.2.0
-|    |    |    +--- com.holon-platform.json:holon-jackson:5.2.0
-|    |    |    |    +--- com.holon-platform.json:holon-json:5.2.0 (*)
+|    |    |         \--- org.jboss.logging:jboss-logging:3.3.2.Final
+|    |    +--- org.jboss.resteasy:resteasy-jackson2-provider:3.6.3.Final
+|    |    |    \--- com.github.fge:json-patch:1.9
+|    |    |         \--- com.github.fge:jackson-coreutils:1.6
+|    |    |              +--- com.github.fge:msg-simple:1.1
+|    |    |              |    \--- com.github.fge:btf:1.2
+|    |    |              \--- com.google.guava:guava:16.0.1
+|    |    +--- com.holon-platform.json:holon-jackson-jaxrs:5.2.1
+|    |    |    +--- com.holon-platform.json:holon-jackson:5.2.1
+|    |    |    |    +--- com.holon-platform.json:holon-json:5.2.1 (*)
 |    |    |    |    +--- com.fasterxml.jackson.core:jackson-core:2.9.8 -> 2.9.9
 |    |    |    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.9.8 -> 2.9.0
 |    |    |    |    +--- com.fasterxml.jackson.core:jackson-databind:2.9.8 -> 2.9.9 (*)
-|    |    |    |    \--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.8 -> 2.9.9
+|    |    |    |    \--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.8 -> 2.9.9 (*)
 |    |    |    +--- com.fasterxml.jackson.core:jackson-core:2.9.8 -> 2.9.9
 |    |    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.9.8 -> 2.9.0
 |    |    |    +--- com.fasterxml.jackson.core:jackson-databind:2.9.8 -> 2.9.9 (*)
 |    |    |    \--- com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.9.8 -> 2.9.9 (*)
-|    |    +--- com.holon-platform.json:holon-jackson-spring:5.2.0
-|    |    |    \--- com.holon-platform.json:holon-jackson:5.2.0 (*)
-|    |    +--- org.springframework:spring-web:5.1.4.RELEASE -> 5.1.8.RELEASE (*)
-|    |    +--- org.springframework:spring-core:5.1.4.RELEASE -> 5.1.8.RELEASE (*)
-|    |    +--- org.springframework.boot:spring-boot-starter-validation:2.1.2.RELEASE -> 2.1.6.RELEASE
+|    |    +--- com.holon-platform.json:holon-jackson-spring:5.2.1
+|    |    |    \--- com.holon-platform.json:holon-jackson:5.2.1 (*)
+|    |    +--- org.springframework:spring-web:5.1.5.RELEASE -> 5.1.8.RELEASE (*)
+|    |    +--- org.springframework:spring-core:5.1.5.RELEASE -> 5.1.8.RELEASE (*)
+|    |    +--- org.springframework.boot:spring-boot-starter-validation:2.1.3.RELEASE -> 2.1.6.RELEASE
 |    |    |    +--- org.springframework.boot:spring-boot-starter:2.1.6.RELEASE (*)
-|    |    |    \--- org.hibernate.validator:hibernate-validator:6.0.17.Final
-|    |    |         +--- javax.validation:validation-api:2.0.1.Final
-|    |    |         +--- org.jboss.logging:jboss-logging:3.3.2.Final
-|    |    |         \--- com.fasterxml:classmate:1.3.4 -> 1.4.0
+|    |    |    \--- org.hibernate.validator:hibernate-validator:6.0.17.Final (*)
 |    |    +--- com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.9.8 -> 2.9.9 (*)
 |    |    +--- org.eclipse:yasson:1.0.1
 |    |    |    +--- javax.json.bind:javax.json.bind-api:1.0
@@ -765,7 +986,7 @@ runtimeClasspath - Runtime classpath of source set 'main'.
 |    |    |         \--- javax.inject:javax.inject:1
 |    |    \--- org.glassfish:javax.json:1.1.2
 |    |         \--- javax.json:javax.json-api:1.1.2 -> 1.1.4
-|    \--- org.springframework.boot:spring-boot-starter-undertow:2.1.2.RELEASE -> 2.1.6.RELEASE
+|    \--- org.springframework.boot:spring-boot-starter-undertow:2.1.3.RELEASE -> 2.1.6.RELEASE
 |         +--- io.undertow:undertow-core:2.0.21.Final
 |         |    +--- org.jboss.logging:jboss-logging:3.4.0.Final -> 3.3.2.Final
 |         |    +--- org.jboss.xnio:xnio-api:3.3.8.Final
@@ -780,24 +1001,43 @@ runtimeClasspath - Runtime classpath of source set 'main'.
 |         |    \--- org.jboss.spec.javax.websocket:jboss-websocket-api_1.1_spec:1.1.4.Final
 |         +--- javax.servlet:javax.servlet-api:4.0.1
 |         \--- org.glassfish:javax.el:3.0.0
-+--- com.h2database:h2:1.4.196
 +--- org.webjars:swagger-ui:3.22.2
 +--- org.projectlombok:lombok:1.18.8
-+--- com.holon-platform.jaxrs:holon-jaxrs-client -> 5.2.0
-|    +--- com.holon-platform.core:holon-async-http:5.2.0
-|    |    \--- com.holon-platform.core:holon-http:5.2.0 (*)
-|    \--- com.holon-platform.jaxrs:holon-jaxrs-commons:5.2.0 (*)
-\--- com.holon-platform.jaxrs:holon-starter-resteasy-client -> 5.2.0
-     +--- com.holon-platform.core:holon-starter:5.2.0 (*)
-     +--- com.holon-platform.json:holon-jackson-jaxrs:5.2.0 (*)
-     +--- com.holon-platform.json:holon-jackson-spring:5.2.0 (*)
-     +--- com.holon-platform.jaxrs:holon-jaxrs-client:5.2.0 (*)
-     +--- org.jboss.resteasy:resteasy-client:3.6.2.Final
++--- com.holon-platform.jdbc:holon-starter-jdbc-datastore-hikaricp -> 5.2.1
+|    +--- com.holon-platform.jdbc:holon-starter-jdbc-hikaricp:5.2.1
+|    |    +--- com.holon-platform.core:holon-starter:5.2.1 (*)
+|    |    +--- com.holon-platform.jdbc:holon-jdbc-spring-boot:5.2.1
+|    |    |    \--- com.holon-platform.jdbc:holon-jdbc-spring:5.2.1
+|    |    |         +--- com.holon-platform.jdbc:holon-jdbc:5.2.1
+|    |    |         \--- org.springframework:spring-jdbc:5.1.5.RELEASE -> 5.1.8.RELEASE (*)
+|    |    \--- com.zaxxer:HikariCP:3.3.1 -> 3.2.0 (*)
+|    \--- com.holon-platform.jdbc:holon-datastore-jdbc-spring-boot:5.2.1
+|         +--- com.holon-platform.jdbc:holon-jdbc-spring-boot:5.2.1 (*)
+|         +--- com.holon-platform.core:holon-spring-boot:5.2.1 (*)
+|         \--- com.holon-platform.jdbc:holon-datastore-jdbc-spring:5.2.1
+|              +--- com.holon-platform.jdbc:holon-jdbc-spring:5.2.1 (*)
+|              +--- com.holon-platform.core:holon-spring:5.2.1 (*)
+|              +--- com.holon-platform.jdbc:holon-datastore-jdbc:5.2.1
+|              |    \--- com.holon-platform.jdbc:holon-datastore-jdbc-composer:5.2.1
+|              |         +--- com.holon-platform.core:holon-core:5.2.1 (*)
+|              |         \--- com.holon-platform.jdbc:holon-jdbc:5.2.1
+|              +--- org.springframework:spring-context:5.1.5.RELEASE -> 5.1.8.RELEASE (*)
+|              \--- net.bytebuddy:byte-buddy:1.9.10 -> 1.9.13
++--- com.h2database:h2:1.4.196
+\--- com.holon-platform.jaxrs:holon-starter-resteasy-client -> 5.2.1
+     +--- com.holon-platform.core:holon-starter:5.2.1 (*)
+     +--- com.holon-platform.json:holon-jackson-jaxrs:5.2.1 (*)
+     +--- com.holon-platform.json:holon-jackson-spring:5.2.1 (*)
+     +--- com.holon-platform.jaxrs:holon-jaxrs-client:5.2.1
+     |    +--- com.holon-platform.core:holon-async-http:5.2.1
+     |    |    \--- com.holon-platform.core:holon-http:5.2.1 (*)
+     |    \--- com.holon-platform.jaxrs:holon-jaxrs-commons:5.2.1 (*)
+     +--- org.jboss.resteasy:resteasy-client:3.6.3.Final
      |    +--- org.jboss.spec.javax.ws.rs:jboss-jaxrs-api_2.1_spec:1.0.2.Final
-     |    +--- org.jboss.resteasy:resteasy-jaxrs:3.6.2.Final (*)
-     |    +--- org.jboss.logging:jboss-logging:3.3.1.Final -> 3.3.2.Final
+     |    +--- org.jboss.resteasy:resteasy-jaxrs:3.6.3.Final (*)
+     |    +--- org.jboss.logging:jboss-logging:3.3.2.Final
      |    \--- org.apache.httpcomponents:httpclient:4.5.4 -> 4.5.9 (*)
-     +--- org.jboss.resteasy:resteasy-jackson2-provider:3.6.2.Final (*)
+     +--- org.jboss.resteasy:resteasy-jackson2-provider:3.6.3.Final (*)
      \--- com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.9.8 -> 2.9.9 (*)
 
 runtimeElements - Elements of runtime for main. (n)
@@ -810,153 +1050,190 @@ testAnnotationProcessor - Annotation processors and their dependencies for sourc
 No dependencies
 
 testCompile - Dependencies for source set 'test' (deprecated, use 'testImplementation' instead).
-+--- com.holon-platform.core:holon-starter-test -> 5.2.4 FAILED
-+--- org.junit.jupiter:junit-jupiter-api:5.4.2
-|    +--- org.apiguardian:apiguardian-api:1.0.0
-|    +--- org.opentest4j:opentest4j:1.1.1
-|    \--- org.junit.platform:junit-platform-commons:1.4.2 -> 1.3.2
-|         \--- org.apiguardian:apiguardian-api:1.0.0
-+--- org.junit.jupiter:junit-jupiter-engine:5.4.2
-|    +--- org.apiguardian:apiguardian-api:1.0.0
-|    +--- org.junit.platform:junit-platform-engine:1.4.2 -> 1.3.2
-|    |    +--- org.apiguardian:apiguardian-api:1.0.0
-|    |    +--- org.junit.platform:junit-platform-commons:1.3.2 (*)
-|    |    \--- org.opentest4j:opentest4j:1.1.1
-|    \--- org.junit.jupiter:junit-jupiter-api:5.4.2 (*)
-\--- com.holon-platform.core:holon-starter-test:5.2.4 FAILED
+No dependencies
 
 testCompileClasspath - Compile classpath for source set 'test'.
-+--- com.holon-platform:bom:5.2.0
++--- org.springframework.boot:spring-boot-starter-actuator -> 2.1.6.RELEASE
+|    +--- org.springframework.boot:spring-boot-starter:2.1.6.RELEASE
+|    |    +--- org.springframework.boot:spring-boot:2.1.6.RELEASE
+|    |    |    +--- org.springframework:spring-core:5.1.8.RELEASE
+|    |    |    |    \--- org.springframework:spring-jcl:5.1.8.RELEASE
+|    |    |    \--- org.springframework:spring-context:5.1.8.RELEASE
+|    |    |         +--- org.springframework:spring-aop:5.1.8.RELEASE
+|    |    |         |    +--- org.springframework:spring-beans:5.1.8.RELEASE
+|    |    |         |    |    \--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    |         |    \--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    |         +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|    |    |         +--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    |         \--- org.springframework:spring-expression:5.1.8.RELEASE
+|    |    |              \--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    +--- org.springframework.boot:spring-boot-autoconfigure:2.1.6.RELEASE
+|    |    |    \--- org.springframework.boot:spring-boot:2.1.6.RELEASE (*)
+|    |    +--- org.springframework.boot:spring-boot-starter-logging:2.1.6.RELEASE
+|    |    |    +--- ch.qos.logback:logback-classic:1.2.3
+|    |    |    |    +--- ch.qos.logback:logback-core:1.2.3
+|    |    |    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.26
+|    |    |    +--- org.apache.logging.log4j:log4j-to-slf4j:2.11.2
+|    |    |    |    +--- org.slf4j:slf4j-api:1.7.25 -> 1.7.26
+|    |    |    |    \--- org.apache.logging.log4j:log4j-api:2.11.2
+|    |    |    \--- org.slf4j:jul-to-slf4j:1.7.26
+|    |    |         \--- org.slf4j:slf4j-api:1.7.26
+|    |    +--- javax.annotation:javax.annotation-api:1.3.2
+|    |    \--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    +--- org.springframework.boot:spring-boot-actuator-autoconfigure:2.1.6.RELEASE
+|    |    +--- org.springframework.boot:spring-boot-actuator:2.1.6.RELEASE
+|    |    |    \--- org.springframework.boot:spring-boot:2.1.6.RELEASE (*)
+|    |    +--- org.springframework.boot:spring-boot-autoconfigure:2.1.6.RELEASE (*)
+|    |    +--- com.fasterxml.jackson.core:jackson-databind:2.9.9
+|    |    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.9.0
+|    |    |    \--- com.fasterxml.jackson.core:jackson-core:2.9.9
+|    |    +--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    \--- org.springframework:spring-context:5.1.8.RELEASE (*)
+|    \--- io.micrometer:micrometer-core:1.1.5
+|         +--- org.hdrhistogram:HdrHistogram:2.1.9
+|         \--- org.latencyutils:LatencyUtils:2.0.3
++--- org.springframework.boot:spring-boot-starter-web -> 2.1.6.RELEASE
+|    +--- org.springframework.boot:spring-boot-starter:2.1.6.RELEASE (*)
+|    +--- org.springframework.boot:spring-boot-starter-json:2.1.6.RELEASE
+|    |    +--- org.springframework.boot:spring-boot-starter:2.1.6.RELEASE (*)
+|    |    +--- org.springframework:spring-web:5.1.8.RELEASE
+|    |    |    +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|    |    |    \--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    +--- com.fasterxml.jackson.core:jackson-databind:2.9.9 (*)
+|    |    +--- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.9.9
+|    |    |    +--- com.fasterxml.jackson.core:jackson-core:2.9.9
+|    |    |    \--- com.fasterxml.jackson.core:jackson-databind:2.9.9 (*)
+|    |    +--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.9
+|    |    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.9.0
+|    |    |    +--- com.fasterxml.jackson.core:jackson-core:2.9.9
+|    |    |    \--- com.fasterxml.jackson.core:jackson-databind:2.9.9 (*)
+|    |    \--- com.fasterxml.jackson.module:jackson-module-parameter-names:2.9.9
+|    |         +--- com.fasterxml.jackson.core:jackson-core:2.9.9
+|    |         \--- com.fasterxml.jackson.core:jackson-databind:2.9.9 (*)
+|    +--- org.hibernate.validator:hibernate-validator:6.0.17.Final
+|    |    +--- javax.validation:validation-api:2.0.1.Final
+|    |    +--- org.jboss.logging:jboss-logging:3.3.2.Final
+|    |    \--- com.fasterxml:classmate:1.3.4 -> 1.4.0
+|    +--- org.springframework:spring-web:5.1.8.RELEASE (*)
+|    \--- org.springframework:spring-webmvc:5.1.8.RELEASE
+|         +--- org.springframework:spring-aop:5.1.8.RELEASE (*)
+|         +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|         +--- org.springframework:spring-context:5.1.8.RELEASE (*)
+|         +--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|         +--- org.springframework:spring-expression:5.1.8.RELEASE (*)
+|         \--- org.springframework:spring-web:5.1.8.RELEASE (*)
++--- com.holon-platform:bom:5.2.3
 |    +--- org.junit.jupiter:junit-jupiter-api:5.3.1 -> 5.4.2 (c)
 |    +--- org.junit.jupiter:junit-jupiter-engine:5.3.1 -> 5.4.2 (c)
-|    +--- com.holon-platform.core:holon-auth-jwt:5.2.0 (c)
-|    +--- com.holon-platform.core:holon-starter-test:5.2.0 -> 5.2.4 FAILED
-|    +--- com.holon-platform.jaxrs:holon-jaxrs-client:5.2.0 (c)
-|    +--- com.holon-platform.jaxrs:holon-jaxrs-swagger-v3:5.2.0 (c)
-|    +--- com.holon-platform.jaxrs:holon-starter-resteasy-undertow:5.2.0 (c)
-|    +--- com.holon-platform.jaxrs:holon-starter-resteasy-client:5.2.0 (c)
-|    +--- com.holon-platform.jdbc:holon-starter-jdbc-datastore-hikaricp:5.2.0 (c)
-|    +--- com.holon-platform.core:holon-auth:5.2.0 (c)
-|    +--- com.holon-platform.jaxrs:holon-jaxrs-commons:5.2.0 (c)
-|    +--- com.holon-platform.jaxrs:holon-starter-resteasy:5.2.0 (c)
-|    +--- com.holon-platform.core:holon-starter:5.2.0 (c)
-|    +--- com.holon-platform.json:holon-jackson-jaxrs:5.2.0 (c)
-|    +--- com.holon-platform.json:holon-jackson-spring:5.2.0 (c)
-|    +--- com.holon-platform.jdbc:holon-starter-jdbc-hikaricp:5.2.0 (c)
-|    +--- com.holon-platform.jdbc:holon-datastore-jdbc-spring-boot:5.2.0 (c)
-|    +--- com.holon-platform.core:holon-http:5.2.0 (c)
-|    +--- com.holon-platform.core:holon-core:5.2.0 (c)
-|    +--- com.holon-platform.jaxrs:holon-jaxrs-spring-boot-resteasy:5.2.0 (c)
-|    +--- com.holon-platform.core:holon-spring-boot:5.2.0 (c)
-|    +--- com.holon-platform.json:holon-jackson:5.2.0 (c)
-|    +--- com.holon-platform.jdbc:holon-jdbc-spring-boot:5.2.0 (c)
-|    +--- com.holon-platform.jdbc:holon-datastore-jdbc-spring:5.2.0 (c)
-|    +--- com.holon-platform.jaxrs:holon-jaxrs-server:5.2.0 (c)
-|    +--- com.holon-platform.core:holon-spring:5.2.0 (c)
-|    +--- com.holon-platform.jdbc:holon-jdbc-spring:5.2.0 (c)
-|    +--- com.holon-platform.jdbc:holon-datastore-jdbc:5.2.0 (c)
+|    +--- com.holon-platform.core:holon-auth-jwt:5.2.1 (c)
+|    +--- com.holon-platform.core:holon-starter-test:5.2.1 -> 5.2.4 FAILED
+|    +--- com.holon-platform.jaxrs:holon-jaxrs-swagger-v3:5.2.1 (c)
+|    +--- com.holon-platform.jaxrs:holon-starter-resteasy-undertow:5.2.1 (c)
+|    +--- com.holon-platform.jaxrs:holon-starter-resteasy-client:5.2.1 (c)
+|    +--- com.holon-platform.jdbc:holon-starter-jdbc-datastore-hikaricp:5.2.1 (c)
+|    +--- com.holon-platform.core:holon-auth:5.2.1 (c)
+|    +--- com.holon-platform.jaxrs:holon-starter-resteasy:5.2.1 (c)
+|    +--- com.holon-platform.core:holon-starter:5.2.1 (c)
+|    +--- com.holon-platform.json:holon-jackson-jaxrs:5.2.1 (c)
+|    +--- com.holon-platform.json:holon-jackson-spring:5.2.1 (c)
+|    +--- com.holon-platform.jaxrs:holon-jaxrs-client:5.2.1 (c)
+|    +--- com.holon-platform.jdbc:holon-starter-jdbc-hikaricp:5.2.1 (c)
+|    +--- com.holon-platform.jdbc:holon-datastore-jdbc-spring-boot:5.2.1 (c)
 |    +--- ch.qos.logback:logback-classic:1.2.3 (c)
-|    \--- com.holon-platform.jdbc:holon-jdbc:5.2.0 (c)
-+--- com.holon-platform.core:holon-auth-jwt -> 5.2.0
-|    +--- com.holon-platform.core:holon-auth:5.2.0
-|    |    \--- com.holon-platform.core:holon-http:5.2.0
-|    |         \--- com.holon-platform.core:holon-core:5.2.0
+|    +--- com.holon-platform.core:holon-http:5.2.1 (c)
+|    +--- com.holon-platform.core:holon-core:5.2.1 (c)
+|    +--- com.holon-platform.jaxrs:holon-jaxrs-spring-boot-resteasy:5.2.1 (c)
+|    +--- com.holon-platform.core:holon-spring-boot:5.2.1 (c)
+|    +--- com.holon-platform.json:holon-jackson:5.2.1 (c)
+|    +--- com.holon-platform.jaxrs:holon-jaxrs-commons:5.2.1 (c)
+|    +--- com.holon-platform.jdbc:holon-jdbc-spring-boot:5.2.1 (c)
+|    +--- com.holon-platform.jdbc:holon-datastore-jdbc-spring:5.2.1 (c)
+|    +--- com.holon-platform.jaxrs:holon-jaxrs-server:5.2.1 (c)
+|    +--- com.holon-platform.core:holon-spring:5.2.1 (c)
+|    +--- com.holon-platform.jdbc:holon-jdbc-spring:5.2.1 (c)
+|    +--- com.holon-platform.jdbc:holon-datastore-jdbc:5.2.1 (c)
+|    \--- com.holon-platform.jdbc:holon-jdbc:5.2.1 (c)
++--- org.springframework.boot:spring-boot-starter-data-jpa -> 2.1.6.RELEASE
+|    +--- org.springframework.boot:spring-boot-starter-aop:2.1.6.RELEASE
+|    |    +--- org.springframework.boot:spring-boot-starter:2.1.6.RELEASE (*)
+|    |    +--- org.springframework:spring-aop:5.1.8.RELEASE (*)
+|    |    \--- org.aspectj:aspectjweaver:1.9.4
+|    +--- org.springframework.boot:spring-boot-starter-jdbc:2.1.6.RELEASE
+|    |    +--- org.springframework.boot:spring-boot-starter:2.1.6.RELEASE (*)
+|    |    +--- com.zaxxer:HikariCP:3.2.0
+|    |    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.26
+|    |    \--- org.springframework:spring-jdbc:5.1.8.RELEASE
+|    |         +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|    |         +--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |         \--- org.springframework:spring-tx:5.1.8.RELEASE
+|    |              +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|    |              \--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    +--- javax.transaction:javax.transaction-api:1.3
+|    +--- javax.xml.bind:jaxb-api:2.3.1
+|    |    \--- javax.activation:javax.activation-api:1.2.0
+|    +--- org.hibernate:hibernate-core:5.3.10.Final
+|    |    +--- org.jboss.logging:jboss-logging:3.3.2.Final
+|    |    +--- javax.persistence:javax.persistence-api:2.2
+|    |    +--- org.javassist:javassist:3.23.2-GA
+|    |    +--- net.bytebuddy:byte-buddy:1.9.5 -> 1.9.13
+|    |    +--- antlr:antlr:2.7.7
+|    |    +--- org.jboss:jandex:2.0.5.Final
+|    |    +--- com.fasterxml:classmate:1.3.4 -> 1.4.0
+|    |    +--- javax.activation:javax.activation-api:1.2.0
+|    |    +--- org.dom4j:dom4j:2.1.1
+|    |    \--- org.hibernate.common:hibernate-commons-annotations:5.0.4.Final
+|    |         \--- org.jboss.logging:jboss-logging:3.3.1.Final -> 3.3.2.Final
+|    +--- org.springframework.data:spring-data-jpa:2.1.9.RELEASE
+|    |    +--- org.springframework.data:spring-data-commons:2.1.9.RELEASE
+|    |    |    +--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    |    +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|    |    |    \--- org.slf4j:slf4j-api:1.7.26
+|    |    +--- org.springframework:spring-orm:5.1.8.RELEASE
+|    |    |    +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|    |    |    +--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    |    +--- org.springframework:spring-jdbc:5.1.8.RELEASE (*)
+|    |    |    \--- org.springframework:spring-tx:5.1.8.RELEASE (*)
+|    |    +--- org.springframework:spring-context:5.1.8.RELEASE (*)
+|    |    +--- org.springframework:spring-aop:5.1.8.RELEASE (*)
+|    |    +--- org.springframework:spring-tx:5.1.8.RELEASE (*)
+|    |    +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|    |    +--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    \--- org.slf4j:slf4j-api:1.7.26
+|    \--- org.springframework:spring-aspects:5.1.8.RELEASE
+|         \--- org.aspectj:aspectjweaver:1.9.3 -> 1.9.4
++--- com.holon-platform.core:holon-auth-jwt -> 5.2.1
+|    +--- com.holon-platform.core:holon-auth:5.2.1
+|    |    \--- com.holon-platform.core:holon-http:5.2.1
+|    |         \--- com.holon-platform.core:holon-core:5.2.1
 |    |              +--- org.apache.commons:commons-lang3:3.8.1
 |    |              \--- javax.annotation:javax.annotation-api:1.3.2
-|    \--- io.jsonwebtoken:jjwt:0.9.1
-+--- com.holon-platform.jdbc:holon-starter-jdbc-datastore-hikaricp -> 5.2.0
-|    +--- com.holon-platform.jdbc:holon-starter-jdbc-hikaricp:5.2.0
-|    |    +--- com.holon-platform.core:holon-starter:5.2.0
-|    |    |    +--- com.holon-platform.core:holon-spring-boot:5.2.0
-|    |    |    |    +--- com.holon-platform.core:holon-spring:5.2.0
-|    |    |    |    |    +--- com.holon-platform.core:holon-http:5.2.0 (*)
-|    |    |    |    |    +--- org.springframework:spring-context:5.1.4.RELEASE -> 5.1.8.RELEASE
-|    |    |    |    |    |    +--- org.springframework:spring-aop:5.1.8.RELEASE
-|    |    |    |    |    |    |    +--- org.springframework:spring-beans:5.1.8.RELEASE
-|    |    |    |    |    |    |    |    \--- org.springframework:spring-core:5.1.8.RELEASE
-|    |    |    |    |    |    |    |         \--- org.springframework:spring-jcl:5.1.8.RELEASE
-|    |    |    |    |    |    |    \--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    |    |    |    |    +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
-|    |    |    |    |    |    +--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    |    |    |    |    \--- org.springframework:spring-expression:5.1.8.RELEASE
-|    |    |    |    |    |         \--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    |    |    |    \--- org.springframework:spring-context-support:5.1.4.RELEASE -> 5.1.8.RELEASE
-|    |    |    |    |         +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
-|    |    |    |    |         +--- org.springframework:spring-context:5.1.8.RELEASE (*)
-|    |    |    |    |         \--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    |    |    +--- com.holon-platform.core:holon-auth:5.2.0 (*)
-|    |    |    |    +--- org.springframework.boot:spring-boot:2.1.2.RELEASE -> 2.1.6.RELEASE
-|    |    |    |    |    +--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    |    |    |    \--- org.springframework:spring-context:5.1.8.RELEASE (*)
-|    |    |    |    \--- org.springframework.boot:spring-boot-autoconfigure:2.1.2.RELEASE -> 2.1.6.RELEASE
-|    |    |    |         \--- org.springframework.boot:spring-boot:2.1.6.RELEASE (*)
-|    |    |    \--- org.springframework.boot:spring-boot-starter:2.1.2.RELEASE -> 2.1.6.RELEASE
-|    |    |         +--- org.springframework.boot:spring-boot:2.1.6.RELEASE (*)
-|    |    |         +--- org.springframework.boot:spring-boot-autoconfigure:2.1.6.RELEASE (*)
-|    |    |         +--- org.springframework.boot:spring-boot-starter-logging:2.1.6.RELEASE
-|    |    |         |    +--- ch.qos.logback:logback-classic:1.2.3
-|    |    |         |    |    +--- ch.qos.logback:logback-core:1.2.3
-|    |    |         |    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.26
-|    |    |         |    +--- org.apache.logging.log4j:log4j-to-slf4j:2.11.2
-|    |    |         |    |    +--- org.slf4j:slf4j-api:1.7.25 -> 1.7.26
-|    |    |         |    |    \--- org.apache.logging.log4j:log4j-api:2.11.2
-|    |    |         |    \--- org.slf4j:jul-to-slf4j:1.7.26
-|    |    |         |         \--- org.slf4j:slf4j-api:1.7.26
-|    |    |         +--- javax.annotation:javax.annotation-api:1.3.2
-|    |    |         \--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    +--- com.holon-platform.jdbc:holon-jdbc-spring-boot:5.2.0
-|    |    |    \--- com.holon-platform.jdbc:holon-jdbc-spring:5.2.0
-|    |    |         +--- com.holon-platform.jdbc:holon-jdbc:5.2.0
-|    |    |         \--- org.springframework:spring-jdbc:5.1.4.RELEASE -> 5.1.8.RELEASE
-|    |    |              +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
-|    |    |              +--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    |              \--- org.springframework:spring-tx:5.1.8.RELEASE
-|    |    |                   +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
-|    |    |                   \--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    \--- com.zaxxer:HikariCP:3.3.0 -> 3.2.0
-|    \--- com.holon-platform.jdbc:holon-datastore-jdbc-spring-boot:5.2.0
-|         +--- com.holon-platform.jdbc:holon-jdbc-spring-boot:5.2.0 (*)
-|         +--- com.holon-platform.core:holon-spring-boot:5.2.0 (*)
-|         \--- com.holon-platform.jdbc:holon-datastore-jdbc-spring:5.2.0
-|              +--- com.holon-platform.jdbc:holon-jdbc-spring:5.2.0 (*)
-|              +--- com.holon-platform.core:holon-spring:5.2.0 (*)
-|              +--- com.holon-platform.jdbc:holon-datastore-jdbc:5.2.0
-|              |    \--- com.holon-platform.jdbc:holon-datastore-jdbc-composer:5.2.0
-|              |         +--- com.holon-platform.core:holon-core:5.2.0 (*)
-|              |         \--- com.holon-platform.jdbc:holon-jdbc:5.2.0
-|              +--- org.springframework:spring-context:5.1.4.RELEASE -> 5.1.8.RELEASE (*)
-|              \--- net.bytebuddy:byte-buddy:1.9.7 -> 1.9.13
-+--- com.holon-platform.jaxrs:holon-jaxrs-swagger-v3 -> 5.2.0
-|    +--- com.holon-platform.jaxrs:holon-jaxrs-swagger-core:5.2.0
-|    |    +--- com.holon-platform.core:holon-core:5.2.0 (*)
-|    |    +--- com.holon-platform.json:holon-json:5.2.0
-|    |    |    \--- com.holon-platform.core:holon-core:5.2.0 (*)
-|    |    \--- net.bytebuddy:byte-buddy:1.9.7 -> 1.9.13
-|    +--- com.holon-platform.core:holon-auth:5.2.0 (*)
-|    +--- com.holon-platform.json:holon-json:5.2.0 (*)
-|    +--- io.swagger.core.v3:swagger-jaxrs2:2.0.6
-|    |    +--- org.reflections:reflections:0.9.11
-|    |    |    +--- com.google.guava:guava:20.0
-|    |    |    \--- org.javassist:javassist:3.21.0-GA -> 3.22.0-GA
-|    |    +--- org.javassist:javassist:3.22.0-GA
-|    |    +--- io.swagger.core.v3:swagger-models:2.0.6
-|    |    +--- io.swagger.core.v3:swagger-annotations:2.0.6
-|    |    +--- io.swagger.core.v3:swagger-integration:2.0.6
-|    |    |    +--- org.reflections:reflections:0.9.11 (*)
-|    |    |    +--- io.swagger.core.v3:swagger-core:2.0.6
-|    |    |    |    +--- javax.xml.bind:jaxb-api:2.3.0 -> 2.3.1
-|    |    |    |    |    \--- javax.activation:javax.activation-api:1.2.0
+|    \--- io.jsonwebtoken:jjwt-api:0.10.6
++--- com.holon-platform.jaxrs:holon-jaxrs-swagger-v3 -> 5.2.1
+|    +--- com.holon-platform.jaxrs:holon-jaxrs-swagger-core:5.2.1
+|    |    +--- com.holon-platform.core:holon-core:5.2.1 (*)
+|    |    +--- com.holon-platform.json:holon-json:5.2.1
+|    |    |    \--- com.holon-platform.core:holon-core:5.2.1 (*)
+|    |    \--- net.bytebuddy:byte-buddy:1.9.10 -> 1.9.13
+|    +--- com.holon-platform.core:holon-auth:5.2.1 (*)
+|    +--- com.holon-platform.json:holon-json:5.2.1 (*)
+|    +--- io.swagger.core.v3:swagger-jaxrs2:2.0.7
+|    |    +--- io.github.classgraph:classgraph:4.6.32
+|    |    +--- org.javassist:javassist:3.22.0-GA -> 3.23.2-GA
+|    |    +--- io.swagger.core.v3:swagger-models:2.0.7
+|    |    +--- io.swagger.core.v3:swagger-annotations:2.0.7
+|    |    +--- io.swagger.core.v3:swagger-integration:2.0.7
+|    |    |    +--- io.github.classgraph:classgraph:4.6.32
+|    |    |    +--- io.swagger.core.v3:swagger-core:2.0.7
+|    |    |    |    +--- javax.xml.bind:jaxb-api:2.3.0 -> 2.3.1 (*)
 |    |    |    |    +--- org.slf4j:slf4j-api:1.7.25 -> 1.7.26
-|    |    |    |    +--- io.swagger.core.v3:swagger-annotations:2.0.6
-|    |    |    |    +--- io.swagger.core.v3:swagger-models:2.0.6
+|    |    |    |    +--- io.swagger.core.v3:swagger-annotations:2.0.7
+|    |    |    |    +--- io.swagger.core.v3:swagger-models:2.0.7
 |    |    |    |    \--- javax.validation:validation-api:1.1.0.Final -> 2.0.1.Final
-|    |    |    \--- io.swagger.core.v3:swagger-models:2.0.6
-|    |    \--- com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.9.5 -> 2.9.9
+|    |    |    \--- io.swagger.core.v3:swagger-models:2.0.7
+|    |    \--- com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.9.8 -> 2.9.9
 |    |         +--- com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:2.9.9
 |    |         |    +--- com.fasterxml.jackson.core:jackson-core:2.9.9
-|    |         |    \--- com.fasterxml.jackson.core:jackson-databind:2.9.9
-|    |         |         +--- com.fasterxml.jackson.core:jackson-annotations:2.9.0
-|    |         |         \--- com.fasterxml.jackson.core:jackson-core:2.9.9
+|    |         |    \--- com.fasterxml.jackson.core:jackson-databind:2.9.9 (*)
 |    |         \--- com.fasterxml.jackson.module:jackson-module-jaxb-annotations:2.9.9
 |    |              +--- com.fasterxml.jackson.core:jackson-annotations:2.9.0
 |    |              +--- com.fasterxml.jackson.core:jackson-core:2.9.9
@@ -967,74 +1244,81 @@ testCompileClasspath - Compile classpath for source set 'test'.
 |    \--- com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.9.8 -> 2.9.9
 |         +--- org.yaml:snakeyaml:1.23
 |         \--- com.fasterxml.jackson.core:jackson-core:2.9.9
-+--- com.holon-platform.jaxrs:holon-starter-resteasy-undertow -> 5.2.0
-|    +--- com.holon-platform.jaxrs:holon-starter-resteasy:5.2.0
-|    |    +--- com.holon-platform.core:holon-starter:5.2.0 (*)
-|    |    +--- com.holon-platform.jaxrs:holon-jaxrs-spring-boot-resteasy:5.2.0
-|    |    |    +--- com.holon-platform.core:holon-spring-boot:5.2.0 (*)
-|    |    |    +--- com.holon-platform.jaxrs:holon-jaxrs-server:5.2.0
-|    |    |    |    +--- com.holon-platform.core:holon-http:5.2.0 (*)
-|    |    |    |    +--- com.holon-platform.core:holon-auth:5.2.0 (*)
-|    |    |    |    \--- com.holon-platform.jaxrs:holon-jaxrs-commons:5.2.0
-|    |    |    |         \--- com.holon-platform.core:holon-core:5.2.0 (*)
-|    |    |    +--- org.springframework:spring-web:5.1.4.RELEASE -> 5.1.8.RELEASE
-|    |    |    |    +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
-|    |    |    |    \--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    |    +--- org.jboss.resteasy:resteasy-jaxrs:3.6.2.Final
++--- com.holon-platform.jaxrs:holon-starter-resteasy-undertow -> 5.2.1
+|    +--- com.holon-platform.jaxrs:holon-starter-resteasy:5.2.1
+|    |    +--- com.holon-platform.core:holon-starter:5.2.1
+|    |    |    +--- com.holon-platform.core:holon-spring-boot:5.2.1
+|    |    |    |    +--- com.holon-platform.core:holon-spring:5.2.1
+|    |    |    |    |    +--- com.holon-platform.core:holon-http:5.2.1 (*)
+|    |    |    |    |    +--- org.springframework:spring-context:5.1.5.RELEASE -> 5.1.8.RELEASE (*)
+|    |    |    |    |    \--- org.springframework:spring-context-support:5.1.5.RELEASE -> 5.1.8.RELEASE
+|    |    |    |    |         +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|    |    |    |    |         +--- org.springframework:spring-context:5.1.8.RELEASE (*)
+|    |    |    |    |         \--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    |    |    +--- com.holon-platform.core:holon-auth:5.2.1 (*)
+|    |    |    |    +--- org.springframework.boot:spring-boot:2.1.3.RELEASE -> 2.1.6.RELEASE (*)
+|    |    |    |    \--- org.springframework.boot:spring-boot-autoconfigure:2.1.3.RELEASE -> 2.1.6.RELEASE (*)
+|    |    |    \--- org.springframework.boot:spring-boot-starter:2.1.3.RELEASE -> 2.1.6.RELEASE (*)
+|    |    +--- com.holon-platform.jaxrs:holon-jaxrs-spring-boot-resteasy:5.2.1
+|    |    |    +--- com.holon-platform.core:holon-spring-boot:5.2.1 (*)
+|    |    |    +--- com.holon-platform.jaxrs:holon-jaxrs-server:5.2.1
+|    |    |    |    +--- com.holon-platform.core:holon-http:5.2.1 (*)
+|    |    |    |    +--- com.holon-platform.core:holon-auth:5.2.1 (*)
+|    |    |    |    \--- com.holon-platform.jaxrs:holon-jaxrs-commons:5.2.1
+|    |    |    |         \--- com.holon-platform.core:holon-core:5.2.1 (*)
+|    |    |    +--- org.springframework:spring-web:5.1.5.RELEASE -> 5.1.8.RELEASE (*)
+|    |    |    +--- org.jboss.resteasy:resteasy-jaxrs:3.6.3.Final
 |    |    |    |    +--- org.jboss.spec.javax.ws.rs:jboss-jaxrs-api_2.1_spec:1.0.2.Final
-|    |    |    |    +--- org.jboss.spec.javax.xml.bind:jboss-jaxb-api_2.3_spec:1.0.0.Final
+|    |    |    |    +--- org.jboss.spec.javax.xml.bind:jboss-jaxb-api_2.3_spec:1.0.1.Final
 |    |    |    |    +--- org.reactivestreams:reactive-streams:1.0.2
-|    |    |    |    +--- javax.validation:validation-api:1.1.0.Final -> 2.0.1.Final
-|    |    |    |    +--- org.jboss.spec.javax.annotation:jboss-annotations-api_1.2_spec:1.0.0.Final -> 1.0.2.Final
+|    |    |    |    +--- javax.validation:validation-api:2.0.1.Final
+|    |    |    |    +--- org.jboss.spec.javax.annotation:jboss-annotations-api_1.3_spec:1.0.1.Final
 |    |    |    |    +--- javax.activation:activation:1.1.1
 |    |    |    |    +--- org.apache.httpcomponents:httpclient:4.5.4 -> 4.5.9
 |    |    |    |    |    +--- org.apache.httpcomponents:httpcore:4.4.11
 |    |    |    |    |    \--- commons-codec:commons-codec:1.11
 |    |    |    |    +--- commons-io:commons-io:2.5
 |    |    |    |    +--- net.jcip:jcip-annotations:1.0
-|    |    |    |    \--- org.jboss.logging:jboss-logging:3.3.1.Final -> 3.3.2.Final
-|    |    |    +--- org.jboss.resteasy:resteasy-jaxb-provider:3.6.2.Final
-|    |    |    |    +--- org.jboss.spec.javax.xml.bind:jboss-jaxb-api_2.3_spec:1.0.0.Final
+|    |    |    |    \--- org.jboss.logging:jboss-logging:3.3.2.Final
+|    |    |    +--- org.jboss.resteasy:resteasy-jaxb-provider:3.6.3.Final
+|    |    |    |    +--- org.jboss.spec.javax.xml.bind:jboss-jaxb-api_2.3_spec:1.0.1.Final
 |    |    |    |    +--- org.glassfish.jaxb:jaxb-runtime:2.3.1
-|    |    |    |    |    +--- javax.xml.bind:jaxb-api:2.3.1 (*)
 |    |    |    |    |    +--- org.glassfish.jaxb:txw2:2.3.1
 |    |    |    |    |    +--- com.sun.istack:istack-commons-runtime:3.0.7
 |    |    |    |    |    +--- org.jvnet.staxex:stax-ex:1.8
 |    |    |    |    |    +--- com.sun.xml.fastinfoset:FastInfoset:1.2.15
 |    |    |    |    |    \--- javax.activation:javax.activation-api:1.2.0
-|    |    |    |    \--- org.jboss.logging:jboss-logging:3.3.1.Final -> 3.3.2.Final
-|    |    |    \--- org.jboss.resteasy:resteasy-spring:3.6.2.Final
-|    |    |         +--- org.jboss.resteasy:resteasy-jaxrs:3.6.2.Final (*)
+|    |    |    |    \--- org.jboss.logging:jboss-logging:3.3.2.Final
+|    |    |    \--- org.jboss.resteasy:resteasy-spring:3.6.3.Final
+|    |    |         +--- org.jboss.resteasy:resteasy-jaxrs:3.6.3.Final (*)
 |    |    |         +--- org.jboss.spec.javax.ws.rs:jboss-jaxrs-api_2.1_spec:1.0.2.Final
-|    |    |         +--- org.jboss.spec.javax.annotation:jboss-annotations-api_1.2_spec:1.0.0.Final -> 1.0.2.Final
+|    |    |         +--- org.jboss.spec.javax.annotation:jboss-annotations-api_1.3_spec:1.0.1.Final
 |    |    |         +--- javax.activation:activation:1.1.1
-|    |    |         \--- org.jboss.logging:jboss-logging:3.3.1.Final -> 3.3.2.Final
-|    |    +--- org.jboss.resteasy:resteasy-jackson2-provider:3.6.2.Final
-|    |    |    \--- com.github.fge:json-patch:1.3
-|    |    |         \--- com.github.fge:jackson-coreutils:1.0
-|    |    |              +--- com.google.guava:guava:14.0 -> 20.0
-|    |    |              \--- net.jcip:jcip-annotations:1.0
-|    |    +--- com.holon-platform.json:holon-jackson-jaxrs:5.2.0
-|    |    |    +--- com.holon-platform.json:holon-jackson:5.2.0
-|    |    |    |    +--- com.holon-platform.json:holon-json:5.2.0 (*)
+|    |    |         \--- org.jboss.logging:jboss-logging:3.3.2.Final
+|    |    +--- org.jboss.resteasy:resteasy-jackson2-provider:3.6.3.Final
+|    |    |    \--- com.github.fge:json-patch:1.9
+|    |    |         \--- com.github.fge:jackson-coreutils:1.6
+|    |    |              +--- com.github.fge:msg-simple:1.1
+|    |    |              |    \--- com.github.fge:btf:1.2
+|    |    |              \--- com.google.guava:guava:16.0.1
+|    |    +--- com.holon-platform.json:holon-jackson-jaxrs:5.2.1
+|    |    |    +--- com.holon-platform.json:holon-jackson:5.2.1
+|    |    |    |    +--- com.holon-platform.json:holon-json:5.2.1 (*)
 |    |    |    |    +--- com.fasterxml.jackson.core:jackson-core:2.9.8 -> 2.9.9
 |    |    |    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.9.8 -> 2.9.0
 |    |    |    |    +--- com.fasterxml.jackson.core:jackson-databind:2.9.8 -> 2.9.9 (*)
-|    |    |    |    \--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.8 -> 2.9.9
+|    |    |    |    \--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.8 -> 2.9.9 (*)
 |    |    |    +--- com.fasterxml.jackson.core:jackson-core:2.9.8 -> 2.9.9
 |    |    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.9.8 -> 2.9.0
 |    |    |    +--- com.fasterxml.jackson.core:jackson-databind:2.9.8 -> 2.9.9 (*)
 |    |    |    \--- com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.9.8 -> 2.9.9 (*)
-|    |    +--- com.holon-platform.json:holon-jackson-spring:5.2.0
-|    |    |    \--- com.holon-platform.json:holon-jackson:5.2.0 (*)
-|    |    +--- org.springframework:spring-web:5.1.4.RELEASE -> 5.1.8.RELEASE (*)
-|    |    +--- org.springframework:spring-core:5.1.4.RELEASE -> 5.1.8.RELEASE (*)
-|    |    +--- org.springframework.boot:spring-boot-starter-validation:2.1.2.RELEASE -> 2.1.6.RELEASE
+|    |    +--- com.holon-platform.json:holon-jackson-spring:5.2.1
+|    |    |    \--- com.holon-platform.json:holon-jackson:5.2.1 (*)
+|    |    +--- org.springframework:spring-web:5.1.5.RELEASE -> 5.1.8.RELEASE (*)
+|    |    +--- org.springframework:spring-core:5.1.5.RELEASE -> 5.1.8.RELEASE (*)
+|    |    +--- org.springframework.boot:spring-boot-starter-validation:2.1.3.RELEASE -> 2.1.6.RELEASE
 |    |    |    +--- org.springframework.boot:spring-boot-starter:2.1.6.RELEASE (*)
-|    |    |    \--- org.hibernate.validator:hibernate-validator:6.0.17.Final
-|    |    |         +--- javax.validation:validation-api:2.0.1.Final
-|    |    |         +--- org.jboss.logging:jboss-logging:3.3.2.Final
-|    |    |         \--- com.fasterxml:classmate:1.3.4 -> 1.4.0
+|    |    |    \--- org.hibernate.validator:hibernate-validator:6.0.17.Final (*)
 |    |    +--- com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.9.8 -> 2.9.9 (*)
 |    |    +--- org.eclipse:yasson:1.0.1
 |    |    |    +--- javax.json.bind:javax.json.bind-api:1.0
@@ -1045,7 +1329,7 @@ testCompileClasspath - Compile classpath for source set 'test'.
 |    |    |         \--- javax.inject:javax.inject:1
 |    |    \--- org.glassfish:javax.json:1.1.2
 |    |         \--- javax.json:javax.json-api:1.1.2 -> 1.1.4
-|    \--- org.springframework.boot:spring-boot-starter-undertow:2.1.2.RELEASE -> 2.1.6.RELEASE
+|    \--- org.springframework.boot:spring-boot-starter-undertow:2.1.3.RELEASE -> 2.1.6.RELEASE
 |         +--- io.undertow:undertow-core:2.0.21.Final
 |         |    +--- org.jboss.logging:jboss-logging:3.4.0.Final -> 3.3.2.Final
 |         |    \--- org.jboss.xnio:xnio-api:3.3.8.Final
@@ -1058,24 +1342,43 @@ testCompileClasspath - Compile classpath for source set 'test'.
 |         |    \--- org.jboss.spec.javax.websocket:jboss-websocket-api_1.1_spec:1.1.4.Final
 |         +--- javax.servlet:javax.servlet-api:4.0.1
 |         \--- org.glassfish:javax.el:3.0.0
-+--- com.h2database:h2:1.4.196
 +--- org.webjars:swagger-ui:3.22.2
 +--- org.projectlombok:lombok:1.18.8
-+--- com.holon-platform.jaxrs:holon-jaxrs-client -> 5.2.0
-|    +--- com.holon-platform.core:holon-async-http:5.2.0
-|    |    \--- com.holon-platform.core:holon-http:5.2.0 (*)
-|    \--- com.holon-platform.jaxrs:holon-jaxrs-commons:5.2.0 (*)
-+--- com.holon-platform.jaxrs:holon-starter-resteasy-client -> 5.2.0
-|    +--- com.holon-platform.core:holon-starter:5.2.0 (*)
-|    +--- com.holon-platform.json:holon-jackson-jaxrs:5.2.0 (*)
-|    +--- com.holon-platform.json:holon-jackson-spring:5.2.0 (*)
-|    +--- com.holon-platform.jaxrs:holon-jaxrs-client:5.2.0 (*)
-|    +--- org.jboss.resteasy:resteasy-client:3.6.2.Final
++--- com.holon-platform.jdbc:holon-starter-jdbc-datastore-hikaricp -> 5.2.1
+|    +--- com.holon-platform.jdbc:holon-starter-jdbc-hikaricp:5.2.1
+|    |    +--- com.holon-platform.core:holon-starter:5.2.1 (*)
+|    |    +--- com.holon-platform.jdbc:holon-jdbc-spring-boot:5.2.1
+|    |    |    \--- com.holon-platform.jdbc:holon-jdbc-spring:5.2.1
+|    |    |         +--- com.holon-platform.jdbc:holon-jdbc:5.2.1
+|    |    |         \--- org.springframework:spring-jdbc:5.1.5.RELEASE -> 5.1.8.RELEASE (*)
+|    |    \--- com.zaxxer:HikariCP:3.3.1 -> 3.2.0 (*)
+|    \--- com.holon-platform.jdbc:holon-datastore-jdbc-spring-boot:5.2.1
+|         +--- com.holon-platform.jdbc:holon-jdbc-spring-boot:5.2.1 (*)
+|         +--- com.holon-platform.core:holon-spring-boot:5.2.1 (*)
+|         \--- com.holon-platform.jdbc:holon-datastore-jdbc-spring:5.2.1
+|              +--- com.holon-platform.jdbc:holon-jdbc-spring:5.2.1 (*)
+|              +--- com.holon-platform.core:holon-spring:5.2.1 (*)
+|              +--- com.holon-platform.jdbc:holon-datastore-jdbc:5.2.1
+|              |    \--- com.holon-platform.jdbc:holon-datastore-jdbc-composer:5.2.1
+|              |         +--- com.holon-platform.core:holon-core:5.2.1 (*)
+|              |         \--- com.holon-platform.jdbc:holon-jdbc:5.2.1
+|              +--- org.springframework:spring-context:5.1.5.RELEASE -> 5.1.8.RELEASE (*)
+|              \--- net.bytebuddy:byte-buddy:1.9.10 -> 1.9.13
++--- com.h2database:h2:1.4.196
++--- com.holon-platform.jaxrs:holon-starter-resteasy-client -> 5.2.1
+|    +--- com.holon-platform.core:holon-starter:5.2.1 (*)
+|    +--- com.holon-platform.json:holon-jackson-jaxrs:5.2.1 (*)
+|    +--- com.holon-platform.json:holon-jackson-spring:5.2.1 (*)
+|    +--- com.holon-platform.jaxrs:holon-jaxrs-client:5.2.1
+|    |    +--- com.holon-platform.core:holon-async-http:5.2.1
+|    |    |    \--- com.holon-platform.core:holon-http:5.2.1 (*)
+|    |    \--- com.holon-platform.jaxrs:holon-jaxrs-commons:5.2.1 (*)
+|    +--- org.jboss.resteasy:resteasy-client:3.6.3.Final
 |    |    +--- org.jboss.spec.javax.ws.rs:jboss-jaxrs-api_2.1_spec:1.0.2.Final
-|    |    +--- org.jboss.resteasy:resteasy-jaxrs:3.6.2.Final (*)
-|    |    +--- org.jboss.logging:jboss-logging:3.3.1.Final -> 3.3.2.Final
+|    |    +--- org.jboss.resteasy:resteasy-jaxrs:3.6.3.Final (*)
+|    |    +--- org.jboss.logging:jboss-logging:3.3.2.Final
 |    |    \--- org.apache.httpcomponents:httpclient:4.5.4 -> 4.5.9 (*)
-|    +--- org.jboss.resteasy:resteasy-jackson2-provider:3.6.2.Final (*)
+|    +--- org.jboss.resteasy:resteasy-jackson2-provider:3.6.3.Final (*)
 |    \--- com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.9.8 -> 2.9.9 (*)
 +--- com.holon-platform.core:holon-starter-test -> 5.2.4 FAILED
 +--- org.junit.jupiter:junit-jupiter-api:5.4.2
@@ -1096,157 +1399,202 @@ testCompileOnly - Compile only dependencies for source set 'test'.
 No dependencies
 
 testImplementation - Implementation only dependencies for source set 'test'. (n)
-No dependencies
++--- com.holon-platform.core:holon-starter-test (n)
++--- org.junit.jupiter:junit-jupiter-api:5.4.2 (n)
++--- org.junit.jupiter:junit-jupiter-engine:5.4.2 (n)
+\--- com.holon-platform.core:holon-starter-test:5.2.4 (n)
 
 testRuntime - Runtime dependencies for source set 'test' (deprecated, use 'testRuntimeOnly' instead).
-+--- com.holon-platform.core:holon-starter-test -> 5.2.4 FAILED
-+--- org.junit.jupiter:junit-jupiter-api:5.4.2
-|    +--- org.apiguardian:apiguardian-api:1.0.0
-|    +--- org.opentest4j:opentest4j:1.1.1
-|    \--- org.junit.platform:junit-platform-commons:1.4.2 -> 1.3.2
-|         \--- org.apiguardian:apiguardian-api:1.0.0
-+--- org.junit.jupiter:junit-jupiter-engine:5.4.2
-|    +--- org.apiguardian:apiguardian-api:1.0.0
-|    +--- org.junit.platform:junit-platform-engine:1.4.2 -> 1.3.2
-|    |    +--- org.apiguardian:apiguardian-api:1.0.0
-|    |    +--- org.junit.platform:junit-platform-commons:1.3.2 (*)
-|    |    \--- org.opentest4j:opentest4j:1.1.1
-|    \--- org.junit.jupiter:junit-jupiter-api:5.4.2 (*)
-\--- com.holon-platform.core:holon-starter-test:5.2.4 FAILED
+No dependencies
 
 testRuntimeClasspath - Runtime classpath of source set 'test'.
-+--- com.holon-platform:bom:5.2.0
++--- org.springframework.boot:spring-boot-starter-actuator -> 2.1.6.RELEASE
+|    +--- org.springframework.boot:spring-boot-starter:2.1.6.RELEASE
+|    |    +--- org.springframework.boot:spring-boot:2.1.6.RELEASE
+|    |    |    +--- org.springframework:spring-core:5.1.8.RELEASE
+|    |    |    |    \--- org.springframework:spring-jcl:5.1.8.RELEASE
+|    |    |    \--- org.springframework:spring-context:5.1.8.RELEASE
+|    |    |         +--- org.springframework:spring-aop:5.1.8.RELEASE
+|    |    |         |    +--- org.springframework:spring-beans:5.1.8.RELEASE
+|    |    |         |    |    \--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    |         |    \--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    |         +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|    |    |         +--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    |         \--- org.springframework:spring-expression:5.1.8.RELEASE
+|    |    |              \--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    +--- org.springframework.boot:spring-boot-autoconfigure:2.1.6.RELEASE
+|    |    |    \--- org.springframework.boot:spring-boot:2.1.6.RELEASE (*)
+|    |    +--- org.springframework.boot:spring-boot-starter-logging:2.1.6.RELEASE
+|    |    |    +--- ch.qos.logback:logback-classic:1.2.3
+|    |    |    |    +--- ch.qos.logback:logback-core:1.2.3
+|    |    |    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.26
+|    |    |    +--- org.apache.logging.log4j:log4j-to-slf4j:2.11.2
+|    |    |    |    +--- org.slf4j:slf4j-api:1.7.25 -> 1.7.26
+|    |    |    |    \--- org.apache.logging.log4j:log4j-api:2.11.2
+|    |    |    \--- org.slf4j:jul-to-slf4j:1.7.26
+|    |    |         \--- org.slf4j:slf4j-api:1.7.26
+|    |    +--- javax.annotation:javax.annotation-api:1.3.2
+|    |    +--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    \--- org.yaml:snakeyaml:1.23
+|    +--- org.springframework.boot:spring-boot-actuator-autoconfigure:2.1.6.RELEASE
+|    |    +--- org.springframework.boot:spring-boot-actuator:2.1.6.RELEASE
+|    |    |    \--- org.springframework.boot:spring-boot:2.1.6.RELEASE (*)
+|    |    +--- org.springframework.boot:spring-boot-autoconfigure:2.1.6.RELEASE (*)
+|    |    +--- com.fasterxml.jackson.core:jackson-databind:2.9.9
+|    |    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.9.0
+|    |    |    \--- com.fasterxml.jackson.core:jackson-core:2.9.9
+|    |    +--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    +--- org.springframework:spring-context:5.1.8.RELEASE (*)
+|    |    \--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.9
+|    |         +--- com.fasterxml.jackson.core:jackson-annotations:2.9.0
+|    |         +--- com.fasterxml.jackson.core:jackson-core:2.9.9
+|    |         \--- com.fasterxml.jackson.core:jackson-databind:2.9.9 (*)
+|    \--- io.micrometer:micrometer-core:1.1.5
+|         +--- org.hdrhistogram:HdrHistogram:2.1.9
+|         \--- org.latencyutils:LatencyUtils:2.0.3
++--- org.springframework.boot:spring-boot-starter-web -> 2.1.6.RELEASE
+|    +--- org.springframework.boot:spring-boot-starter:2.1.6.RELEASE (*)
+|    +--- org.springframework.boot:spring-boot-starter-json:2.1.6.RELEASE
+|    |    +--- org.springframework.boot:spring-boot-starter:2.1.6.RELEASE (*)
+|    |    +--- org.springframework:spring-web:5.1.8.RELEASE
+|    |    |    +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|    |    |    \--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    +--- com.fasterxml.jackson.core:jackson-databind:2.9.9 (*)
+|    |    +--- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.9.9
+|    |    |    +--- com.fasterxml.jackson.core:jackson-core:2.9.9
+|    |    |    \--- com.fasterxml.jackson.core:jackson-databind:2.9.9 (*)
+|    |    +--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.9 (*)
+|    |    \--- com.fasterxml.jackson.module:jackson-module-parameter-names:2.9.9
+|    |         +--- com.fasterxml.jackson.core:jackson-core:2.9.9
+|    |         \--- com.fasterxml.jackson.core:jackson-databind:2.9.9 (*)
+|    +--- org.hibernate.validator:hibernate-validator:6.0.17.Final
+|    |    +--- javax.validation:validation-api:2.0.1.Final
+|    |    +--- org.jboss.logging:jboss-logging:3.3.2.Final
+|    |    \--- com.fasterxml:classmate:1.3.4 -> 1.4.0
+|    +--- org.springframework:spring-web:5.1.8.RELEASE (*)
+|    \--- org.springframework:spring-webmvc:5.1.8.RELEASE
+|         +--- org.springframework:spring-aop:5.1.8.RELEASE (*)
+|         +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|         +--- org.springframework:spring-context:5.1.8.RELEASE (*)
+|         +--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|         +--- org.springframework:spring-expression:5.1.8.RELEASE (*)
+|         \--- org.springframework:spring-web:5.1.8.RELEASE (*)
++--- com.holon-platform:bom:5.2.3
 |    +--- org.junit.jupiter:junit-jupiter-api:5.3.1 -> 5.4.2 (c)
 |    +--- org.junit.jupiter:junit-jupiter-engine:5.3.1 -> 5.4.2 (c)
-|    +--- com.holon-platform.core:holon-auth-jwt:5.2.0 (c)
-|    +--- com.holon-platform.core:holon-starter-test:5.2.0 -> 5.2.4 FAILED
-|    +--- com.holon-platform.jaxrs:holon-jaxrs-client:5.2.0 (c)
-|    +--- com.holon-platform.jaxrs:holon-jaxrs-swagger-v3:5.2.0 (c)
-|    +--- com.holon-platform.jaxrs:holon-starter-resteasy-undertow:5.2.0 (c)
-|    +--- com.holon-platform.jaxrs:holon-starter-resteasy-client:5.2.0 (c)
-|    +--- com.holon-platform.jdbc:holon-starter-jdbc-datastore-hikaricp:5.2.0 (c)
-|    +--- com.holon-platform.core:holon-auth:5.2.0 (c)
-|    +--- com.holon-platform.jaxrs:holon-jaxrs-commons:5.2.0 (c)
-|    +--- com.holon-platform.jaxrs:holon-starter-resteasy:5.2.0 (c)
-|    +--- com.holon-platform.core:holon-starter:5.2.0 (c)
-|    +--- com.holon-platform.json:holon-jackson-jaxrs:5.2.0 (c)
-|    +--- com.holon-platform.json:holon-jackson-spring:5.2.0 (c)
-|    +--- com.holon-platform.jdbc:holon-starter-jdbc-hikaricp:5.2.0 (c)
-|    +--- com.holon-platform.jdbc:holon-datastore-jdbc-spring-boot:5.2.0 (c)
-|    +--- com.holon-platform.core:holon-http:5.2.0 (c)
-|    +--- com.holon-platform.core:holon-core:5.2.0 (c)
-|    +--- com.holon-platform.jaxrs:holon-jaxrs-spring-boot-resteasy:5.2.0 (c)
-|    +--- com.holon-platform.core:holon-spring-boot:5.2.0 (c)
-|    +--- com.holon-platform.json:holon-jackson:5.2.0 (c)
-|    +--- com.holon-platform.jdbc:holon-jdbc-spring-boot:5.2.0 (c)
-|    +--- com.holon-platform.jdbc:holon-datastore-jdbc-spring:5.2.0 (c)
-|    +--- com.holon-platform.jaxrs:holon-jaxrs-server:5.2.0 (c)
-|    +--- com.holon-platform.core:holon-spring:5.2.0 (c)
-|    +--- com.holon-platform.jdbc:holon-jdbc-spring:5.2.0 (c)
-|    +--- com.holon-platform.jdbc:holon-datastore-jdbc:5.2.0 (c)
+|    +--- com.holon-platform.core:holon-auth-jwt:5.2.1 (c)
+|    +--- com.holon-platform.core:holon-starter-test:5.2.1 -> 5.2.4 FAILED
+|    +--- com.holon-platform.jaxrs:holon-jaxrs-swagger-v3:5.2.1 (c)
+|    +--- com.holon-platform.jaxrs:holon-starter-resteasy-undertow:5.2.1 (c)
+|    +--- com.holon-platform.jaxrs:holon-starter-resteasy-client:5.2.1 (c)
+|    +--- com.holon-platform.jdbc:holon-starter-jdbc-datastore-hikaricp:5.2.1 (c)
+|    +--- com.holon-platform.core:holon-auth:5.2.1 (c)
+|    +--- com.holon-platform.jaxrs:holon-starter-resteasy:5.2.1 (c)
+|    +--- com.holon-platform.core:holon-starter:5.2.1 (c)
+|    +--- com.holon-platform.json:holon-jackson-jaxrs:5.2.1 (c)
+|    +--- com.holon-platform.json:holon-jackson-spring:5.2.1 (c)
+|    +--- com.holon-platform.jaxrs:holon-jaxrs-client:5.2.1 (c)
+|    +--- com.holon-platform.jdbc:holon-starter-jdbc-hikaricp:5.2.1 (c)
+|    +--- com.holon-platform.jdbc:holon-datastore-jdbc-spring-boot:5.2.1 (c)
 |    +--- ch.qos.logback:logback-classic:1.2.3 (c)
-|    \--- com.holon-platform.jdbc:holon-jdbc:5.2.0 (c)
-+--- com.holon-platform.core:holon-auth-jwt -> 5.2.0
-|    +--- com.holon-platform.core:holon-auth:5.2.0
-|    |    \--- com.holon-platform.core:holon-http:5.2.0
-|    |         \--- com.holon-platform.core:holon-core:5.2.0
+|    +--- com.holon-platform.core:holon-http:5.2.1 (c)
+|    +--- com.holon-platform.core:holon-core:5.2.1 (c)
+|    +--- com.holon-platform.jaxrs:holon-jaxrs-spring-boot-resteasy:5.2.1 (c)
+|    +--- com.holon-platform.core:holon-spring-boot:5.2.1 (c)
+|    +--- com.holon-platform.json:holon-jackson:5.2.1 (c)
+|    +--- com.holon-platform.jaxrs:holon-jaxrs-commons:5.2.1 (c)
+|    +--- com.holon-platform.jdbc:holon-jdbc-spring-boot:5.2.1 (c)
+|    +--- com.holon-platform.jdbc:holon-datastore-jdbc-spring:5.2.1 (c)
+|    +--- com.holon-platform.jaxrs:holon-jaxrs-server:5.2.1 (c)
+|    +--- com.holon-platform.core:holon-spring:5.2.1 (c)
+|    +--- com.holon-platform.jdbc:holon-jdbc-spring:5.2.1 (c)
+|    +--- com.holon-platform.jdbc:holon-datastore-jdbc:5.2.1 (c)
+|    \--- com.holon-platform.jdbc:holon-jdbc:5.2.1 (c)
++--- org.springframework.boot:spring-boot-starter-data-jpa -> 2.1.6.RELEASE
+|    +--- org.springframework.boot:spring-boot-starter-aop:2.1.6.RELEASE
+|    |    +--- org.springframework.boot:spring-boot-starter:2.1.6.RELEASE (*)
+|    |    +--- org.springframework:spring-aop:5.1.8.RELEASE (*)
+|    |    \--- org.aspectj:aspectjweaver:1.9.4
+|    +--- org.springframework.boot:spring-boot-starter-jdbc:2.1.6.RELEASE
+|    |    +--- org.springframework.boot:spring-boot-starter:2.1.6.RELEASE (*)
+|    |    +--- com.zaxxer:HikariCP:3.2.0
+|    |    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.26
+|    |    \--- org.springframework:spring-jdbc:5.1.8.RELEASE
+|    |         +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|    |         +--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |         \--- org.springframework:spring-tx:5.1.8.RELEASE
+|    |              +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|    |              \--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    +--- javax.transaction:javax.transaction-api:1.3
+|    +--- javax.xml.bind:jaxb-api:2.3.1
+|    |    \--- javax.activation:javax.activation-api:1.2.0
+|    +--- org.hibernate:hibernate-core:5.3.10.Final
+|    |    +--- org.jboss.logging:jboss-logging:3.3.2.Final
+|    |    +--- javax.persistence:javax.persistence-api:2.2
+|    |    +--- org.javassist:javassist:3.23.2-GA
+|    |    +--- net.bytebuddy:byte-buddy:1.9.5 -> 1.9.13
+|    |    +--- antlr:antlr:2.7.7
+|    |    +--- org.jboss:jandex:2.0.5.Final
+|    |    +--- com.fasterxml:classmate:1.3.4 -> 1.4.0
+|    |    +--- javax.activation:javax.activation-api:1.2.0
+|    |    +--- org.dom4j:dom4j:2.1.1
+|    |    \--- org.hibernate.common:hibernate-commons-annotations:5.0.4.Final
+|    |         \--- org.jboss.logging:jboss-logging:3.3.1.Final -> 3.3.2.Final
+|    +--- org.springframework.data:spring-data-jpa:2.1.9.RELEASE
+|    |    +--- org.springframework.data:spring-data-commons:2.1.9.RELEASE
+|    |    |    +--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    |    +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|    |    |    \--- org.slf4j:slf4j-api:1.7.26
+|    |    +--- org.springframework:spring-orm:5.1.8.RELEASE
+|    |    |    +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|    |    |    +--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    |    +--- org.springframework:spring-jdbc:5.1.8.RELEASE (*)
+|    |    |    \--- org.springframework:spring-tx:5.1.8.RELEASE (*)
+|    |    +--- org.springframework:spring-context:5.1.8.RELEASE (*)
+|    |    +--- org.springframework:spring-aop:5.1.8.RELEASE (*)
+|    |    +--- org.springframework:spring-tx:5.1.8.RELEASE (*)
+|    |    +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|    |    +--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    \--- org.slf4j:slf4j-api:1.7.26
+|    \--- org.springframework:spring-aspects:5.1.8.RELEASE
+|         \--- org.aspectj:aspectjweaver:1.9.3 -> 1.9.4
++--- com.holon-platform.core:holon-auth-jwt -> 5.2.1
+|    +--- com.holon-platform.core:holon-auth:5.2.1
+|    |    \--- com.holon-platform.core:holon-http:5.2.1
+|    |         \--- com.holon-platform.core:holon-core:5.2.1
 |    |              +--- org.apache.commons:commons-lang3:3.8.1
 |    |              \--- javax.annotation:javax.annotation-api:1.3.2
-|    \--- io.jsonwebtoken:jjwt:0.9.1
-+--- com.holon-platform.jdbc:holon-starter-jdbc-datastore-hikaricp -> 5.2.0
-|    +--- com.holon-platform.jdbc:holon-starter-jdbc-hikaricp:5.2.0
-|    |    +--- com.holon-platform.core:holon-starter:5.2.0
-|    |    |    +--- com.holon-platform.core:holon-spring-boot:5.2.0
-|    |    |    |    +--- com.holon-platform.core:holon-spring:5.2.0
-|    |    |    |    |    +--- com.holon-platform.core:holon-http:5.2.0 (*)
-|    |    |    |    |    +--- org.springframework:spring-context:5.1.4.RELEASE -> 5.1.8.RELEASE
-|    |    |    |    |    |    +--- org.springframework:spring-aop:5.1.8.RELEASE
-|    |    |    |    |    |    |    +--- org.springframework:spring-beans:5.1.8.RELEASE
-|    |    |    |    |    |    |    |    \--- org.springframework:spring-core:5.1.8.RELEASE
-|    |    |    |    |    |    |    |         \--- org.springframework:spring-jcl:5.1.8.RELEASE
-|    |    |    |    |    |    |    \--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    |    |    |    |    +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
-|    |    |    |    |    |    +--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    |    |    |    |    \--- org.springframework:spring-expression:5.1.8.RELEASE
-|    |    |    |    |    |         \--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    |    |    |    \--- org.springframework:spring-context-support:5.1.4.RELEASE -> 5.1.8.RELEASE
-|    |    |    |    |         +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
-|    |    |    |    |         +--- org.springframework:spring-context:5.1.8.RELEASE (*)
-|    |    |    |    |         \--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    |    |    +--- com.holon-platform.core:holon-auth:5.2.0 (*)
-|    |    |    |    +--- org.springframework.boot:spring-boot:2.1.2.RELEASE -> 2.1.6.RELEASE
-|    |    |    |    |    +--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    |    |    |    \--- org.springframework:spring-context:5.1.8.RELEASE (*)
-|    |    |    |    \--- org.springframework.boot:spring-boot-autoconfigure:2.1.2.RELEASE -> 2.1.6.RELEASE
-|    |    |    |         \--- org.springframework.boot:spring-boot:2.1.6.RELEASE (*)
-|    |    |    \--- org.springframework.boot:spring-boot-starter:2.1.2.RELEASE -> 2.1.6.RELEASE
-|    |    |         +--- org.springframework.boot:spring-boot:2.1.6.RELEASE (*)
-|    |    |         +--- org.springframework.boot:spring-boot-autoconfigure:2.1.6.RELEASE (*)
-|    |    |         +--- org.springframework.boot:spring-boot-starter-logging:2.1.6.RELEASE
-|    |    |         |    +--- ch.qos.logback:logback-classic:1.2.3
-|    |    |         |    |    +--- ch.qos.logback:logback-core:1.2.3
-|    |    |         |    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.26
-|    |    |         |    +--- org.apache.logging.log4j:log4j-to-slf4j:2.11.2
-|    |    |         |    |    +--- org.slf4j:slf4j-api:1.7.25 -> 1.7.26
-|    |    |         |    |    \--- org.apache.logging.log4j:log4j-api:2.11.2
-|    |    |         |    \--- org.slf4j:jul-to-slf4j:1.7.26
-|    |    |         |         \--- org.slf4j:slf4j-api:1.7.26
-|    |    |         +--- javax.annotation:javax.annotation-api:1.3.2
-|    |    |         +--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    |         \--- org.yaml:snakeyaml:1.23
-|    |    +--- com.holon-platform.jdbc:holon-jdbc-spring-boot:5.2.0
-|    |    |    \--- com.holon-platform.jdbc:holon-jdbc-spring:5.2.0
-|    |    |         +--- com.holon-platform.jdbc:holon-jdbc:5.2.0
-|    |    |         \--- org.springframework:spring-jdbc:5.1.4.RELEASE -> 5.1.8.RELEASE
-|    |    |              +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
-|    |    |              +--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    |              \--- org.springframework:spring-tx:5.1.8.RELEASE
-|    |    |                   +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
-|    |    |                   \--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    \--- com.zaxxer:HikariCP:3.3.0 -> 3.2.0
-|    \--- com.holon-platform.jdbc:holon-datastore-jdbc-spring-boot:5.2.0
-|         +--- com.holon-platform.jdbc:holon-jdbc-spring-boot:5.2.0 (*)
-|         +--- com.holon-platform.core:holon-spring-boot:5.2.0 (*)
-|         \--- com.holon-platform.jdbc:holon-datastore-jdbc-spring:5.2.0
-|              +--- com.holon-platform.jdbc:holon-jdbc-spring:5.2.0 (*)
-|              +--- com.holon-platform.core:holon-spring:5.2.0 (*)
-|              +--- com.holon-platform.jdbc:holon-datastore-jdbc:5.2.0
-|              |    \--- com.holon-platform.jdbc:holon-datastore-jdbc-composer:5.2.0
-|              |         +--- com.holon-platform.core:holon-core:5.2.0 (*)
-|              |         \--- com.holon-platform.jdbc:holon-jdbc:5.2.0
-|              +--- org.springframework:spring-context:5.1.4.RELEASE -> 5.1.8.RELEASE (*)
-|              \--- net.bytebuddy:byte-buddy:1.9.7 -> 1.9.13
-+--- com.holon-platform.jaxrs:holon-jaxrs-swagger-v3 -> 5.2.0
-|    +--- com.holon-platform.jaxrs:holon-jaxrs-swagger-core:5.2.0
-|    |    +--- com.holon-platform.core:holon-core:5.2.0 (*)
-|    |    +--- com.holon-platform.json:holon-json:5.2.0
-|    |    |    \--- com.holon-platform.core:holon-core:5.2.0 (*)
-|    |    \--- net.bytebuddy:byte-buddy:1.9.7 -> 1.9.13
-|    +--- com.holon-platform.core:holon-auth:5.2.0 (*)
-|    +--- com.holon-platform.json:holon-json:5.2.0 (*)
-|    +--- io.swagger.core.v3:swagger-jaxrs2:2.0.6
-|    |    +--- org.reflections:reflections:0.9.11
-|    |    |    +--- com.google.guava:guava:20.0
-|    |    |    \--- org.javassist:javassist:3.21.0-GA -> 3.22.0-GA
-|    |    +--- org.javassist:javassist:3.22.0-GA
-|    |    +--- io.swagger.core.v3:swagger-models:2.0.6
-|    |    +--- io.swagger.core.v3:swagger-annotations:2.0.6
-|    |    +--- io.swagger.core.v3:swagger-integration:2.0.6
-|    |    |    +--- org.reflections:reflections:0.9.11 (*)
-|    |    |    +--- io.swagger.core.v3:swagger-core:2.0.6
-|    |    |    |    +--- javax.xml.bind:jaxb-api:2.3.0 -> 2.3.1
-|    |    |    |    |    \--- javax.activation:javax.activation-api:1.2.0
+|    +--- io.jsonwebtoken:jjwt-api:0.10.6
+|    +--- io.jsonwebtoken:jjwt-impl:0.10.6
+|    |    \--- io.jsonwebtoken:jjwt-api:0.10.6
+|    \--- io.jsonwebtoken:jjwt-jackson:0.10.6
+|         \--- io.jsonwebtoken:jjwt-api:0.10.6
++--- com.holon-platform.jaxrs:holon-jaxrs-swagger-v3 -> 5.2.1
+|    +--- com.holon-platform.jaxrs:holon-jaxrs-swagger-core:5.2.1
+|    |    +--- com.holon-platform.core:holon-core:5.2.1 (*)
+|    |    +--- com.holon-platform.json:holon-json:5.2.1
+|    |    |    \--- com.holon-platform.core:holon-core:5.2.1 (*)
+|    |    \--- net.bytebuddy:byte-buddy:1.9.10 -> 1.9.13
+|    +--- com.holon-platform.core:holon-auth:5.2.1 (*)
+|    +--- com.holon-platform.json:holon-json:5.2.1 (*)
+|    +--- io.swagger.core.v3:swagger-jaxrs2:2.0.7
+|    |    +--- io.github.classgraph:classgraph:4.6.32
+|    |    +--- org.javassist:javassist:3.22.0-GA -> 3.23.2-GA
+|    |    +--- io.swagger.core.v3:swagger-models:2.0.7
+|    |    +--- io.swagger.core.v3:swagger-annotations:2.0.7
+|    |    +--- io.swagger.core.v3:swagger-integration:2.0.7
+|    |    |    +--- io.github.classgraph:classgraph:4.6.32
+|    |    |    +--- io.swagger.core.v3:swagger-core:2.0.7
+|    |    |    |    +--- javax.xml.bind:jaxb-api:2.3.0 -> 2.3.1 (*)
 |    |    |    |    +--- org.slf4j:slf4j-api:1.7.25 -> 1.7.26
-|    |    |    |    +--- io.swagger.core.v3:swagger-annotations:2.0.6
-|    |    |    |    +--- io.swagger.core.v3:swagger-models:2.0.6
+|    |    |    |    +--- io.swagger.core.v3:swagger-annotations:2.0.7
+|    |    |    |    +--- io.swagger.core.v3:swagger-models:2.0.7
 |    |    |    |    \--- javax.validation:validation-api:1.1.0.Final -> 2.0.1.Final
-|    |    |    \--- io.swagger.core.v3:swagger-models:2.0.6
-|    |    \--- com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.9.5 -> 2.9.9
+|    |    |    \--- io.swagger.core.v3:swagger-models:2.0.7
+|    |    \--- com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.9.8 -> 2.9.9
 |    |         +--- com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:2.9.9
 |    |         |    +--- com.fasterxml.jackson.core:jackson-core:2.9.9
-|    |         |    \--- com.fasterxml.jackson.core:jackson-databind:2.9.9
-|    |         |         +--- com.fasterxml.jackson.core:jackson-annotations:2.9.0
-|    |         |         \--- com.fasterxml.jackson.core:jackson-core:2.9.9
+|    |         |    \--- com.fasterxml.jackson.core:jackson-databind:2.9.9 (*)
 |    |         \--- com.fasterxml.jackson.module:jackson-module-jaxb-annotations:2.9.9
 |    |              +--- com.fasterxml.jackson.core:jackson-annotations:2.9.0
 |    |              +--- com.fasterxml.jackson.core:jackson-core:2.9.9
@@ -1257,74 +1605,81 @@ testRuntimeClasspath - Runtime classpath of source set 'test'.
 |    \--- com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.9.8 -> 2.9.9
 |         +--- org.yaml:snakeyaml:1.23
 |         \--- com.fasterxml.jackson.core:jackson-core:2.9.9
-+--- com.holon-platform.jaxrs:holon-starter-resteasy-undertow -> 5.2.0
-|    +--- com.holon-platform.jaxrs:holon-starter-resteasy:5.2.0
-|    |    +--- com.holon-platform.core:holon-starter:5.2.0 (*)
-|    |    +--- com.holon-platform.jaxrs:holon-jaxrs-spring-boot-resteasy:5.2.0
-|    |    |    +--- com.holon-platform.core:holon-spring-boot:5.2.0 (*)
-|    |    |    +--- com.holon-platform.jaxrs:holon-jaxrs-server:5.2.0
-|    |    |    |    +--- com.holon-platform.core:holon-http:5.2.0 (*)
-|    |    |    |    +--- com.holon-platform.core:holon-auth:5.2.0 (*)
-|    |    |    |    \--- com.holon-platform.jaxrs:holon-jaxrs-commons:5.2.0
-|    |    |    |         \--- com.holon-platform.core:holon-core:5.2.0 (*)
-|    |    |    +--- org.springframework:spring-web:5.1.4.RELEASE -> 5.1.8.RELEASE
-|    |    |    |    +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
-|    |    |    |    \--- org.springframework:spring-core:5.1.8.RELEASE (*)
-|    |    |    +--- org.jboss.resteasy:resteasy-jaxrs:3.6.2.Final
++--- com.holon-platform.jaxrs:holon-starter-resteasy-undertow -> 5.2.1
+|    +--- com.holon-platform.jaxrs:holon-starter-resteasy:5.2.1
+|    |    +--- com.holon-platform.core:holon-starter:5.2.1
+|    |    |    +--- com.holon-platform.core:holon-spring-boot:5.2.1
+|    |    |    |    +--- com.holon-platform.core:holon-spring:5.2.1
+|    |    |    |    |    +--- com.holon-platform.core:holon-http:5.2.1 (*)
+|    |    |    |    |    +--- org.springframework:spring-context:5.1.5.RELEASE -> 5.1.8.RELEASE (*)
+|    |    |    |    |    \--- org.springframework:spring-context-support:5.1.5.RELEASE -> 5.1.8.RELEASE
+|    |    |    |    |         +--- org.springframework:spring-beans:5.1.8.RELEASE (*)
+|    |    |    |    |         +--- org.springframework:spring-context:5.1.8.RELEASE (*)
+|    |    |    |    |         \--- org.springframework:spring-core:5.1.8.RELEASE (*)
+|    |    |    |    +--- com.holon-platform.core:holon-auth:5.2.1 (*)
+|    |    |    |    +--- org.springframework.boot:spring-boot:2.1.3.RELEASE -> 2.1.6.RELEASE (*)
+|    |    |    |    \--- org.springframework.boot:spring-boot-autoconfigure:2.1.3.RELEASE -> 2.1.6.RELEASE (*)
+|    |    |    \--- org.springframework.boot:spring-boot-starter:2.1.3.RELEASE -> 2.1.6.RELEASE (*)
+|    |    +--- com.holon-platform.jaxrs:holon-jaxrs-spring-boot-resteasy:5.2.1
+|    |    |    +--- com.holon-platform.core:holon-spring-boot:5.2.1 (*)
+|    |    |    +--- com.holon-platform.jaxrs:holon-jaxrs-server:5.2.1
+|    |    |    |    +--- com.holon-platform.core:holon-http:5.2.1 (*)
+|    |    |    |    +--- com.holon-platform.core:holon-auth:5.2.1 (*)
+|    |    |    |    \--- com.holon-platform.jaxrs:holon-jaxrs-commons:5.2.1
+|    |    |    |         \--- com.holon-platform.core:holon-core:5.2.1 (*)
+|    |    |    +--- org.springframework:spring-web:5.1.5.RELEASE -> 5.1.8.RELEASE (*)
+|    |    |    +--- org.jboss.resteasy:resteasy-jaxrs:3.6.3.Final
 |    |    |    |    +--- org.jboss.spec.javax.ws.rs:jboss-jaxrs-api_2.1_spec:1.0.2.Final
-|    |    |    |    +--- org.jboss.spec.javax.xml.bind:jboss-jaxb-api_2.3_spec:1.0.0.Final
+|    |    |    |    +--- org.jboss.spec.javax.xml.bind:jboss-jaxb-api_2.3_spec:1.0.1.Final
 |    |    |    |    +--- org.reactivestreams:reactive-streams:1.0.2
-|    |    |    |    +--- javax.validation:validation-api:1.1.0.Final -> 2.0.1.Final
-|    |    |    |    +--- org.jboss.spec.javax.annotation:jboss-annotations-api_1.2_spec:1.0.0.Final -> 1.0.2.Final
+|    |    |    |    +--- javax.validation:validation-api:2.0.1.Final
+|    |    |    |    +--- org.jboss.spec.javax.annotation:jboss-annotations-api_1.3_spec:1.0.1.Final
 |    |    |    |    +--- javax.activation:activation:1.1.1
 |    |    |    |    +--- org.apache.httpcomponents:httpclient:4.5.4 -> 4.5.9
 |    |    |    |    |    +--- org.apache.httpcomponents:httpcore:4.4.11
 |    |    |    |    |    \--- commons-codec:commons-codec:1.11
 |    |    |    |    +--- commons-io:commons-io:2.5
 |    |    |    |    +--- net.jcip:jcip-annotations:1.0
-|    |    |    |    \--- org.jboss.logging:jboss-logging:3.3.1.Final -> 3.3.2.Final
-|    |    |    +--- org.jboss.resteasy:resteasy-jaxb-provider:3.6.2.Final
-|    |    |    |    +--- org.jboss.spec.javax.xml.bind:jboss-jaxb-api_2.3_spec:1.0.0.Final
+|    |    |    |    \--- org.jboss.logging:jboss-logging:3.3.2.Final
+|    |    |    +--- org.jboss.resteasy:resteasy-jaxb-provider:3.6.3.Final
+|    |    |    |    +--- org.jboss.spec.javax.xml.bind:jboss-jaxb-api_2.3_spec:1.0.1.Final
 |    |    |    |    +--- org.glassfish.jaxb:jaxb-runtime:2.3.1
-|    |    |    |    |    +--- javax.xml.bind:jaxb-api:2.3.1 (*)
 |    |    |    |    |    +--- org.glassfish.jaxb:txw2:2.3.1
 |    |    |    |    |    +--- com.sun.istack:istack-commons-runtime:3.0.7
 |    |    |    |    |    +--- org.jvnet.staxex:stax-ex:1.8
 |    |    |    |    |    +--- com.sun.xml.fastinfoset:FastInfoset:1.2.15
 |    |    |    |    |    \--- javax.activation:javax.activation-api:1.2.0
-|    |    |    |    \--- org.jboss.logging:jboss-logging:3.3.1.Final -> 3.3.2.Final
-|    |    |    \--- org.jboss.resteasy:resteasy-spring:3.6.2.Final
-|    |    |         +--- org.jboss.resteasy:resteasy-jaxrs:3.6.2.Final (*)
+|    |    |    |    \--- org.jboss.logging:jboss-logging:3.3.2.Final
+|    |    |    \--- org.jboss.resteasy:resteasy-spring:3.6.3.Final
+|    |    |         +--- org.jboss.resteasy:resteasy-jaxrs:3.6.3.Final (*)
 |    |    |         +--- org.jboss.spec.javax.ws.rs:jboss-jaxrs-api_2.1_spec:1.0.2.Final
-|    |    |         +--- org.jboss.spec.javax.annotation:jboss-annotations-api_1.2_spec:1.0.0.Final -> 1.0.2.Final
+|    |    |         +--- org.jboss.spec.javax.annotation:jboss-annotations-api_1.3_spec:1.0.1.Final
 |    |    |         +--- javax.activation:activation:1.1.1
-|    |    |         \--- org.jboss.logging:jboss-logging:3.3.1.Final -> 3.3.2.Final
-|    |    +--- org.jboss.resteasy:resteasy-jackson2-provider:3.6.2.Final
-|    |    |    \--- com.github.fge:json-patch:1.3
-|    |    |         \--- com.github.fge:jackson-coreutils:1.0
-|    |    |              +--- com.google.guava:guava:14.0 -> 20.0
-|    |    |              \--- net.jcip:jcip-annotations:1.0
-|    |    +--- com.holon-platform.json:holon-jackson-jaxrs:5.2.0
-|    |    |    +--- com.holon-platform.json:holon-jackson:5.2.0
-|    |    |    |    +--- com.holon-platform.json:holon-json:5.2.0 (*)
+|    |    |         \--- org.jboss.logging:jboss-logging:3.3.2.Final
+|    |    +--- org.jboss.resteasy:resteasy-jackson2-provider:3.6.3.Final
+|    |    |    \--- com.github.fge:json-patch:1.9
+|    |    |         \--- com.github.fge:jackson-coreutils:1.6
+|    |    |              +--- com.github.fge:msg-simple:1.1
+|    |    |              |    \--- com.github.fge:btf:1.2
+|    |    |              \--- com.google.guava:guava:16.0.1
+|    |    +--- com.holon-platform.json:holon-jackson-jaxrs:5.2.1
+|    |    |    +--- com.holon-platform.json:holon-jackson:5.2.1
+|    |    |    |    +--- com.holon-platform.json:holon-json:5.2.1 (*)
 |    |    |    |    +--- com.fasterxml.jackson.core:jackson-core:2.9.8 -> 2.9.9
 |    |    |    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.9.8 -> 2.9.0
 |    |    |    |    +--- com.fasterxml.jackson.core:jackson-databind:2.9.8 -> 2.9.9 (*)
-|    |    |    |    \--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.8 -> 2.9.9
+|    |    |    |    \--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.8 -> 2.9.9 (*)
 |    |    |    +--- com.fasterxml.jackson.core:jackson-core:2.9.8 -> 2.9.9
 |    |    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.9.8 -> 2.9.0
 |    |    |    +--- com.fasterxml.jackson.core:jackson-databind:2.9.8 -> 2.9.9 (*)
 |    |    |    \--- com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.9.8 -> 2.9.9 (*)
-|    |    +--- com.holon-platform.json:holon-jackson-spring:5.2.0
-|    |    |    \--- com.holon-platform.json:holon-jackson:5.2.0 (*)
-|    |    +--- org.springframework:spring-web:5.1.4.RELEASE -> 5.1.8.RELEASE (*)
-|    |    +--- org.springframework:spring-core:5.1.4.RELEASE -> 5.1.8.RELEASE (*)
-|    |    +--- org.springframework.boot:spring-boot-starter-validation:2.1.2.RELEASE -> 2.1.6.RELEASE
+|    |    +--- com.holon-platform.json:holon-jackson-spring:5.2.1
+|    |    |    \--- com.holon-platform.json:holon-jackson:5.2.1 (*)
+|    |    +--- org.springframework:spring-web:5.1.5.RELEASE -> 5.1.8.RELEASE (*)
+|    |    +--- org.springframework:spring-core:5.1.5.RELEASE -> 5.1.8.RELEASE (*)
+|    |    +--- org.springframework.boot:spring-boot-starter-validation:2.1.3.RELEASE -> 2.1.6.RELEASE
 |    |    |    +--- org.springframework.boot:spring-boot-starter:2.1.6.RELEASE (*)
-|    |    |    \--- org.hibernate.validator:hibernate-validator:6.0.17.Final
-|    |    |         +--- javax.validation:validation-api:2.0.1.Final
-|    |    |         +--- org.jboss.logging:jboss-logging:3.3.2.Final
-|    |    |         \--- com.fasterxml:classmate:1.3.4 -> 1.4.0
+|    |    |    \--- org.hibernate.validator:hibernate-validator:6.0.17.Final (*)
 |    |    +--- com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.9.8 -> 2.9.9 (*)
 |    |    +--- org.eclipse:yasson:1.0.1
 |    |    |    +--- javax.json.bind:javax.json.bind-api:1.0
@@ -1335,7 +1690,7 @@ testRuntimeClasspath - Runtime classpath of source set 'test'.
 |    |    |         \--- javax.inject:javax.inject:1
 |    |    \--- org.glassfish:javax.json:1.1.2
 |    |         \--- javax.json:javax.json-api:1.1.2 -> 1.1.4
-|    \--- org.springframework.boot:spring-boot-starter-undertow:2.1.2.RELEASE -> 2.1.6.RELEASE
+|    \--- org.springframework.boot:spring-boot-starter-undertow:2.1.3.RELEASE -> 2.1.6.RELEASE
 |         +--- io.undertow:undertow-core:2.0.21.Final
 |         |    +--- org.jboss.logging:jboss-logging:3.4.0.Final -> 3.3.2.Final
 |         |    +--- org.jboss.xnio:xnio-api:3.3.8.Final
@@ -1350,24 +1705,43 @@ testRuntimeClasspath - Runtime classpath of source set 'test'.
 |         |    \--- org.jboss.spec.javax.websocket:jboss-websocket-api_1.1_spec:1.1.4.Final
 |         +--- javax.servlet:javax.servlet-api:4.0.1
 |         \--- org.glassfish:javax.el:3.0.0
-+--- com.h2database:h2:1.4.196
 +--- org.webjars:swagger-ui:3.22.2
 +--- org.projectlombok:lombok:1.18.8
-+--- com.holon-platform.jaxrs:holon-jaxrs-client -> 5.2.0
-|    +--- com.holon-platform.core:holon-async-http:5.2.0
-|    |    \--- com.holon-platform.core:holon-http:5.2.0 (*)
-|    \--- com.holon-platform.jaxrs:holon-jaxrs-commons:5.2.0 (*)
-+--- com.holon-platform.jaxrs:holon-starter-resteasy-client -> 5.2.0
-|    +--- com.holon-platform.core:holon-starter:5.2.0 (*)
-|    +--- com.holon-platform.json:holon-jackson-jaxrs:5.2.0 (*)
-|    +--- com.holon-platform.json:holon-jackson-spring:5.2.0 (*)
-|    +--- com.holon-platform.jaxrs:holon-jaxrs-client:5.2.0 (*)
-|    +--- org.jboss.resteasy:resteasy-client:3.6.2.Final
++--- com.holon-platform.jdbc:holon-starter-jdbc-datastore-hikaricp -> 5.2.1
+|    +--- com.holon-platform.jdbc:holon-starter-jdbc-hikaricp:5.2.1
+|    |    +--- com.holon-platform.core:holon-starter:5.2.1 (*)
+|    |    +--- com.holon-platform.jdbc:holon-jdbc-spring-boot:5.2.1
+|    |    |    \--- com.holon-platform.jdbc:holon-jdbc-spring:5.2.1
+|    |    |         +--- com.holon-platform.jdbc:holon-jdbc:5.2.1
+|    |    |         \--- org.springframework:spring-jdbc:5.1.5.RELEASE -> 5.1.8.RELEASE (*)
+|    |    \--- com.zaxxer:HikariCP:3.3.1 -> 3.2.0 (*)
+|    \--- com.holon-platform.jdbc:holon-datastore-jdbc-spring-boot:5.2.1
+|         +--- com.holon-platform.jdbc:holon-jdbc-spring-boot:5.2.1 (*)
+|         +--- com.holon-platform.core:holon-spring-boot:5.2.1 (*)
+|         \--- com.holon-platform.jdbc:holon-datastore-jdbc-spring:5.2.1
+|              +--- com.holon-platform.jdbc:holon-jdbc-spring:5.2.1 (*)
+|              +--- com.holon-platform.core:holon-spring:5.2.1 (*)
+|              +--- com.holon-platform.jdbc:holon-datastore-jdbc:5.2.1
+|              |    \--- com.holon-platform.jdbc:holon-datastore-jdbc-composer:5.2.1
+|              |         +--- com.holon-platform.core:holon-core:5.2.1 (*)
+|              |         \--- com.holon-platform.jdbc:holon-jdbc:5.2.1
+|              +--- org.springframework:spring-context:5.1.5.RELEASE -> 5.1.8.RELEASE (*)
+|              \--- net.bytebuddy:byte-buddy:1.9.10 -> 1.9.13
++--- com.h2database:h2:1.4.196
++--- com.holon-platform.jaxrs:holon-starter-resteasy-client -> 5.2.1
+|    +--- com.holon-platform.core:holon-starter:5.2.1 (*)
+|    +--- com.holon-platform.json:holon-jackson-jaxrs:5.2.1 (*)
+|    +--- com.holon-platform.json:holon-jackson-spring:5.2.1 (*)
+|    +--- com.holon-platform.jaxrs:holon-jaxrs-client:5.2.1
+|    |    +--- com.holon-platform.core:holon-async-http:5.2.1
+|    |    |    \--- com.holon-platform.core:holon-http:5.2.1 (*)
+|    |    \--- com.holon-platform.jaxrs:holon-jaxrs-commons:5.2.1 (*)
+|    +--- org.jboss.resteasy:resteasy-client:3.6.3.Final
 |    |    +--- org.jboss.spec.javax.ws.rs:jboss-jaxrs-api_2.1_spec:1.0.2.Final
-|    |    +--- org.jboss.resteasy:resteasy-jaxrs:3.6.2.Final (*)
-|    |    +--- org.jboss.logging:jboss-logging:3.3.1.Final -> 3.3.2.Final
+|    |    +--- org.jboss.resteasy:resteasy-jaxrs:3.6.3.Final (*)
+|    |    +--- org.jboss.logging:jboss-logging:3.3.2.Final
 |    |    \--- org.apache.httpcomponents:httpclient:4.5.4 -> 4.5.9 (*)
-|    +--- org.jboss.resteasy:resteasy-jackson2-provider:3.6.2.Final (*)
+|    +--- org.jboss.resteasy:resteasy-jackson2-provider:3.6.3.Final (*)
 |    \--- com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.9.8 -> 2.9.9 (*)
 +--- com.holon-platform.core:holon-starter-test -> 5.2.4 FAILED
 +--- org.junit.jupiter:junit-jupiter-api:5.4.2
