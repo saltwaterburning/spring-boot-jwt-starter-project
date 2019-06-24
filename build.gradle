@@ -3,7 +3,6 @@
  *
  * http://localhost:8080/openapi?type=json
  * http://localhost:8080/openapi?type=yaml
- * http://localhost:8080/swagger-ui/index.html
  * http://localhost:8080/swagger-ui/index.html  (ToDo)
  */
 
@@ -12,7 +11,7 @@ plugins {
   id 'war'
 //  id 'maven-publish'
   id 'org.springframework.boot' version '2.1.6.RELEASE' apply true
-//  id 'io.spring.dependency-management' version "1.0.8.RELEASE"
+  id 'io.spring.dependency-management' version "1.0.8.RELEASE"
 }
 
 // https://repo1.maven.org/maven2/com/holon-platform/
@@ -76,8 +75,9 @@ dependencies {
   }
 
   implementation 'com.holon-platform.core:holon-auth-jwt'
+  implementation 'com.holon-platform.core:holon-core'
   implementation 'com.holon-platform.jpa:holon-datastore-jpa'
-//  implementation 'com.holon-platform.jpa:holon-starter-jpa-hibernate'
+  implementation 'com.holon-platform.jpa:holon-starter-jpa-hibernate'
   implementation 'com.holon-platform.jaxrs:holon-jaxrs-swagger-v3'
   implementation 'com.holon-platform.jaxrs:holon-starter-resteasy-undertow'
   implementation 'com.h2database:h2:1.4.196'
