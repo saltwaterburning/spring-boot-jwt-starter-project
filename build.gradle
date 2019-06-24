@@ -17,26 +17,74 @@ plugins {
   id 'java'
   id 'war'
 //  id 'maven-publish'
-  id 'org.springframework.boot' version '2.1.6.RELEASE' apply true
+  id 'org.springframework.boot' version "2.1.6.RELEASE" apply true
   id 'io.spring.dependency-management' version "1.0.8.RELEASE"
 }
 
-// https://repo1.maven.org/maven2/com/holon-platform/
 repositories {
     mavenLocal()
-    maven {
-        url = 'http://repo.maven.apache.org/maven2'
-    }
+    mavenCentral()
 }
 
 group = theGroup
 version = theVersion
-description = 'com.holon-platform.examples:holon-example-jaxrs-swagger'
+description = theDesription
 sourceCompatibility = theSourceCompatibility
 targetCompatibility = theSourceCompatibility
 
+dependencies {
+  // Spring actuator
+  implementation('org.springframework.boot:spring-boot-starter-actuator') {
+    because "This application relies upon Spring Boot."
+  }
+  implementation('org.springframework.boot:spring-boot-starter-web') {
+    because "Undertow is faster and uses less memory."
+    exclude group: 'org.springframework.boot', module: 'spring-boot-starter-tomcat'
+  }
+
+  implementation(platform("com.holon-platform:bom:$holonVersion")) {
+    because "This application relies on Holon JAX-RS/OpenAPI modules."
+  }
+
+  implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+  // Holon JAX-RS & OpenAPI v3
+  implementation 'com.holon-platform.core:holon-auth-jwt'
+  implementation 'com.holon-platform.jaxrs:holon-jaxrs-swagger-v3'
+  implementation 'com.holon-platform.jaxrs:holon-starter-resteasy-undertow'
+
+  // ToDo...
+  implementation "org.webjars:swagger-ui:$swaggerUIVersion"
+
+  // Additional utils...
+  annotationProcessor "org.projectlombok:lombok:$lombokVersion"
+  implementation "org.projectlombok:lombok:$lombokVersion"
+
+  // Demo app
+  implementation 'com.holon-platform.jdbc:holon-starter-jdbc-datastore-hikaricp'
+  implementation 'com.h2database:h2:1.4.196'
+  // Demo client
+  implementation 'com.holon-platform.jaxrs:holon-starter-resteasy-client'
+
+  // Testing...
+  testImplementation 'com.holon-platform.core:holon-starter-test'
+  testImplementation "org.junit.jupiter:junit-jupiter-api:$junitJupiterVersion"
+  testImplementation "org.junit.jupiter:junit-jupiter-engine:$junitJupiterVersion"
+  testImplementation "com.holon-platform.core:holon-starter-test:$holonVersion"
+}
+
 // Displays project dependency tree.
 task allDeps(type: DependencyReportTask) {}
+
+tasks.withType(JavaCompile) {
+  options.encoding = 'UTF-8'
+  options.fork = true
+  options.incremental = true
+}
+
+tasks.withType(Test) {
+  forkEvery = 100
+}
 
 bootJar {
   classifier = 'boot'
@@ -66,50 +114,3 @@ bootWar {
 jar {  enabled = true  }
 
 springBoot {  buildInfo()  }
-
-dependencies {
-  // Spring actuator
-  implementation('org.springframework.boot:spring-boot-starter-actuator') {
-    because "This application relies upon Spring Boot."
-  }
-  implementation('org.springframework.boot:spring-boot-starter-web') {
-    because "Undertow is faster and uses less memory."
-    exclude group: 'org.springframework.boot', module: 'spring-boot-starter-tomcat'
-  }
-
-  implementation(platform("com.holon-platform:bom:$holonVersion")) {
-    because "This application relies on Holon JAX-RS/OpenAPI modules."
-  }
-
-  implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-
-  // Holon JAX-RS & OpenAPI v3
-  implementation 'com.holon-platform.core:holon-auth-jwt'
-  implementation 'com.holon-platform.jaxrs:holon-jaxrs-swagger-v3'
-  implementation 'com.holon-platform.jaxrs:holon-starter-resteasy-undertow'
-
-  // ToDo...
-  implementation('org.webjars:swagger-ui:3.22.2') {
-    because 'Supplies Swagger interactive API UI.'
-  }
-
-  // Additional utils...
-  annotationProcessor 'org.projectlombok:lombok:1.18.8'
-  implementation 'org.projectlombok:lombok:1.18.8'
-
-  // Demo app
-  implementation 'com.holon-platform.jdbc:holon-starter-jdbc-datastore-hikaricp'
-  implementation 'com.h2database:h2:1.4.196'
-  // Demo client
-  implementation 'com.holon-platform.jaxrs:holon-starter-resteasy-client'
-
-  // Testing...
-  testImplementation 'com.holon-platform.core:holon-starter-test'
-  testImplementation 'org.junit.jupiter:junit-jupiter-api:5.4.2'
-  testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.4.2'
-  testImplementation 'com.holon-platform.core:holon-starter-test:5.2.4'
-}
-
-tasks.withType(JavaCompile) {
-    options.encoding = 'UTF-8'
-}
