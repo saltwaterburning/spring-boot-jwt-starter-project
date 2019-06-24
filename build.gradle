@@ -76,8 +76,9 @@ dependencies {
 
   implementation 'com.holon-platform.core:holon-auth-jwt'
   implementation 'com.holon-platform.core:holon-core'
-  implementation 'com.holon-platform.jpa:holon-datastore-jpa'
-  implementation 'com.holon-platform.jpa:holon-starter-jpa-hibernate'
+  implementation 'com.holon-platform.jdbc:holon-starter-jdbc-datastore-hikaricp'
+//  implementation 'com.holon-platform.jpa:holon-datastore-jpa'
+//  implementation 'com.holon-platform.jpa:holon-starter-jpa-hibernate'
   implementation 'com.holon-platform.jaxrs:holon-jaxrs-swagger-v3'
   implementation 'com.holon-platform.jaxrs:holon-starter-resteasy-undertow'
   implementation 'com.h2database:h2:1.4.196'

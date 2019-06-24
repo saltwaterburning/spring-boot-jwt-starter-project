@@ -36,7 +36,7 @@ import com.holonplatform.auth.jwt.JwtConfiguration;
 //)
 // https://howtodoinjava.com/resteasy/jax-rs-resteasy-basic-authentication-and-authorization-tutorial/
 @SpringBootApplication
-public class Application {
+public class SecureApplication {
 
 	@Bean
 	public Realm realm(AccountProvider accountProvider, JwtConfiguration jwtConfiguration) {
@@ -49,6 +49,6 @@ public class Application {
 	}
 
 	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
+		SpringApplication.run(SecureApplication.class, args);
 	}
 }
