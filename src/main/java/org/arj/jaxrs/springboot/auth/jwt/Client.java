@@ -37,10 +37,10 @@ public class Client {
 
 	public static void main(String[] args) {
 		RestClient client = JaxrsRestClient.create(getTrustAllClient());
-		String API_TARGET = "https://localhost:8443/api";
+		String API_TARGET = "http://localhost:8080/api";
 
 		try {
-			String publicKey = client.request().target("https://localhost:8443/jwt/issue")
+			String publicKey = client.request().target("http://localhost:8080/jwt/issue")
 					.authorizationBasic("act1", "act1secret")
 					.getForEntity(String.class).orElse(null);
 
