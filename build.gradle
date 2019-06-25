@@ -34,13 +34,14 @@ targetCompatibility = theSourceCompatibility
 
 dependencies {
   // Spring actuator
+  /*
   implementation('org.springframework.boot:spring-boot-starter-actuator') {
     because "This application relies upon Spring Boot."
   }
   implementation('org.springframework.boot:spring-boot-starter-web') {
     because "Undertow is faster and uses less memory."
     exclude group: 'org.springframework.boot', module: 'spring-boot-starter-tomcat'
-  }
+  }*/
 
   implementation(platform("com.holon-platform:bom:$holonVersion")) {
     because "This application relies on Holon JAX-RS/OpenAPI modules."
@@ -101,15 +102,14 @@ bootRun {
   sourceResources sourceSets.main
 }
 
-/*
+
 bootWar {
   excludeDevtools = false
   manifest {
-//    attributes 'Main-Class': 'org.springframework.boot.loader.PropertiesLauncher'
     attributes 'Main-Class': 'org.springframework.boot.loader.WarLauncher'
   }
 }
-*/
+
 
 jar {  enabled = true  }
 
